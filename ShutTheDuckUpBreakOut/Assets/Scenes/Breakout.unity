@@ -562,6 +562,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 3491840253457541008, guid: 030a8036512849845958c2be8cfd6f68, type: 3}
+      propertyPath: RoleLeanght
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3491840253457541009, guid: 030a8036512849845958c2be8cfd6f68, type: 3}
       propertyPath: m_Color.b
       value: 1
