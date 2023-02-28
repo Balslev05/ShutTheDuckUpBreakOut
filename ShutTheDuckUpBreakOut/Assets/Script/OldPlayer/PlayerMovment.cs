@@ -4,8 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 public class PlayerMovment : MonoBehaviour
 {
-
-    public float speed = 150;
+    public float speed = 250;
     public Rigidbody2D rb;
     [Header("RoleStats")]
     public float RoleLeanght = 1f;
@@ -15,6 +14,9 @@ public class PlayerMovment : MonoBehaviour
     private float NormalMoveSpeed;
     UnityEngine.Vector2 Movement;
   
+  private void Awake() {
+   
+  }
     
     void Start()
     {
@@ -30,20 +32,22 @@ public class PlayerMovment : MonoBehaviour
        /*  {
             anim.SetBool("Gun",false);
         } else{anim.SetBool("Gun",true); } */
-        
+
         //  Moving 
         Vector2 dir = rb.transform.position - transform.position;
         dir = dir.normalized;
         lastDirection = dir;
+        
         if(Roling == true)
         {
          return;
-        }
-        else
+
+        }else
         {
             Movement.x = Input.GetAxisRaw("Horizontal");
             Movement.y = Input.GetAxisRaw("Vertical");
         }
+        
         Vector2 velocity = rb.velocity;   
 
         if(Input.GetKeyDown(KeyCode.Space))

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerIam : MonoBehaviour
+public class AimWithGun : MonoBehaviour
 {
     private UnityEngine.Vector3 mousepos;
     public Camera cam;
@@ -27,5 +27,6 @@ public class PlayerIam : MonoBehaviour
         transform.rotation =   UnityEngine.Quaternion.Euler(0,0,angel);         
     }
 }
+
 
 
