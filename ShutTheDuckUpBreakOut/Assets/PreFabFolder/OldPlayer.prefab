@@ -192,6 +192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7121341291033966909}
   - component: {fileID: 3078989585482620862}
+  - component: {fileID: 7662509852442929527}
   m_Layer: 0
   m_Name: WeaponParent
   m_TagString: Untagged
@@ -227,6 +228,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 343f3a160ce703141b4269b57dc23ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &7662509852442929527
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4300133332591119037}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ab05d62223a552e47bdc4be1e89e6a6a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4609033304657918668
 GameObject:
   m_ObjectHideFlags: 0
