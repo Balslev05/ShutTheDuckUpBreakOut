@@ -8,9 +8,12 @@ public class AimWithWeapon : MonoBehaviour
     private Camera maincam;
     private Vector3 mousepos;
     public GameObject player;
+    public Collider2D WeaponCollider;
     
     void Start()
     {
+        WeaponCollider.enabled = false;
+
         maincam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
     void Update()
@@ -34,7 +37,12 @@ public class AimWithWeapon : MonoBehaviour
         float rotZ = Mathf.Atan2(rotation.y,rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0,0,rotZ);
     }
-    void activeCollider(){
-        
+    public void activateAttackCollider()
+    {
+        WeaponCollider.enabled = true;
+    }
+    public void DeactivateAttackCollider()
+    {
+        WeaponCollider.enabled = false;
     }
 }

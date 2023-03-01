@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private AimWithWeapon weapon;
+  public Weapon weapon;
+  public bool CarryingWeapon = true; 
+
     // Start is called before the first frame update
 
     void Awake()
     {
-    weapon = GetComponentInChildren<AimWithWeapon>();
+      
     }
     void Start()
     {
@@ -22,4 +24,23 @@ public class Player : MonoBehaviour
     {
         
     }
-   }
+
+
+    void  OnTriggerStay2D(Collider2D collider)
+    {
+      
+      if(collider.gameObject.tag == "Weapon")
+      {
+      
+        if(Input.GetKey(KeyCode.F))
+        {
+          CarryingWeapon = true;
+          weapon.CurrentWeapons = collider.GetComponent<Item>().weaponType;
+          print("1");
+          Destroy(collider.gameObject);
+          weapon.PickUpWeapon();
+
+        }
+      }
+    }
+}

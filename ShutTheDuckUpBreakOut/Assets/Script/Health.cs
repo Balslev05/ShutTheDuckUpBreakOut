@@ -20,10 +20,6 @@ public class Health : MonoBehaviour
         }
     }
 
-
-
-
-
     void Death()
     {
         Destroy(this.gameObject);

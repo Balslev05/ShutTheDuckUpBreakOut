@@ -1,0 +1,57 @@
+Date : 2023-03-01 16:54:48
+Directory : c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut
+Total : 20 files,  2364 codes, 589 comments, 341 blanks, all 3294 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| C#       |         17 |      1,787 |        589 |        339 |      2,715 |
+| JSON     |          2 |        576 |          0 |          2 |        578 |
+| Markdown |          1 |          1 |          0 |          0 |          1 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                                                    | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                                                       |         20 |      2,364 |        589 |        341 |      3,294 |
+| . (Files)                                                                                                                                               |          1 |          1 |          0 |          0 |          1 |
+| Assets                                                                                                                                                  |         17 |      1,787 |        589 |        339 |      2,715 |
+| Assets\Plugins                                                                                                                                          |          8 |      1,309 |        555 |        226 |      2,090 |
+| Assets\Plugins\Demigiant                                                                                                                                |          8 |      1,309 |        555 |        226 |      2,090 |
+| Assets\Plugins\Demigiant\DOTween                                                                                                                        |          8 |      1,309 |        555 |        226 |      2,090 |
+| Assets\Plugins\Demigiant\DOTween\Modules                                                                                                                |          8 |      1,309 |        555 |        226 |      2,090 |
+| Assets\Script                                                                                                                                           |          9 |        478 |         34 |        113 |        625 |
+| Assets\Script (Files)                                                                                                                                   |          1 |         23 |          0 |          5 |         28 |
+| Assets\Script\OldPlayer                                                                                                                                 |          6 |        242 |         15 |         64 |        321 |
+| Assets\Script\YoungPlayer                                                                                                                               |          2 |        213 |         19 |         44 |        276 |
+| Packages                                                                                                                                                |          2 |        576 |          0 |          2 |        578 |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                                                                                | language | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs        | C#       |         98 |         80 |         25 |        203 |
+| c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleEPOOutline.cs   | C#       |        109 |         18 |         20 |        147 |
+| c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs      | C#       |        137 |         60 |         20 |        217 |
+| c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs    | C#       |        125 |         51 |         18 |        194 |
+| c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs       | C#       |         63 |         17 |         14 |         94 |
+| c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs           | C#       |        390 |        203 |         70 |        663 |
+| c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs | C#       |        264 |         99 |         41 |        404 |
+| c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs        | C#       |        123 |         27 |         18 |        168 |
+| c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\Health.cs                                               | C#       |         23 |          0 |          5 |         28 |
+| c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\OldPlayer\AimWithGun.cs                                 | C#       |         28 |          0 |          5 |         33 |
+| c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\OldPlayer\AimWithWeapon.cs                              | C#       |         42 |          0 |          7 |         49 |
+| c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\OldPlayer\Mouse.cs                                      | C#       |         17 |          0 |          5 |         22 |
+| c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\OldPlayer\Player.cs                                     | C#       |         26 |          2 |         10 |         38 |
+| c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\OldPlayer\PlayerMovment.cs                              | C#       |         59 |          7 |         16 |         82 |
+| c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\OldPlayer\Weapon.cs                                     | C#       |         70 |          6 |         21 |         97 |
+| c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\YoungPlayer\YoungMechanics.cs                           | C#       |        129 |         16 |         30 |        175 |
+| c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\YoungPlayer\YoungMovment.cs                             | C#       |         84 |          3 |         14 |        101 |
+| c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Packages\manifest.json                                                | JSON     |         47 |          0 |          1 |         48 |
+| c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Packages\packages-lock.json                                           | JSON     |        529 |          0 |          1 |        530 |
+| c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\README.md                                                             | Markdown |          1 |          0 |          0 |          1 |
+| Total                                                                                                                                                   |          |      2,364 |        589 |        341 |      3,294 |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
