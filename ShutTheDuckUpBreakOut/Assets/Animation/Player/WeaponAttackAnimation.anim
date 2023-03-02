@@ -60,22 +60,7 @@ AnimationClip:
   m_PositionCurves: []
   m_ScaleCurves: []
   m_FloatCurves: []
-  m_PPtrCurves:
-  - curve:
-    - time: 0
-      value: {fileID: -468555503, guid: 67aa647521ab78342a86659b3c2f4e0f, type: 3}
-    - time: 0.016666668
-      value: {fileID: -1433668501, guid: 67aa647521ab78342a86659b3c2f4e0f, type: 3}
-    - time: 0.05
-      value: {fileID: 1887570812, guid: 67aa647521ab78342a86659b3c2f4e0f, type: 3}
-    - time: 0.06666667
-      value: {fileID: 1502224469, guid: 67aa647521ab78342a86659b3c2f4e0f, type: 3}
-    - time: 0.1
-      value: {fileID: 454530185, guid: 67aa647521ab78342a86659b3c2f4e0f, type: 3}
-    attribute: m_Sprite
-    path: FakeWeapon
-    classID: 212
-    script: {fileID: 0}
+  m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -90,19 +75,7 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2959365802
-      attribute: 0
-      script: {fileID: 0}
-      typeID: 212
-      customType: 23
-      isPPtrCurve: 1
-    pptrCurveMapping:
-    - {fileID: -468555503, guid: 67aa647521ab78342a86659b3c2f4e0f, type: 3}
-    - {fileID: -1433668501, guid: 67aa647521ab78342a86659b3c2f4e0f, type: 3}
-    - {fileID: 1887570812, guid: 67aa647521ab78342a86659b3c2f4e0f, type: 3}
-    - {fileID: 1502224469, guid: 67aa647521ab78342a86659b3c2f4e0f, type: 3}
-    - {fileID: 454530185, guid: 67aa647521ab78342a86659b3c2f4e0f, type: 3}
+    pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

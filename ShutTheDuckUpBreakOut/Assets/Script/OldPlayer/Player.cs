@@ -32,10 +32,10 @@ public class Player : MonoBehaviour
       if(collider.gameObject.tag == "Weapon")
       {
       
-        if(Input.GetKey(KeyCode.F))
+        if(Input.GetKey(KeyCode.F)  && CarryingWeapon == false)
         {
           CarryingWeapon = true;
-          weapon.CurrentWeapons = collider.GetComponent<Item>().weaponType;
+          weapon.CurrentWeapon = collider.GetComponent<Item>().weaponType;
           print("1");
           Destroy(collider.gameObject);
           weapon.PickUpWeapon();

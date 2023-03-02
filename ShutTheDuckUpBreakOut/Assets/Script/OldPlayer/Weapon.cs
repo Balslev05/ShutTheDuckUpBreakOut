@@ -1,4 +1,3 @@
-using System.Reflection.Metadata;
 using System.Data;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,7 +5,7 @@ using UnityEngine;
 using DG.Tweening;
 public class Weapon : MonoBehaviour
 {
-    public Objects_Weapons CurrentWeapons;
+    public Objects_Weapons CurrentWeapon;
     public GameObject ItemDrop;
     public Player playerStats;
     public Animator WeaponAnim;
@@ -28,18 +27,10 @@ public class Weapon : MonoBehaviour
     {
         KnockBack *= -1;
 
-        WeaponSprite = this.gameObject.GetComponent<SpriteRenderer>().sprite;
     }
 
     void Update()
     {
-        
-
-
-
-
-
-
         //throw
         if(Input.GetKeyDown(KeyCode.Space) && playerStats.CarryingWeapon == true)
         {
@@ -92,30 +83,30 @@ public class Weapon : MonoBehaviour
 
     public void DestroyWeapon()
     {
-        resetsweaponStats();
-        Destroy(this.gameObject);
+        resetsweapon();
     }
 
     public void PickUpWeapon()
     {    
-        Damage = CurrentWeapons.Damage;
-        KnockBack = CurrentWeapons.KnockBack;
-        Durability = CurrentWeapons.Durability;
-        weight = CurrentWeapons.weight;
+        Damage = CurrentWeapon.Damage;
+        KnockBack = CurrentWeapon.KnockBack;
+        Durability = CurrentWeapon.Durability;
+        weight = CurrentWeapon.weight;
         
+        SpriteRenderer ItemSprite = this.gameObject.GetComponent<SpriteRenderer>();
+        ItemSprite.sprite = CurrentWeapon.sprite;
         this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        WeaponSprite = CurrentWeapons.sprite;
     }
     public void ThrowWeapon()
     {
         playerStats.CarryingWeapon = false;
-        resetsweaponStats();
-
+        resetsweapon();
         GameObject thrownWeapon = Instantiate(ItemDrop, transform.position, transform.rotation); 
+        thrownWeapon.GetComponent<Item>().weaponType = CurrentWeapon;
         //thrownWeapon.AddComponent<>
         //Throw your current Weapon
     }
-    public void resetsweaponStats()
+    public void resetsweapon()
     {
         Damage = 0;
         KnockBack = 0;

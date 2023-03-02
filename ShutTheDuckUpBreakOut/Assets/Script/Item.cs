@@ -6,7 +6,6 @@ public class Item : MonoBehaviour
 {
     public Objects_Weapons weaponType;
     public bool IsItThrown;
-    Sprite sprite;
     Rigidbody2D rb;
     Vector3 mouseDir;
     Vector3 mousePos;
@@ -18,7 +17,13 @@ public class Item : MonoBehaviour
     }
     void Start()
     {
-        sprite = weaponType.sprite;
+        //starts with a raondom Rotation
+        var euler = transform.eulerAngles;
+        euler.z = Random.Range(0, 360);
+        transform.eulerAngles = euler;
+
+        SpriteRenderer ItemSprite = this.gameObject.GetComponent<SpriteRenderer>();
+        ItemSprite.sprite = weaponType.sprite;
 
         if(IsItThrown == true){
             Thrown();
@@ -26,12 +31,13 @@ public class Item : MonoBehaviour
     }
     void Update()
     {
-       if(IsItThrown == true)
-       {
-        DOVirtual.Float( thrownForce, 0, 3, LeanghtThrown =>{thrownForce = LeanghtThrown;});
+       
+        if(IsItThrown == true)
+        {
+            DOVirtual.Float( thrownForce, 0, 3, LeanghtThrown =>{thrownForce = LeanghtThrown;});
 
-        transform.position = Vector3.MoveTowards(transform.position, mousePos, thrownForce * Time.deltaTime);
-       }
+            transform.position = Vector3.MoveTowards(transform.position, mousePos, thrownForce);
+        }
        
     }
     public void Thrown()
