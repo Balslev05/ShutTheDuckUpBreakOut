@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,7 @@ public class Objects_Weapons : ScriptableObject
     public int Durability; // how many hits you can hit 
     public int weight; // Slows the Cooldown
     public int KnockBack; //knockbacks the enemy
-    
+
+    public  float throwSpeed;
 }
     

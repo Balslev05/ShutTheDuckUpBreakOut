@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff8fdc283a257db4e8ab8ca0ab712840, type: 3}
-  m_Name: Sword
+  m_Name: CrowBar
   m_EditorClassIdentifier: 
-  sprite: {fileID: -1242261701, guid: 4fd83dc4293e8fc489ab76e6f0c339f4, type: 3}
-  Damage: 2
-  Durability: 3
+  sprite: {fileID: -468555503, guid: 67aa647521ab78342a86659b3c2f4e0f, type: 3}
+  Damage: 1
+  Durability: 2
   weight: 1
   KnockBack: 1
+  throwSpeed: 0.1

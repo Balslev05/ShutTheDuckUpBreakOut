@@ -15,6 +15,9 @@ public class Weapon : MonoBehaviour
     public int throwForce;
     public bool ReadyToAttack;
 
+    public float ChargeTimer;
+    public float Time_Charge;
+
     //Stats Based on Scriptebal Object
     [Header ("Stats")]
     [SerializeField] private int Damage;  // the damage you do
@@ -26,23 +29,28 @@ public class Weapon : MonoBehaviour
     void Awake()
     {
         KnockBack *= -1;
-
+        
     }
 
     void Update()
     {
         //throw
-        if(Input.GetKeyDown(KeyCode.Space) && playerStats.CarryingWeapon == true)
+        if(Input.GetKey(KeyCode.Space) && playerStats.CarryingMelee == true)
         {
-            ThrowWeapon();
+            ChargeTimer += Time.deltaTime;
+        }
+
+        if(Input.GetKeyUp(KeyCode.Space) && playerStats.CarryingMelee == true)
+        {
+            AttemptToThrow();  
         }
         //destroy the weapon
-        if(Durability <= 0 && playerStats.CarryingWeapon == true)
+        if(Durability <= 0 && playerStats.CarryingMelee == true)
         {
             DestroyWeapon();
         }
         //Attack
-        if(Input.GetKeyDown(KeyCode.Mouse0) && ReadyToAttack && playerStats.CarryingWeapon == true)
+        if(Input.GetKeyDown(KeyCode.Mouse0) && ReadyToAttack && playerStats.CarryingMelee == true)
         {
             Attack();
         }
@@ -60,18 +68,15 @@ public class Weapon : MonoBehaviour
 
             collider.transform.position += dirFromAttack * KnockBack;
 
-           print("wow");
             Durability --;
             
         }           
     }
-  
     IEnumerator AttackCooldown()
     {
         yield return new WaitForSeconds(Attack_Cooldown + weight / 4);
         ReadyToAttack = true;
     }
-    
     void Attack()
     {
         ReadyToAttack = false;
@@ -80,12 +85,10 @@ public class Weapon : MonoBehaviour
 
         StartCoroutine(AttackCooldown());
     }
-
     public void DestroyWeapon()
     {
         resetsweapon();
     }
-
     public void PickUpWeapon()
     {    
         Damage = CurrentWeapon.Damage;
@@ -97,13 +100,26 @@ public class Weapon : MonoBehaviour
         ItemSprite.sprite = CurrentWeapon.sprite;
         this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
     }
+      public void AttemptToThrow()
+    {
+      if(ChargeTimer >= Time_Charge){
+        ThrowWeapon(); 
+    
+
+      } 
+      ChargeTimer = 0;     
+
+    }
+    
     public void ThrowWeapon()
     {
-        playerStats.CarryingWeapon = false;
+        playerStats.CarryingMelee = false;
         resetsweapon();
         GameObject thrownWeapon = Instantiate(ItemDrop, transform.position, transform.rotation); 
-        thrownWeapon.GetComponent<Item>().weaponType = CurrentWeapon;
-        //thrownWeapon.AddComponent<>
+        thrownWeapon.GetComponent<Item_Melee>().MeleeType = CurrentWeapon;
+
+        thrownWeapon.GetComponent<Item_Melee>().IsItThrown = true;
+        
         //Throw your current Weapon
     }
     public void resetsweapon()
