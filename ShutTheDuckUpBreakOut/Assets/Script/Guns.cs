@@ -19,7 +19,7 @@ public class Guns : MonoBehaviour
     [Header ("Stats")]
     public int SpeedBullet; // how fast bullet goes
     public float BulletSpread;
-    [SerializeField] private int BulletDamage; // damage that you do
+    [SerializeField] private float BulletDamage; // damage that you do
     [SerializeField] private int ShotsInMagasin; // how many times it can shoots
     [SerializeField] private int RealodeSpeed; // how fast you realode
     [SerializeField] private int TimebetweenShots; // the damage you do
@@ -73,7 +73,7 @@ public class Guns : MonoBehaviour
             collider.transform.position += dirFromAttack * KnockBack;
             
 
-            ShotsInMagasin --;
+            
             
         }           
     }
@@ -93,6 +93,8 @@ public class Guns : MonoBehaviour
         {
             GameObject bullet = Instantiate(BulletPrefab, ShootPoint.position, transform.parent.rotation);
         }
+
+        ShotsInMagasin --;
 
         ReadyToShoot = false;
         

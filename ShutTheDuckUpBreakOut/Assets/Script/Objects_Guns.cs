@@ -7,7 +7,7 @@ using UnityEngine;
 public class Objects_Guns : ScriptableObject {
     public Sprite sprite;
     public int Weight;
-    public int BulletDamage;  // the damage you do
+    public float BulletDamage;  // the damage you do
     public int RealoadeSpeed; 
     public int SpeedBullet;  // the damage you do
     public int ShotsInMagasin; // how many hits you can hit

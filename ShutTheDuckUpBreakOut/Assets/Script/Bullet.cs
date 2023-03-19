@@ -44,6 +44,11 @@ public class Bullet : MonoBehaviour
     {
         if(collider.gameObject.tag == "Enemy")
         {
+
+            collider.GetComponent<Health>().currentHealth--;
+
+
+
             Destroy(gameObject);
         }
     }

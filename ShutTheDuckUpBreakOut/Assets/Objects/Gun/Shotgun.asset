@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: -232587261, guid: 4fd83dc4293e8fc489ab76e6f0c339f4, type: 3}
   Weight: 2
-  BulletDamage: 1
+  BulletDamage: 0.2
   RealoadeSpeed: 2
   SpeedBullet: 25
   ShotsInMagasin: 4
