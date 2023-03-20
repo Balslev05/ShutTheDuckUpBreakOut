@@ -12,16 +12,19 @@ public class Item_Gun : MonoBehaviour
     Vector3 mousePos;
     [SerializeField] private float thrownForce = 250;
 
-
+    private SpriteRenderer ItemSprite;
     
     private float speed;
     private Vector3 lastPos;
     void Awake()
     {
         rb = this.gameObject.GetComponent<Rigidbody2D>();
+        ItemSprite = this.gameObject.GetComponent<SpriteRenderer>();
     }
     void Start()
     {
+        ItemSprite.sprite = GunType.sprite;    
+
         //starts with a raondom Rotation
         var euler = transform.eulerAngles;
         euler.z = Random.Range(0, 360);
@@ -33,12 +36,13 @@ public class Item_Gun : MonoBehaviour
     }
     void Update()
     {
-        SpriteRenderer ItemSprite = this.gameObject.GetComponent<SpriteRenderer>();
-        ItemSprite.sprite = GunType.sprite;              
+
     }
+
 
     public void Thrown()
     {
+
         //Finds the mouse place to throw
         Vector2 tempPos = transform.position;
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

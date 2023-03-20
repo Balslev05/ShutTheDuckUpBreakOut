@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int  maxhealth;
+    public int  maxHealth;
     public float currentHealth;
 
 
     void Start()
     {
-        currentHealth = maxhealth;
+        currentHealth = maxHealth;
     }
     void Update()
     {

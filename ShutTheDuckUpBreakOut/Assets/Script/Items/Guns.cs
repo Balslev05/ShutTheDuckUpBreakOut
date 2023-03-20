@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Guns : MonoBehaviour
 {
-    public Transform ShootPoint;
+    public GameObject ItemDrop;
     public GameObject BulletPrefab;
     public Objects_Guns CurrentGun;
-    public GameObject ItemDrop;
     public Player playerStats;
+    public Transform ShootPoint;
     public Animator GunAnim;
+    public bool HasAGun;
     public bool ReadyToShoot;
     [Header ("Throw")]
     public float ChargeTimer;
@@ -19,14 +20,15 @@ public class Guns : MonoBehaviour
     [Header ("Stats")]
     public int SpeedBullet; // how fast bullet goes
     public float BulletSpread;
-    [SerializeField] private float BulletDamage; // damage that you do
-    [SerializeField] private int ShotsInMagasin; // how many times it can shoots
-    [SerializeField] private int RealodeSpeed; // how fast you realode
-    [SerializeField] private int TimebetweenShots; // the damage you do
-    [SerializeField] private int BulletFiredPerShot; // how many bullets that are Shots  
-    [SerializeField] private int Gunweight; // Slows the Cooldown
-    [SerializeField] private int KnockBack; //knockbacks the enemy
-    [SerializeField] private Sprite GunSprite; // gun sprite
+    public float BulletDamage; // damage that you do
+    public int ShotsInMagasin; // how many times it can shoots
+    public int RealodeSpeed; // how fast you realode
+    public int TimebetweenShots; // the damage you do
+    public int BulletFiredPerShot; // how many bullets that are Shots  
+    public int Gunweight; // Slows the Cooldown
+    public int KnockBack; //knockbacks the enemy
+    public Sprite GunSprite; // gun sprite
+
     
     void Awake()
     {
@@ -36,7 +38,11 @@ public class Guns : MonoBehaviour
 
     void Update()
     {
-        
+        if(playerStats.CarryingGun == false)
+        {
+            return;
+        }
+
         //throw
         if(Input.GetKey(KeyCode.Space) && playerStats.CarryingGun == true)
         {
@@ -60,27 +66,11 @@ public class Guns : MonoBehaviour
         }
     }
 
-    
-    public void OnTriggerEnter2D(Collider2D collider)
-
-    {
-        if(collider.gameObject.tag == "Enemy")
-        {
-            collider.GetComponent<Health>().currentHealth -= BulletDamage;
-
-            Vector3 dirFromAttack = - (collider.transform.position - transform.position).normalized;
-
-            collider.transform.position += dirFromAttack * KnockBack;
-            
-
-            
-            
-        }           
-    }
     void Shoot()
     {
         
         ReadyToShoot = false;
+
         if(Gunweight >= 3){
             //play anim HeavyAnim
             GunAnim.Play("GunFireHeavy");
@@ -106,12 +96,9 @@ public class Guns : MonoBehaviour
         yield return new WaitForSeconds(TimebetweenShots + Gunweight / 4);
         ReadyToShoot = true;
     }
-    public void DestroyWeapon()
-    {
-        resetsweapon();
-    }
     public void PickUpWeapon()
     {      
+        playerStats.CarryingGun = true;
         ReadyToShoot = true;
 
         BulletDamage = CurrentGun.BulletDamage;
@@ -158,10 +145,16 @@ public class Guns : MonoBehaviour
         ShotsInMagasin = 0;
         Gunweight = 0;
         this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        playerStats.CarryingGun = false;
+
         
        
     }
 
+    public void DestroyWeapon()
+    {
+        resetsweapon();
+    }
 
 
 }

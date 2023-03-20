@@ -4,16 +4,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using DG.Tweening;
+
 public class bossSystem : MonoBehaviour
 {
-
+    public CinemachineVirtualCamera Player_Camera;
+    public Animator Boss_Anim;
+    public int BattelCamZoom;
     public int FinderRange;
+    public int TimeBetweenAttack;
+    public bool ReadyToAttack = false;
+    
     private Health BossHealth;
     private GameObject player;
-    public CinemachineVirtualCamera Player_Camera;
-
-    public int BattelCamZoom;
-    
 
 
     void Start()
@@ -41,14 +43,42 @@ public class bossSystem : MonoBehaviour
     {
         DOVirtual.Float( Player_Camera.m_Lens.OrthographicSize, BattelCamZoom, 2, LensZoomOut =>{Player_Camera.m_Lens.OrthographicSize = LensZoomOut;}).SetEase(Ease.OutCubic);
 
+        StartCoroutine(BossWaitingToAttack());
+    }
+    IEnumerator BossWaitingToAttack()
+    {
+        yield return new WaitForSeconds(TimeBetweenAttack);
 
+
+        if(ReadyToAttack == true)
+        {
+            AttackPlayer();
+        }
+
+   }
+    public void AttackPlayer()
+    {
+        int BossAttack;
+        
+        BossAttack = Random.Range(1,4);
+
+        Attack(BossAttack);
+        
     }
 
-    public void AttackPlayer(){
-        int BossAttack;
-        BossAttack = Random.Range(0,5);
+    public void Attack(int attackNumber)
+    {
+        Boss_Anim.Play("Attack"+attackNumber);
 
-    
+        ReadyToAttack = false;
+
+        print("A " + attackNumber);
+    }
+
+    public void FinishAttack()
+    {
+        ReadyToAttack = true;
+        StartCoroutine(BossWaitingToAttack());
     }
 
 

@@ -34,6 +34,11 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
+        if(playerStats.CarryingMelee == false)
+        {
+            return;
+        }
+
         //throw
         if(Input.GetKey(KeyCode.Space) && playerStats.CarryingMelee == true)
         {
@@ -90,7 +95,7 @@ public class Weapon : MonoBehaviour
         resetsweapon();
     }
     public void PickUpWeapon()
-    {    
+    {    playerStats.CarryingMelee = true;
         Damage = CurrentWeapon.Damage;
         KnockBack = CurrentWeapon.KnockBack;
         Durability = CurrentWeapon.Durability;
@@ -129,8 +134,8 @@ public class Weapon : MonoBehaviour
         Durability = 0;
         weight = 0;
         this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        playerStats.CarryingMelee = false;
 
-       
     }
 }
 
