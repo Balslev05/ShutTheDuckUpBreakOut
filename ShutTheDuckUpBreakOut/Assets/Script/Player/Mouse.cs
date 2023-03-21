@@ -11,7 +11,7 @@ public class Mouse : MonoBehaviour
     void Update()
     {
         Vector3 mousepos = cam.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 targetpos =(player.position + mousepos) / 2f;
+        Vector3 targetpos = (player.position + mousepos) / 2f;
 
         targetpos.x = Mathf.Clamp(targetpos.x, -MaxDistance + player.position.x, MaxDistance + player.position.x);
         targetpos.y = Mathf.Clamp(targetpos.y, -MaxDistance + player.position.y, MaxDistance + player.position.y);

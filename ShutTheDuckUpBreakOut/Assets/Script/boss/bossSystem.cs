@@ -1,12 +1,14 @@
+using System.Net.Mime;
 using System.IO.Pipes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using DG.Tweening;
-
+using UnityEngine.UI;
 public class bossSystem : MonoBehaviour
 {
+    public Image HealthUI;
     public CinemachineVirtualCamera Player_Camera;
     public Animator Boss_Anim;
     public int BattelCamZoom;
@@ -16,6 +18,7 @@ public class bossSystem : MonoBehaviour
     
     private Health BossHealth;
     private GameObject player;
+
 
 
     void Start()
@@ -30,6 +33,9 @@ public class bossSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+          HealthUI.fillAmount = BossHealth.currentHealth / 100;
+
+
         if(Vector2.Distance(transform.position,player.transform.position) < FinderRange * 10)
         {
             FoundPlayer();

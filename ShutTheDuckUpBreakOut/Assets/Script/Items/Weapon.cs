@@ -63,37 +63,31 @@ public class Weapon : MonoBehaviour
 
     
     public void OnTriggerEnter2D(Collider2D collider)
-
     {
         if(collider.gameObject.tag == "Enemy")
         {
             collider.GetComponent<Health>().currentHealth -= Damage;
-
             Vector3 dirFromAttack = - (collider.transform.position - transform.position).normalized;
-
             collider.transform.position += dirFromAttack * KnockBack;
 
-            Durability --;
-            
+            Durability --;            
         }           
     }
+
     IEnumerator AttackCooldown()
     {
         yield return new WaitForSeconds(Attack_Cooldown + weight / 4);
         ReadyToAttack = true;
     }
+
     void Attack()
     {
         ReadyToAttack = false;
-
         WeaponAnim.Play("WeaponAttackAnimation");
-
         StartCoroutine(AttackCooldown());
     }
-    public void DestroyWeapon()
-    {
-        resetsweapon();
-    }
+
+    
     public void PickUpWeapon()
     {    playerStats.CarryingMelee = true;
         Damage = CurrentWeapon.Damage;
@@ -119,7 +113,7 @@ public class Weapon : MonoBehaviour
     public void ThrowWeapon()
     {
         playerStats.CarryingMelee = false;
-        resetsweapon();
+        ResetWeapon();
         GameObject thrownWeapon = Instantiate(ItemDrop, transform.position, transform.rotation); 
         thrownWeapon.GetComponent<Item_Melee>().MeleeType = CurrentWeapon;
 
@@ -127,15 +121,20 @@ public class Weapon : MonoBehaviour
         
         //Throw your current Weapon
     }
-    public void resetsweapon()
+    
+    public void ResetWeapon()
     {
         Damage = 0;
         KnockBack = 0;
         Durability = 0;
         weight = 0;
-        this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<SpriteRenderer>().enabled = false;
         playerStats.CarryingMelee = false;
+    }
 
+    public void DestroyWeapon()
+    {
+        ResetWeapon();
     }
 }
 
