@@ -19,6 +19,19 @@ public class bossSystem : MonoBehaviour
     private Health BossHealth;
     private GameObject player;
 
+     [Header ("Attack1")]
+     public GameObject EGG;
+
+
+    [Header ("Introduction")]
+    public bool Introduction = false;
+    public GameObject Introduction_BossCamera;
+    public GameObject Introduction_PlayerCamera;
+    
+
+    
+
+
 
 
     void Start()
@@ -30,7 +43,6 @@ public class bossSystem : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
           HealthUI.fillAmount = BossHealth.currentHealth / 100;
@@ -38,21 +50,29 @@ public class bossSystem : MonoBehaviour
 
         if(Vector2.Distance(transform.position,player.transform.position) < FinderRange * 10)
         {
+            if(Introduction == true) // looking if the intrroduction have been played if not it starts the introduction
+            {
             FoundPlayer();
+            }
+            else
+            {
+                StartBossIntroduction();
+            }
         }
     }
-
-
-
 
     public void FoundPlayer()
     {
         DOVirtual.Float( Player_Camera.m_Lens.OrthographicSize, BattelCamZoom, 2, LensZoomOut =>{Player_Camera.m_Lens.OrthographicSize = LensZoomOut;}).SetEase(Ease.OutCubic);
 
+        if(ReadyToAttack == true)
+        {
         StartCoroutine(BossWaitingToAttack());
+        }
     }
     IEnumerator BossWaitingToAttack()
     {
+        print("Waiting");
         yield return new WaitForSeconds(TimeBetweenAttack);
 
 
@@ -77,14 +97,41 @@ public class bossSystem : MonoBehaviour
         Boss_Anim.Play("Attack"+attackNumber);
 
         ReadyToAttack = false;
-
-        print("A " + attackNumber);
     }
 
     public void FinishAttack()
     {
         ReadyToAttack = true;
-        StartCoroutine(BossWaitingToAttack());
+    }
+
+
+    public void SpawnEGG()
+    {
+        Instantiate(EGG, transform.position, this.gameObject.transform.rotation);
+    }
+
+    // introduction's
+
+    public void StartBossIntroduction()
+    {
+        print("start1");
+        Introduction_BossCamera.SetActive(true);
+        Introduction_PlayerCamera.SetActive(false);
+
+        Boss_Anim.Play("Introduction");
+        print("start2");
+
+    }
+    public void EndBossIntroduction()
+    {
+        Introduction = true;
+        print("End1");
+
+        Introduction_BossCamera.SetActive(false);
+    
+        Introduction_PlayerCamera.SetActive(true);
+        print("End2");
+
     }
 
 
