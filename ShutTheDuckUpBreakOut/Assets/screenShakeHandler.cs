@@ -5,21 +5,13 @@ using UnityEngine;
 public class screenShakeHandler : MonoBehaviour
 {
     public float duratoin;
-    public bool BeginScreenShake = false;
     public AnimationCurve Anim;
     
    
-     void Update()
-    {
-        if(BeginScreenShake)
-        {
-            BeginScreenShake = false;
-            StartCoroutine(ScreenShake());
-        }    
-    }
 
-   IEnumerator ScreenShake()
+  public IEnumerator ScreenShakeNormal()
    {
+    print("SHAKE!!!");
     Vector3 startpos = transform.position;
     float Timer = 0;
 
@@ -32,5 +24,10 @@ public class screenShakeHandler : MonoBehaviour
         yield return null;
     }
     transform.position = startpos;
+   }
+
+   public void StartScreenShake()
+   {
+    StartCoroutine(ScreenShakeNormal());
    }
 }

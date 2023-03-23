@@ -72,7 +72,7 @@ public class bossSystem : MonoBehaviour
     }
     IEnumerator BossWaitingToAttack()
     {
-        print("Waiting");
+        
         yield return new WaitForSeconds(TimeBetweenAttack);
 
 
@@ -95,6 +95,8 @@ public class bossSystem : MonoBehaviour
     public void Attack(int attackNumber)
     {
         Boss_Anim.Play("Attack"+attackNumber);
+
+        print(attackNumber);
 
         ReadyToAttack = false;
     }
