@@ -29,10 +29,17 @@ public class Guns : MonoBehaviour
     public int KnockBack; //knockbacks the enemy
     public Sprite GunSprite; // gun sprite
 
+
+    private screenShakeHandler ScreenShake;
     
     void Awake()
     {
         KnockBack *= -1;
+
+    }
+    void Start()
+    {
+        ScreenShake = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<screenShakeHandler>();
 
     }
 
@@ -84,6 +91,8 @@ public class Guns : MonoBehaviour
             GameObject bullet = Instantiate(BulletPrefab, ShootPoint.position, transform.parent.rotation);
         }
 
+        ScreenShake.StartScreenShakeSmall();
+        
         ShotsInMagasin --;
 
         ReadyToShoot = false;
