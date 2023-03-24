@@ -91,7 +91,7 @@ public class Guns : MonoBehaviour
             GameObject bullet = Instantiate(BulletPrefab, ShootPoint.position, transform.parent.rotation);
         }
 
-        ScreenShake.StartScreenShakeSmall();
+        ScreenShake.StartShake(0.1f,0.5f,0.25f);
         
         ShotsInMagasin --;
 

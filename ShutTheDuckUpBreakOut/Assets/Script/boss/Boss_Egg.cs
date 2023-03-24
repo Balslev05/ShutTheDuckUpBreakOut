@@ -22,7 +22,7 @@ public class Boss_Egg : MonoBehaviour
 
     public void EggScreenShake()
     {
-        screenshake.StartScreenShakeHard();
+       screenshake.StartShake(0.1f,5,10);
     }
     public void EggExploade()
     {
