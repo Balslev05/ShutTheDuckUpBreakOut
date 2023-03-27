@@ -21,6 +21,8 @@ public class bossSystem : MonoBehaviour
 
      [Header ("Attack1")]
      public GameObject EGG;
+     public ParticleSystem Partical_Feathers;
+     
 
 
     [Header ("Introduction")]
@@ -110,6 +112,10 @@ public class bossSystem : MonoBehaviour
     public void SpawnEGG()
     {
         Instantiate(EGG, transform.position, this.gameObject.transform.rotation);
+    }
+     public void SpawnFeathers()
+    {
+        Instantiate(Partical_Feathers, transform.position, this.gameObject.transform.rotation);
     }
 
     // introduction's
