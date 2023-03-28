@@ -19,7 +19,12 @@ public class bossSystem : MonoBehaviour
     private Health BossHealth;
     private GameObject player;
 
-     [Header ("Attack1")]
+
+
+
+
+     [Header ("Attacks")]
+    public screenShakeHandler screenShake;
      public GameObject EGG;
      public ParticleSystem Partical_Feathers;
      
@@ -113,9 +118,11 @@ public class bossSystem : MonoBehaviour
     {
         Instantiate(EGG, transform.position, this.gameObject.transform.rotation);
     }
+
      public void SpawnFeathers()
     {
         Instantiate(Partical_Feathers, transform.position, this.gameObject.transform.rotation);
+        screenShake.StartShake(0.3f,5,3);
     }
 
     // introduction's

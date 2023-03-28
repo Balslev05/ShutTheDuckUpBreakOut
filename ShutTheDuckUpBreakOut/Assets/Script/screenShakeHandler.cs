@@ -33,7 +33,7 @@ public class screenShakeHandler : MonoBehaviour
   
 
   
-  public IEnumerator ShakeScreen()
+    IEnumerator ShakeScreen()
    {  
 
     yield return new WaitForSeconds(ScreenShakeDuration);
