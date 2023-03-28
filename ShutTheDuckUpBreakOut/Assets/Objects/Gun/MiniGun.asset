@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bb331dd260ff594387ed7684aa38692, type: 3}
-  m_Name: Rifel
+  m_Name: MiniGun
   m_EditorClassIdentifier: 
-  sprite: {fileID: -1444367571, guid: 80d5940fb7521354b877e5a9f7015249, type: 3}
-  TimeBetweenShots: 0.2
-  BulletDamage: 2
-  Weight: 0
-  SpeedBullet: 45
-  ShotsInMagasin: 600
+  sprite: {fileID: 0}
+  TimeBetweenShots: 0
+  BulletDamage: 0.5
+  Weight: 10
+  SpeedBullet: 35
+  ShotsInMagasin: 999
   bulletFiredPerShot: 1
-  knockBack: 2
-  bulletSPread: 0.05
+  knockBack: 0
+  bulletSPread: 0.005
   HoldToFire: 1

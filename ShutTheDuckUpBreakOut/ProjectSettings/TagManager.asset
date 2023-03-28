@@ -9,11 +9,12 @@ TagManager:
   - Melee
   - PlayerGunStats
   - CMBrain
+  - Terrain
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Terrain
   - Water
   - UI
   - Player

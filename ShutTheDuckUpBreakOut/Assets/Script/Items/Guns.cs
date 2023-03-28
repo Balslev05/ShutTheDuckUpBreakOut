@@ -18,15 +18,15 @@ public class Guns : MonoBehaviour
 
     //Stats Based on Scriptebal Object
     [Header ("Stats")]
-    public int SpeedBullet; // how fast bullet goes
     public float BulletSpread;
     public float BulletDamage; // damage that you do
+    public float TimeBetweenShots; // how fast you realode
     public int ShotsInMagasin; // how many times it can shoots
-    public int RealodeSpeed; // how fast you realode
-    public int TimebetweenShots; // the damage you do
+    public int SpeedBullet; // how fast bullet goes
     public int BulletFiredPerShot; // how many bullets that are Shots  
     public int Gunweight; // Slows the Cooldown
     public int KnockBack; //knockbacks the enemy
+    public bool holdToFire;
     public Sprite GunSprite; // gun sprite
 
 
@@ -65,8 +65,12 @@ public class Guns : MonoBehaviour
         {
             DestroyWeapon();
         }
+        if(holdToFire == true && Input.GetKey(KeyCode.Mouse0) && ReadyToShoot && playerStats.CarryingGun == true)
+        {
+            Shoot();
+        }
         //Attack
-        if(Input.GetKeyDown(KeyCode.Mouse0) && ReadyToShoot == true && playerStats.CarryingGun == true)
+        if(holdToFire == false && Input.GetKeyDown(KeyCode.Mouse0) && ReadyToShoot == true && playerStats.CarryingGun == true)
         {
             
             Shoot();
@@ -94,15 +98,13 @@ public class Guns : MonoBehaviour
         ScreenShake.StartShake(0.1f,0.5f,0.25f);
         
         ShotsInMagasin --;
-
-        ReadyToShoot = false;
         
         StartCoroutine(AttackCooldown());
     }
  
     IEnumerator AttackCooldown()
     {
-        yield return new WaitForSeconds(TimebetweenShots + Gunweight / 4);
+        yield return new WaitForSeconds(TimeBetweenShots);
         ReadyToShoot = true;
     }
     public void PickUpWeapon()
@@ -111,13 +113,15 @@ public class Guns : MonoBehaviour
         ReadyToShoot = true;
 
         BulletDamage = CurrentGun.BulletDamage;
-        RealodeSpeed = CurrentGun.RealoadeSpeed;
+        TimeBetweenShots = CurrentGun.TimeBetweenShots;
         SpeedBullet = CurrentGun.SpeedBullet;
         ShotsInMagasin = CurrentGun.ShotsInMagasin;
         BulletFiredPerShot = CurrentGun.bulletFiredPerShot;
         Gunweight = CurrentGun.Weight;
         BulletSpread = CurrentGun.bulletSPread;
         KnockBack = CurrentGun.knockBack;
+        holdToFire = CurrentGun.HoldToFire;
+
 
         SpriteRenderer ItemSprite = this.gameObject.GetComponent<SpriteRenderer>();
         ItemSprite.sprite = CurrentGun.sprite;
