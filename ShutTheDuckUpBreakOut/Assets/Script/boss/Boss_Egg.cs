@@ -6,6 +6,8 @@ public class Boss_Egg : MonoBehaviour
 {
     private screenShakeHandler screenshake;
     public ParticleSystem EggSlices;
+    public GameObject Enemies;
+    public int SpawningEnemies;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,5 +29,9 @@ public class Boss_Egg : MonoBehaviour
     public void EggExploade()
     {
         Instantiate(EggSlices,this.transform.position,Quaternion.identity);
+        for (int i = 0; i < SpawningEnemies; i++)
+        {
+        Instantiate(Enemies,this.transform.position,Quaternion.identity);
+        }
     }
 }

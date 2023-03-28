@@ -8,7 +8,6 @@ public class Health : MonoBehaviour
     public int  maxHealth;
     public float currentHealth;
 
-
     void Start()
     {
         currentHealth = maxHealth;
