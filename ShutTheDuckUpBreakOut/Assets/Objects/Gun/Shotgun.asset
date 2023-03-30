@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Shotgun
   m_EditorClassIdentifier: 
   sprite: {fileID: -232587261, guid: 4fd83dc4293e8fc489ab76e6f0c339f4, type: 3}
-  Weight: 2
+  TimeBetweenShots: 0
   BulletDamage: 0.2
-  RealoadeSpeed: 2
+  Weight: 2
   SpeedBullet: 25
   ShotsInMagasin: 4
   bulletFiredPerShot: 4
   knockBack: 2
   bulletSPread: 0.4
+  HoldToFire: 0
+  BulletSize: {x: 1, y: 1, z: 1}
+  GunScreenshake: 3

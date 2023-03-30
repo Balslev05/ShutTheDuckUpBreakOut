@@ -15,6 +15,8 @@ public class Objects_Guns : ScriptableObject {
     public int knockBack; // knockback
     public float bulletSPread; // bulletSpread
     public bool HoldToFire;
+    public Vector3 BulletSize;
+    public float GunScreenshake;
+
 
 }
-

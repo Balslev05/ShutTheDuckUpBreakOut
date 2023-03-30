@@ -24,10 +24,12 @@ public class Guns : MonoBehaviour
     public int ShotsInMagasin; // how many times it can shoots
     public int SpeedBullet; // how fast bullet goes
     public int BulletFiredPerShot; // how many bullets that are Shots  
+    public Vector3 Bulletsize; // how big is the bullet
     public int Gunweight; // Slows the Cooldown
     public int KnockBack; //knockbacks the enemy
     public bool holdToFire;
     public Sprite GunSprite; // gun sprite
+    public float GunScreenShake;
 
 
     private screenShakeHandler ScreenShake;
@@ -93,9 +95,10 @@ public class Guns : MonoBehaviour
         for (int i = 0; i < BulletFiredPerShot; i++)
         {
             GameObject bullet = Instantiate(BulletPrefab, ShootPoint.position, transform.parent.rotation);
+            bullet.transform.localScale = Bulletsize;
         }
 
-        ScreenShake.StartShake(0.1f,0.5f,0.25f);
+        ScreenShake.StartShake(0.1f,GunScreenShake,0.5f);
         
         ShotsInMagasin --;
         
@@ -121,6 +124,8 @@ public class Guns : MonoBehaviour
         BulletSpread = CurrentGun.bulletSPread;
         KnockBack = CurrentGun.knockBack;
         holdToFire = CurrentGun.HoldToFire;
+        Bulletsize = CurrentGun.BulletSize;
+        GunScreenShake = CurrentGun.GunScreenshake;
 
 
         SpriteRenderer ItemSprite = this.gameObject.GetComponent<SpriteRenderer>();

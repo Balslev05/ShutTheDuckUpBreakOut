@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff8fdc283a257db4e8ab8ca0ab712840, type: 3}
   m_Name: Axe
   m_EditorClassIdentifier: 
-  sprite: {fileID: 594181640, guid: 7f160a144c651de43837a16a9cf3dd3f, type: 3}
+  sprite: {fileID: -2635633, guid: a3d3105054ecf0a4c8959bb226d7d588, type: 3}
   Damage: 3
   Durability: 1
   weight: 2
