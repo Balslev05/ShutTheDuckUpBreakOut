@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bb331dd260ff594387ed7684aa38692, type: 3}
-  m_Name: Rifel
+  m_Name: Snuper
   m_EditorClassIdentifier: 
-  GunName: Rifel
-  sprite: {fileID: -1444367571, guid: 80d5940fb7521354b877e5a9f7015249, type: 3}
-  TimeBetweenShots: 0.2
-  BulletDamage: 2
-  Weight: 0
-  SpeedBullet: 45
-  ShotsInMagasin: 600
+  GunName: Snuper
+  sprite: {fileID: -928212842, guid: a7b779d9b5150e9439777f56757e32ea, type: 3}
+  TimeBetweenShots: 6
+  BulletDamage: 10
+  Weight: 7
+  SpeedBullet: 60
+  ShotsInMagasin: 2
   bulletFiredPerShot: 1
-  knockBack: 2
-  bulletSPread: 0.05
-  HoldToFire: 1
-  BulletSize: {x: 0.5, y: 0.5, z: 0.5}
-  GunScreenshake: 2
+  knockBack: 50
+  bulletSPread: 0
+  HoldToFire: 0
+  BulletSize: {x: 1.2, y: 1.2, z: 0}
+  GunScreenshake: 6

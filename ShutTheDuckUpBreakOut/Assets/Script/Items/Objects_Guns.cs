@@ -4,7 +4,9 @@ using UnityEngine;
 
 
 [CreateAssetMenu(fileName = "Objects_Guns", menuName = "Guns", order = 0)]
-public class Objects_Guns : ScriptableObject {
+public class Objects_Guns : ScriptableObject 
+{
+    public string GunName;
     public Sprite sprite;
     public float  TimeBetweenShots; 
     public float BulletDamage;  // the damage you do
