@@ -10,6 +10,7 @@ TagManager:
   - PlayerGunStats
   - CMBrain
   - Terrain
+  - Bullet
   layers:
   - Default
   - TransparentFX

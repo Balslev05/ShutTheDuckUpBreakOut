@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ba5026b7a1963814bb9ac6d8dc771651
+guid: 5980aa9e6cd85a74bb2550c643be5834
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,43 +105,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TimerBar_0
+      name: BossFrame_0
       rect:
         serializedVersion: 2
-        x: 138
-        y: 337
-        width: 226
-        height: 27
+        x: 24
+        y: 220
+        width: 1610
+        height: 85
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2c184d17c4bf9646ae69a7df98155e6
-      internalID: -1908064038
+      spriteID: 558ba59741bdad64cb31c8ee7f582d45
+      internalID: 885628270
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TimerBar_1
+      name: BossFrame_1
       rect:
         serializedVersion: 2
-        x: 137
-        y: 136
-        width: 228
-        height: 33
+        x: 24
+        y: 36
+        width: 1610
+        height: 85
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1121d52a7bd8c7c4bae19c1fcee04632
-      internalID: 1402384601
+      spriteID: 7a76ab0be1b616d458e2986cfddd8a1a
+      internalID: 719256715
       vertices: []
       indices: 
       edges: []
@@ -157,8 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TimerBar_0: -1908064038
-      TimerBar_1: 1402384601
+      BossFrame_1: 719256715
+      BossFrame_0: 885628270
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
