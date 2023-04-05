@@ -19,19 +19,16 @@ public class Health : MonoBehaviour
             Death();
         }
     }
-
-    
-
-    void Death()
-    {
-        Destroy(this.gameObject);
-    }
     public void OnTriggerEnter2D(Collider2D collider)
     {
         if(collider.gameObject.tag == "Bullet")
         {
-            collider.GetComponent<Health>().currentHealth--;
+            currentHealth -= collider.GetComponent<Bullet>().BulletDamage;
             Debug.Log("Hit");
         }
 }
+    void Death()
+    {
+        Destroy(this.gameObject);
+    }
 }

@@ -11,9 +11,12 @@ public class Player : MonoBehaviour
   public Guns Gun;
   public bool CarryingMelee = false;
   public bool CarryingGun = false;
-  [Header  ("awdawdawd") ]
+  [Header  ("UI") ]
   public Image GunIcon;
   public TMP_Text MaxInMagasin;
+  public TMP_Text CurrentInMagasin;
+  public TMP_Text GunName;
+  public GameObject GunUI;
 
 
     // Start is called before the first frame update
@@ -30,7 +33,15 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+      if(CarryingGun == true)
+      {
+        UpdateGunUI();
+        GunUI.SetActive(true);
+      }
+      else
+      {
+        GunUI.SetActive(false);
+      }
     }
 
 
@@ -67,7 +78,16 @@ public class Player : MonoBehaviour
 
           Destroy(collider.gameObject);
           Gun.PickUpWeapon();
+          UpdateGunUI();
         }
       }
+    }
+     void UpdateGunUI()
+    {
+
+        MaxInMagasin.text = Gun.MaxShots.ToString();
+        CurrentInMagasin.text = Gun.ShotsInMagasin.ToString();
+        GunName.text = Gun.GunName.ToString();
+        GunIcon.sprite = Gun.GunSprite;
     }
 }

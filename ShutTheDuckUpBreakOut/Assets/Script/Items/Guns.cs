@@ -18,6 +18,7 @@ public class Guns : MonoBehaviour
 
     //Stats Based on Scriptebal Object
     [Header ("Stats")]
+    public int MaxShots;
     public float BulletSpread;
     public float BulletDamage; // damage that you do
     public float TimeBetweenShots; // how fast you realode
@@ -30,6 +31,7 @@ public class Guns : MonoBehaviour
     public bool holdToFire;
     public Sprite GunSprite; // gun sprite
     public float GunScreenShake;
+    public string GunName;
 
 
     private screenShakeHandler ScreenShake;
@@ -126,6 +128,9 @@ public class Guns : MonoBehaviour
         holdToFire = CurrentGun.HoldToFire;
         Bulletsize = CurrentGun.BulletSize;
         GunScreenShake = CurrentGun.GunScreenshake;
+        MaxShots = CurrentGun.ShotsInMagasin;
+        GunName = CurrentGun.GunName;
+        GunSprite = CurrentGun.sprite; 
 
 
         SpriteRenderer ItemSprite = this.gameObject.GetComponent<SpriteRenderer>();

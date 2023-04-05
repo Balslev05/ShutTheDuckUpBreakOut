@@ -7,16 +7,16 @@ public class Bullet : MonoBehaviour
     private Vector3 mousepos;
     private  Camera MainCamera;
     public float force;  
-    private Guns BulletStats;
+    public Guns BulletStats;
     public Rigidbody2D rb;
-    
+    public float BulletDamage;
     // Start is called before the first frame update
     void Start()
     {
-                // remeber to change the obtject
         MainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 
         BulletStats = GameObject.FindGameObjectWithTag("PlayerGunStats").GetComponent<Guns>();
+        BulletDamage = BulletStats.BulletDamage;
 
         rb = GetComponent<Rigidbody2D>();
     /*
@@ -32,24 +32,18 @@ public class Bullet : MonoBehaviour
         float Spreadangle = Random.Range(-BulletStats.BulletSpread, BulletStats.BulletSpread);
 
         rb.velocity = (transform.right+transform.up * Spreadangle).normalized * BulletStats.SpeedBullet;
+
         Destroy(gameObject,2);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-    public void OnTriggerEnter2D(Collider2D collider)
+    void OnCollisionEnter(Collision other)
     {
-        if(collider.gameObject.tag == "Enemy")
-        {
-
-            collider.GetComponent<Health>().currentHealth--;
-
-
-
-            Destroy(gameObject);
-        }
+        Destroy(this.gameObject);
     }
+   
 }
