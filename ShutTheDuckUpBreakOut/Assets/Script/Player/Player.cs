@@ -1,7 +1,9 @@
+using System.Net.Mime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -9,6 +11,9 @@ public class Player : MonoBehaviour
   public Guns Gun;
   public bool CarryingMelee = false;
   public bool CarryingGun = false;
+  [Header  ("awdawdawd") ]
+  public Image GunIcon;
+  public TMP_Text MaxInMagasin;
 
 
     // Start is called before the first frame update
