@@ -24,7 +24,6 @@ public class Health : MonoBehaviour
         if(collider.gameObject.tag == "Bullet")
         {
             currentHealth -= collider.GetComponent<Bullet>().BulletDamage;
-            Debug.Log("Hit");
         }
 }
     void Death()
