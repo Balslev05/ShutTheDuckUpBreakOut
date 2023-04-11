@@ -36,7 +36,7 @@ public class Item_Gun : MonoBehaviour
     }
     void Update()
     {
-
+        transform.localScale = GunType.GunSize;
     }
 
 

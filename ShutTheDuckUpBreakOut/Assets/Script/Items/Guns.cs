@@ -31,7 +31,9 @@ public class Guns : MonoBehaviour
     public bool holdToFire;
     public Sprite GunSprite; // gun sprite
     public float GunScreenShake;
+    public Vector3 GunSize;
     public string GunName;
+    
 
 
     private screenShakeHandler ScreenShake;
@@ -49,6 +51,8 @@ public class Guns : MonoBehaviour
 
     void Update()
     {
+        this.gameObject.transform.localScale = GunSize;
+
         if(playerStats.CarryingGun == false)
         {
             return;
@@ -130,7 +134,8 @@ public class Guns : MonoBehaviour
         GunScreenShake = CurrentGun.GunScreenshake;
         MaxShots = CurrentGun.ShotsInMagasin;
         GunName = CurrentGun.GunName;
-        GunSprite = CurrentGun.sprite; 
+        GunSprite = CurrentGun.sprite;
+        GunSize = CurrentGun.GunSize; 
 
 
         SpriteRenderer ItemSprite = this.gameObject.GetComponent<SpriteRenderer>();

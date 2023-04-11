@@ -8,12 +8,24 @@ public class Health : MonoBehaviour
     public int  maxHealth;
     public float currentHealth;
 
+
+
+    [Header ("Knockback")]
+     public float knockbackForce = 5.0f;      // The force of the knockback
+    public float knockbackDuration = 0.5f;  // The duration of the knockback effect
+
+
+    private Rigidbody2D rb2D;              // Reference to the Rigidbody2D component
+    private Vector2 knockbackDirection;   // The direction of the knockback
+    private float knockbackTimer;        // Timer for the knockback effect
+
     void Start()
     {
         currentHealth = maxHealth;
     }
     void Update()
     {
+        this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
         if(currentHealth <= 0)
         {
             Death();
@@ -30,4 +42,5 @@ public class Health : MonoBehaviour
     {
         Destroy(this.gameObject);
     }
+    
 }

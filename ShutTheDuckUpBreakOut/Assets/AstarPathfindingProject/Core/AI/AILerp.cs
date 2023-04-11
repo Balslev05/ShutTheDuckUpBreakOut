@@ -642,7 +642,7 @@ namespace Pathfinding {
 		Quaternion SimulateRotationTowards (Vector3 direction, float deltaTime) {
 			// Rotate unless we are really close to the target
 			if (direction != Vector3.zero) {
-				Quaternion targetRotation = Quaternion.LookRotation(direction, orientation == OrientationMode.YAxisForward ? Vector3.back : Vector3.up);
+				Quaternion targetRotation = Quaternion.identity;
 				// This causes the character to only rotate around the Z axis
 				if (orientation == OrientationMode.YAxisForward) targetRotation *= Quaternion.Euler(90, 0, 0);
 				return Quaternion.Slerp(simulatedRotation, targetRotation, deltaTime * rotationSpeed);

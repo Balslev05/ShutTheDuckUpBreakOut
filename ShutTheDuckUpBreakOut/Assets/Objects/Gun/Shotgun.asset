@@ -24,4 +24,5 @@ MonoBehaviour:
   bulletSPread: 0.4
   HoldToFire: 0
   BulletSize: {x: 1, y: 1, z: 1}
+  GunSize: {x: 1, y: 1, z: 1}
   GunScreenshake: 3

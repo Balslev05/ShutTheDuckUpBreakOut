@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4fd83dc4293e8fc489ab76e6f0c339f4
+guid: 6bcf4cd6a910e8240a2e4ab61fe428c3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,43 +105,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sword
+      name: GooseRun_0
       rect:
         serializedVersion: 2
-        x: 180
-        y: 103
-        width: 7
-        height: 28
-      alignment: 9
-      pivot: {x: 0.45453754, y: 0.14386423}
+        x: 0
+        y: 0
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f44ad71865e62c4bb28067804490974
-      internalID: -1242261701
+      spriteID: c3e2b96702dad8145ba0d1b2f1b4c932
+      internalID: 1131863914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shotgun
+      name: GooseRun_1
       rect:
         serializedVersion: 2
-        x: 65
-        y: 119
-        width: 36
-        height: 12
-      alignment: 9
-      pivot: {x: 0.11192343, y: 0.4224167}
+        x: 96
+        y: 0
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44ced2e90e94b8546b13822b4f063d02
-      internalID: -232587261
+      spriteID: 36c0ea4e60a16734aa08610bce1fb3cc
+      internalID: 901660695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GooseRun_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92757202701fe9848920cb1ecac5c5be
+      internalID: 1136968422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GooseRun_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4576c6250de8544d8df618dce01502c
+      internalID: 656447057
       vertices: []
       indices: 
       edges: []
@@ -157,55 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      0px All_30: -844240647
-      0px All_36: -998096394
-      0px All_47: 560220477
-      0px All_31: 1320724108
-      0px All_8: 1388682387
-      0px All_32: -104213448
-      0px All_27: -522291097
-      0px All_43: -1938265919
-      0px All_44: -1703972178
-      0px All_38: -1170539364
-      0px All_39: -581468063
-      0px All_4: 157378741
-      0px All_16: 1379770860
-      0px All_42: -188422526
-      0px All_3: 602883158
-      0px All_23: -1126759885
-      Shotgun: -232587261
-      0px All_22: 526845248
-      Pistol: 1636176703
-      0px All_37: 1727033375
-      0px All_7: 800675167
-      0px All_28: 736980124
-      0px All_12: 944700539
-      0px All_29: 1327776863
-      0px All_34: 1839945358
-      0px All_15: -776394861
-      0px All_35: 1362945712
-      0px All_33: -23672652
-      0px All_26: 1617815312
-      Sword: -1242261701
-      0px All_21: 304811306
-      0px All_19: -1685171370
-      0px All_40: -1018648344
-      0px All_46: 1028486983
-      0px All_20: -589583424
-      0px All_41: -1072869478
-      0px All_14: -2135825752
-      0px All_48: 487708482
-      0px All_13: 357553922
-      0px All_5: -291612129
-      0px All_11: 675172421
-      0px All_17: 18262458
-      0px All_24: 623245497
-      0px All_25: 792784044
-      0px All_10: 1097966512
-      0px All_6: -1400464785
-      0px All_2: 236565768
-      0px All_45: 661479294
-      0px All_18: 1213070566
+      GooseRun_2: 1136968422
+      GooseRun_0: 1131863914
+      GooseRun_1: 901660695
+      GooseRun_3: 656447057
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

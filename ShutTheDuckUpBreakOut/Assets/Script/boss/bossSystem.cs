@@ -1,5 +1,3 @@
-using System.Net.Mime;
-using System.IO.Pipes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,16 +16,21 @@ public class bossSystem : MonoBehaviour
     
     private Health BossHealth;
     private GameObject player;
+    private Vector3 NormalSize;
 
 
 
 
 
-     [Header ("Attacks")]
+    [Header ("Attack1")]
     public screenShakeHandler screenShake;
      public GameObject EGG;
+     public int FlyHieght;
      public ParticleSystem Partical_Feathers;
-     
+
+    [Header ("Attack2")]
+    public Vector3 InAirSize;
+    
 
 
     [Header ("Introduction")]
@@ -47,11 +50,12 @@ public class bossSystem : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("Player");
 
-
+        NormalSize = transform.localScale;
     }
 
     void Update()
     {
+        
           HealthUI.fillAmount = BossHealth.currentHealth / 100;
 
 
@@ -112,19 +116,50 @@ public class bossSystem : MonoBehaviour
     {
         ReadyToAttack = true;
     }
-
-
+    
+    
+    //Attack 1
+    public void FlyUp()
+    {
+        transform.DOMoveY(transform.position.y + FlyHieght, 2);
+    }
+    public void Flydown()
+    {  
+       transform.DOMoveY(transform.position.y - FlyHieght, 2);
+    }
     public void SpawnEGG()
     {
         Instantiate(EGG, transform.position, this.gameObject.transform.rotation);
     }
-
      public void SpawnFeathers()
     {
         Instantiate(Partical_Feathers, transform.position, this.gameObject.transform.rotation);
         screenShake.StartShake(0.3f,5,3);
     }
-
+    
+    
+    //Attack 2
+    public void Jump()
+    {
+        transform.DOScale(InAirSize,0.8f).SetEase(Ease.InOutSine);
+    }
+    
+     public void WarningToAttack()
+    {
+        transform.DOScale(InAirSize,0.8f);
+    }
+     public void Lands()
+    {
+        transform.DOScale(NormalSize,1);
+        // MakeParticals
+        transform.DOLocalMove(player.transform.position,0.3f).SetEase(Ease.InOutCubic);
+    }
+    
+    
+    
+    
+    
+    
     // introduction's
 
     public void StartBossIntroduction()

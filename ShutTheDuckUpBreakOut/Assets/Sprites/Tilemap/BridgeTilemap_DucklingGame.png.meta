@@ -1879,11 +1879,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BridgeTilemap_DucklingGame_63: -1752278041
+      BridgeTilemap_DucklingGame_38: -970655388
+      BridgeTilemap_DucklingGame_71: 726329460
       BridgeTilemap_DucklingGame_36: 388658246
       BridgeTilemap_DucklingGame_14: 1974981802
       BridgeTilemap_DucklingGame_56: -1751193350
-      BridgeTilemap_DucklingGame_71: 726329460
+      BridgeTilemap_DucklingGame_79: -419766904
       BridgeTilemap_DucklingGame_47: -1871442804
       BridgeTilemap_DucklingGame_28: -638069890
       BridgeTilemap_DucklingGame_51: 1999179138
@@ -1920,7 +1921,6 @@ TextureImporter:
       BridgeTilemap_DucklingGame_0: -1580329269
       BridgeTilemap_DucklingGame_1: -614986301
       BridgeTilemap_DucklingGame_73: -1404296579
-      BridgeTilemap_DucklingGame_79: -419766904
       BridgeTilemap_DucklingGame_62: -1926081343
       BridgeTilemap_DucklingGame_7: -2106414981
       BridgeTilemap_DucklingGame_15: -280950337
@@ -1961,8 +1961,8 @@ TextureImporter:
       BridgeTilemap_DucklingGame_68: -225744139
       BridgeTilemap_DucklingGame_33: 1751545514
       BridgeTilemap_DucklingGame_54: 1177982384
+      BridgeTilemap_DucklingGame_63: -1752278041
       BridgeTilemap_DucklingGame_49: 1818367402
-      BridgeTilemap_DucklingGame_38: -970655388
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

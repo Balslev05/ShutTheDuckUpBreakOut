@@ -18,7 +18,9 @@ public class Objects_Guns : ScriptableObject
     public float bulletSPread; // bulletSpread
     public bool HoldToFire;
     public Vector3 BulletSize;
+    public Vector3 GunSize;
     public float GunScreenshake;
+
 
 
 }
