@@ -1,3 +1,4 @@
+using System.Security.Cryptography.X509Certificates;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,6 +31,9 @@ public class bossSystem : MonoBehaviour
 
     [Header ("Attack2")]
     public Vector3 InAirSize;
+    public float LaunchSpeed;
+    public GameObject DangerSign;
+    public GameObject DangerSignPlacement;
     
 
 
@@ -99,7 +103,9 @@ public class bossSystem : MonoBehaviour
         
         BossAttack = Random.Range(1,4);
 
+        BossAttack = 2; // DO to try attacks
         Attack(BossAttack);
+
         
     }
 
@@ -122,6 +128,7 @@ public class bossSystem : MonoBehaviour
     public void FlyUp()
     {
         transform.DOMoveY(transform.position.y + FlyHieght, 2);
+        screenShake.StartShake(0.2f,3,3);       
     }
     public void Flydown()
     {  
@@ -141,20 +148,29 @@ public class bossSystem : MonoBehaviour
     //Attack 2
     public void Jump()
     {
-        transform.DOScale(InAirSize,0.8f).SetEase(Ease.InOutSine);
+        transform.DOScale(InAirSize,1f).SetEase(Ease.InOutSine);
+        screenShake.StartShake(0.1f,1,1);
+
     }
     
-     public void WarningToAttack()
+     public void FindigPlayerPos()
     {
-        transform.DOScale(InAirSize,0.8f);
+        GameObject DangerSignPrefab = Instantiate(DangerSign,player.transform.position,Quaternion.identity);
+        DangerSignPlacement = DangerSignPrefab;
+
     }
-     public void Lands()
+     public void ChargeAtplayer()
     {
+        transform.DOScale(InAirSize,1f);
         transform.DOScale(NormalSize,1);
         // MakeParticals
-        transform.DOLocalMove(player.transform.position,0.3f).SetEase(Ease.InOutCubic);
+        transform.DOLocalMove(DangerSignPlacement.transform.position,LaunchSpeed).SetEase(Ease.InOutCubic);
+        
+        Destroy(DangerSignPlacement,2);
+        
+        
     }
-    
+   
     
     
     

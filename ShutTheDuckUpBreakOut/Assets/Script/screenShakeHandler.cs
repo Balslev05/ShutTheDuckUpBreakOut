@@ -5,10 +5,9 @@ using Cinemachine;
 
 public class screenShakeHandler : MonoBehaviour
 {
-   public CinemachineVirtualCamera cam;
-   private CinemachineBasicMultiChannelPerlin noise;
-    private float ScreenShakeDuration;
-
+    public CinemachineVirtualCamera cam;
+    private CinemachineBasicMultiChannelPerlin noise;
+    private float ScreenShakeDuration; 
 
     void Start()
     {
@@ -38,6 +37,7 @@ public class screenShakeHandler : MonoBehaviour
 
     yield return new WaitForSeconds(ScreenShakeDuration);
     
+    transform.rotation = Quaternion.identity;
     noise.m_AmplitudeGain = 0;
     noise.m_FrequencyGain = 0;
    }

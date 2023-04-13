@@ -10,27 +10,20 @@ public class Bullet : MonoBehaviour
     public Guns BulletStats;
     public Rigidbody2D rb;
     public float BulletDamage;
+    public ParticleSystem BulletDust;
+    
     // Start is called before the first frame update
     void Start()
     {
         MainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-
         BulletStats = GameObject.FindGameObjectWithTag("PlayerGunStats").GetComponent<Guns>();
+        
         BulletDamage = BulletStats.BulletDamage;
 
+
+
         rb = GetComponent<Rigidbody2D>();
-    /*
-        mousepos = MainCamera.ScreenToWorldPoint(Input.mousePosition);
-
-        Vector3 direction = mousepos -transform.position;
-        Vector3 rotation = transform.position - mousepos;
-
-       
-        
-        rb.velocity = new Vector2(direction.x, direction.y).normalized * BulletStats.SpeedBullet + new Vector2(Spreadangle,Spreadangle);
-        */
         float Spreadangle = Random.Range(-BulletStats.BulletSpread, BulletStats.BulletSpread);
-
         rb.velocity = (transform.right+transform.up * Spreadangle).normalized * BulletStats.SpeedBullet;
 
         Destroy(gameObject,2);
@@ -49,6 +42,8 @@ public class Bullet : MonoBehaviour
         } 
         else
         {
+        Instantiate(BulletDust,this.transform.position,Quaternion.identity);
+        
         Destroy(this.gameObject);  
         }
     }
