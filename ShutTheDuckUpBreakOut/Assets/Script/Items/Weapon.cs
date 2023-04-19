@@ -68,7 +68,7 @@ public class Weapon : MonoBehaviour
         {
             collider.GetComponent<Health>().currentHealth -= Damage;
             Vector3 dirFromAttack = - (collider.transform.position - transform.position).normalized;
-            collider.transform.position += dirFromAttack * KnockBack;
+            collider.transform.position += dirFromAttack * -KnockBack;
 
             Durability --;            
         }           

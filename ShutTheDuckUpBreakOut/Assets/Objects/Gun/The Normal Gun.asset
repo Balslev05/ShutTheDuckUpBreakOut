@@ -20,7 +20,7 @@ MonoBehaviour:
   SpeedBullet: 20
   ShotsInMagasin: 1
   bulletFiredPerShot: 1
-  knockBack: 0
+  knockBack: 100
   bulletSPread: 0.05
   HoldToFire: 0
   BulletSize: {x: 4, y: 4, z: 4}

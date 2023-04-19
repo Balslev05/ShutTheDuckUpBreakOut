@@ -1,33 +1,9 @@
 fileFormatVersion: 2
-guid: be9dee588f6b4c94da4464425fe888ee
+guid: 32cb0109130bad2499b1cb4a1830a0cd
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -3700192600834747682
-    second: Duckling_0
-  - first:
-      213: 1487954041278725400
-    second: Duckling_1
-  - first:
-      213: -6106201143729571349
-    second: Duckling_2
-  - first:
-      213: -6009331661546326274
-    second: Duckling_3
-  - first:
-      213: -5831811100126831459
-    second: Duckling_4
-  - first:
-      213: 849729314644598519
-    second: Duckling_5
-  - first:
-      213: -8275056198010903578
-    second: Duckling_6
-  - first:
-      213: 844602381820909505
-    second: Duckling_7
+  internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -87,10 +63,11 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -102,10 +79,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 16384
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -114,22 +91,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
-    maxTextureSize: 16384
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 16384
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -140,96 +105,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Duckling_0
-      rect:
-        serializedVersion: 2
-        x: 20
-        y: 48
-        width: 9
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed257ba1f6646acc0800000000000000
-      internalID: -3700192600834747682
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Duckling_1
-      rect:
-        serializedVersion: 2
-        x: 52
-        y: 48
-        width: 9
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81d7688215646a410800000000000000
-      internalID: 1487954041278725400
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Duckling_2
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 48
-        width: 9
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be93aec696a624ba0800000000000000
-      internalID: -6106201143729571349
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Duckling_3
-      rect:
-        serializedVersion: 2
-        x: 116
-        y: 48
-        width: 9
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef6f50051b09a9ca0800000000000000
-      internalID: -6009331661546326274
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Duckling_4
+      name: Duckling-R1
       rect:
         serializedVersion: 2
         x: 19
-        y: 16
-        width: 11
+        y: 48
+        width: 9
         height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -238,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9c92c3e3be311fa0800000000000000
-      internalID: -5831811100126831459
+      spriteID: 4a5a2cd1b37f6424f9190cfa05301040
+      internalID: -2078439460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Duckling_5
+      name: Duckling-R2
       rect:
         serializedVersion: 2
         x: 51
-        y: 16
-        width: 11
-        height: 19
+        y: 48
+        width: 9
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,17 +140,59 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fe90a24f48dacb00800000000000000
-      internalID: 849729314644598519
+      spriteID: d26b60eab9d4f3344a36cacfc501af8d
+      internalID: -1085445526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Duckling_6
+      name: Duckling-R3
       rect:
         serializedVersion: 2
         x: 83
+        y: 48
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e14cc5a4ae2114b8d0d714e73dfcea
+      internalID: -169013311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duckling-R4
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 48
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c628b85c768e0a649bbe4d9798ebeb4b
+      internalID: -1694281305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duckling-R5
+      rect:
+        serializedVersion: 2
+        x: 18
         y: 16
         width: 11
         height: 19
@@ -280,19 +203,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e36a252b38192d80800000000000000
-      internalID: -8275056198010903578
+      spriteID: 48b4e9a477da14e4e911cee650185f12
+      internalID: 1380309536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Duckling_7
+      name: Duckling-R6
       rect:
         serializedVersion: 2
-        x: 114
+        x: 50
         y: 16
-        width: 13
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7e1b5181566ee443968af74aec61132
+      internalID: -2120874002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duckling-R7
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 16
+        width: 11
         height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -301,8 +245,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c752e03461a8bb00800000000000000
-      internalID: 844602381820909505
+      spriteID: 168e4df56a6c0484c9bde7fcc1302413
+      internalID: -786688341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duckling-R8
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 16
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f9251033c848042804726df6bfa247
+      internalID: 360271322
       vertices: []
       indices: 
       edges: []
@@ -318,14 +283,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Duckling_4: -5831811100126831459
-      Duckling_1: 1487954041278725400
-      Duckling_2: -6106201143729571349
-      Duckling_7: 844602381820909505
-      Duckling_5: 849729314644598519
-      Duckling_3: -6009331661546326274
-      Duckling_0: -3700192600834747682
-      Duckling_6: -8275056198010903578
+      Duckling-R7: -786688341
+      Duckling-R5: 1380309536
+      Duckling-R4: -1694281305
+      Duckling-R6: -2120874002
+      Duckling-export_5: -399053876
+      Duckling-export_16: -1236406719
+      Duckling-R3: -169013311
+      Duckling-export_2: -1372812573
+      Duckling-export_1: 1614981730
+      Duckling-R2: -1085445526
+      Duckling-export_4: -434602099
+      Duckling-export_0: 158900277
+      Duckling-export_6: -711562867
+      Duckling-R8: 360271322
+      Duckling-export_7: -946533626
+      Duckling-R1: -2078439460
+      Duckling-export_3: 1878711519
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

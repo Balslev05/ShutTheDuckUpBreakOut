@@ -1,0 +1,230 @@
+"filename", "language", "JSON", "XML", "C#", "ShaderLab", "Markdown", "HTML", "comment", "blank", "total"
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Behaviors\AIDestinationSetter.cs", "C#", 0, 0, 26, 0, 0, 0, 15, 5, 46
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Behaviors\Patrol.cs", "C#", 0, 0, 32, 0, 0, 0, 16, 12, 60
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\CHANGELOG.md", "Markdown", 0, 0, 0, 0, 1894, 0, 0, 105, 1999
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\AI\AIBase.cs", "C#", 0, 0, 357, 0, 0, 0, 314, 104, 775
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\AI\AILerp.cs", "C#", 0, 0, 351, 0, 0, 0, 243, 108, 702
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\AI\AIPath.cs", "C#", 0, 0, 214, 0, 0, 0, 201, 77, 492
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\AI\IAstarAI.cs", "C#", 0, 0, 31, 0, 0, 0, 336, 26, 393
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\AI\NavmeshController.cs", "C#", 0, 0, 0, 0, 0, 0, 3, 2, 5
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\AI\Seeker.cs", "C#", 0, 0, 190, 0, 0, 0, 252, 66, 508
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\AI\TurnBasedAI.cs", "C#", 0, 0, 19, 0, 0, 0, 3, 4, 26
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\AstarData.cs", "C#", 0, 0, 407, 0, 0, 0, 220, 107, 734
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\AstarMath.cs", "C#", 0, 0, 799, 0, 0, 0, 484, 248, 1531
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\AstarPath.cs", "C#", 0, 0, 845, 0, 0, 0, 1018, 301, 2164
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\GraphUpdateScene.cs", "C#", 0, 0, 209, 0, 0, 0, 132, 58, 399
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\GraphUpdateShape.cs", "C#", 0, 0, 96, 0, 0, 0, 32, 16, 144
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\AnimationLink.cs", "C#", 0, 0, 98, 0, 0, 0, 1, 24, 123
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\ArrayPool.cs", "C#", 0, 0, 112, 0, 0, 0, 68, 19, 199
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\AstarDebugger.cs", "C#", 0, 0, 226, 0, 0, 0, 35, 77, 338
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\AutoRepathPolicy.cs", "C#", 0, 0, 45, 0, 0, 0, 41, 15, 101
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\BinaryHeap.cs", "C#", 0, 0, 191, 0, 0, 0, 82, 52, 325
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\Draw.cs", "C#", 0, 0, 71, 0, 0, 0, 1, 20, 92
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\EditorResourceHelper.cs", "C#", 0, 0, 80, 0, 0, 0, 10, 16, 106
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\GraphEditorBase.cs", "C#", 0, 0, 7, 0, 0, 0, 2, 2, 11
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\GraphModifier.cs", "C#", 0, 0, 119, 0, 0, 0, 57, 29, 205
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\GraphUpdateProcessor.cs", "C#", 0, 0, 242, 0, 0, 0, 65, 63, 370
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\GraphUtilities.cs", "C#", 0, 0, 145, 0, 0, 0, 100, 26, 271
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\HierarchicalGraph.cs", "C#", 0, 0, 222, 0, 0, 0, 77, 48, 347
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\Int3.cs", "C#", 0, 0, 220, 0, 0, 0, 32, 63, 315
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\ListPool.cs", "C#", 0, 0, 115, 0, 0, 0, 74, 23, 212
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\MovementUtilities.cs", "C#", 0, 0, 71, 0, 0, 0, 77, 27, 175
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\NodeLink.cs", "C#", 0, 0, 116, 0, 0, 0, 16, 26, 158
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\NodeLink2.cs", "C#", 0, 0, 220, 0, 0, 0, 32, 57, 309
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\NodeLink3.cs", "C#", 0, 0, 228, 0, 0, 0, 18, 68, 314
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\ObjectPool.cs", "C#", 0, 0, 65, 0, 0, 0, 56, 11, 132
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\PathInterpolator.cs", "C#", 0, 0, 144, 0, 0, 0, 27, 36, 207
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\PathPool.cs", "C#", 0, 0, 65, 0, 0, 0, 11, 13, 89
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\PathProcessor.cs", "C#", 0, 0, 340, 0, 0, 0, 138, 110, 588
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\PathReturnQueue.cs", "C#", 0, 0, 42, 0, 0, 0, 20, 12, 74
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\StackPool.cs", "C#", 0, 0, 46, 0, 0, 0, 40, 13, 99
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\ThreadControlQueue.cs", "C#", 0, 0, 181, 0, 0, 0, 66, 45, 292
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\WindowsStoreCompatibility.cs", "C#", 0, 0, 111, 0, 0, 0, 15, 23, 149
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Misc\WorkItemProcessor.cs", "C#", 0, 0, 167, 0, 0, 0, 129, 43, 339
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Nodes\GraphNode.cs", "C#", 0, 0, 330, 0, 0, 0, 385, 97, 812
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Path.cs", "C#", 0, 0, 375, 0, 0, 0, 360, 111, 846
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\PathHandler.cs", "C#", 0, 0, 100, 0, 0, 0, 76, 34, 210
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Serialization\JsonConverters.cs", "C#", 0, 0, 0, 0, 0, 0, 3, 2, 5
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Serialization\JsonSerializer.cs", "C#", 0, 0, 577, 0, 0, 0, 159, 176, 912
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Serialization\SimpleJsonReplacement.cs", "C#", 0, 0, 0, 0, 0, 0, 3, 2, 5
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Serialization\SimpleZipReplacement.cs", "C#", 0, 0, 62, 0, 0, 0, 0, 18, 80
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\Serialization\TinyJson.cs", "C#", 0, 0, 383, 0, 0, 0, 30, 54, 467
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Core\astarclasses.cs", "C#", 0, 0, 518, 0, 0, 0, 543, 145, 1206
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Documentation\documentation.html", "HTML", 0, 0, 0, 0, 0, 15381, 0, 1662, 17043
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Documentation\index.md", "Markdown", 0, 0, 0, 0, 6, 0, 0, 2, 8
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Editor\AIBaseEditor.cs", "C#", 0, 0, 134, 0, 0, 0, 3, 25, 162
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Editor\AILerpEditor.cs", "C#", 0, 0, 27, 0, 0, 0, 0, 5, 32
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Editor\AnimationLinkEditor.cs", "C#", 0, 0, 21, 0, 0, 0, 0, 4, 25
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Editor\AstarPathEditor.cs", "C#", 0, 0, 1041, 0, 0, 0, 107, 295, 1443
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Editor\AstarUpdateChecker.cs", "C#", 0, 0, 228, 0, 0, 0, 36, 44, 308
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Editor\AstarUpdateWindow.cs", "C#", 0, 0, 81, 0, 0, 0, 1, 22, 104
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Editor\CustomGraphEditorAttribute.cs", "C#", 0, 0, 12, 0, 0, 0, 4, 4, 20
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.cginc", "ShaderLab", 0, 0, 0, 51, 0, 0, 19, 8, 78
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.shader", "ShaderLab", 0, 0, 0, 89, 0, 0, 2, 28, 119
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\NavmeshOutline.shader", "ShaderLab", 0, 0, 0, 70, 0, 0, 3, 15, 88
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Editor\GraphEditors\GraphEditor.cs", "C#", 0, 0, 107, 0, 0, 0, 14, 25, 146
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Editor\GraphEditors\GridGeneratorEditor.cs", "C#", 0, 0, 562, 0, 0, 0, 28, 141, 731
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Editor\GraphEditors\NavMeshGeneratorEditor.cs", "C#", 0, 0, 28, 0, 0, 0, 0, 10, 38
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Editor\GraphEditors\PointGeneratorEditor.cs", "C#", 0, 0, 38, 0, 0, 0, 0, 14, 52
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Editor\GraphUpdateSceneEditor.cs", "C#", 0, 0, 257, 0, 0, 0, 11, 51, 319
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Editor\Legacy\LegacyAIPathEditor2.cs", "C#", 0, 0, 16, 0, 0, 0, 0, 2, 18
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Editor\Legacy\LegacyEditorHelper2.cs", "C#", 0, 0, 28, 0, 0, 0, 0, 2, 30
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Editor\ModifierEditors\RaycastModifierEditor.cs", "C#", 0, 0, 29, 0, 0, 0, 0, 6, 35
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Editor\ModifierEditors\SmoothModifierEditor.cs", "C#", 0, 0, 39, 0, 0, 0, 0, 7, 46
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Editor\ProceduralGridMoverEditor.cs", "C#", 0, 0, 23, 0, 0, 0, 1, 5, 29
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Editor\SeekerEditor.cs", "C#", 0, 0, 116, 0, 0, 0, 4, 22, 142
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\ExampleScenes\Example12_Procedural\ProceduralWorld.cs", "C#", 0, 0, 175, 0, 0, 0, 52, 55, 282
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\AstarSmoothFollow2.cs", "C#", 0, 0, 26, 0, 0, 0, 8, 5, 39
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\DoorController.cs", "C#", 0, 0, 38, 0, 0, 0, 9, 13, 60
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\MineBotAI.cs", "C#", 0, 0, 36, 0, 0, 0, 14, 6, 56
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\MineBotAnimation.cs", "C#", 0, 0, 32, 0, 0, 0, 31, 11, 74
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\ObjectPlacer.cs", "C#", 0, 0, 52, 0, 0, 0, 14, 13, 79
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\SnapToNode.cs", "C#", 0, 0, 16, 0, 0, 0, 4, 2, 22
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\TargetMover.cs", "C#", 0, 0, 51, 0, 0, 0, 15, 12, 78
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\ExampleScenes\Materials\DiffuseAlwaysVisible.shader", "ShaderLab", 0, 0, 0, 30, 0, 0, 0, 16, 46
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Light.shader", "ShaderLab", 0, 0, 0, 26, 0, 0, 0, 0, 26
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Generators\Base.cs", "C#", 0, 0, 291, 0, 0, 0, 314, 95, 700
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Generators\GridGenerator.cs", "C#", 0, 0, 1157, 0, 0, 0, 741, 345, 2243
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Generators\NavMeshGenerator.cs", "C#", 0, 0, 161, 0, 0, 0, 60, 52, 273
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Generators\NavmeshBase.cs", "C#", 0, 0, 798, 0, 0, 0, 336, 233, 1367
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Generators\NodeClasses\GridNode.cs", "C#", 0, 0, 241, 0, 0, 0, 57, 64, 362
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Generators\NodeClasses\GridNodeBase.cs", "C#", 0, 0, 207, 0, 0, 0, 98, 58, 363
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Generators\NodeClasses\PointNode.cs", "C#", 0, 0, 146, 0, 0, 0, 86, 41, 273
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Generators\NodeClasses\TriangleMeshNode.cs", "C#", 0, 0, 250, 0, 0, 0, 120, 91, 461
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Generators\PointGenerator.cs", "C#", 0, 0, 318, 0, 0, 0, 184, 90, 592
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Generators\QuadtreeGraph.cs", "C#", 0, 0, 0, 0, 0, 0, 3, 2, 5
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Generators\Utilities\BBTree.cs", "C#", 0, 0, 359, 0, 0, 0, 103, 86, 548
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Generators\Utilities\EuclideanEmbedding.cs", "C#", 0, 0, 32, 0, 0, 0, 12, 15, 59
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Generators\Utilities\GraphTransform.cs", "C#", 0, 0, 141, 0, 0, 0, 43, 32, 216
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Generators\Utilities\GridLookup.cs", "C#", 0, 0, 132, 0, 0, 0, 35, 26, 193
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Generators\Utilities\NavMeshRenderer.cs", "C#", 0, 0, 0, 0, 0, 0, 3, 2, 5
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Generators\Utilities\NavmeshTile.cs", "C#", 0, 0, 38, 0, 0, 0, 18, 21, 77
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Generators\Utilities\ObjImporter.cs", "C#", 0, 0, 212, 0, 0, 0, 15, 17, 244
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Generators\Utilities\PointKDTree.cs", "C#", 0, 0, 212, 0, 0, 0, 53, 45, 310
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Legacy\Editor\LegacyAIPathEditor.cs", "C#", 0, 0, 0, 0, 0, 0, 3, 2, 5
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Legacy\Editor\LegacyEditorHelper.cs", "C#", 0, 0, 0, 0, 0, 0, 3, 2, 5
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Legacy\Editor\LegacyRVOControllerEditor.cs", "C#", 0, 0, 0, 0, 0, 0, 3, 2, 5
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Legacy\Editor\LegacyRichAIEditor.cs", "C#", 0, 0, 0, 0, 0, 0, 3, 2, 5
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Legacy\LegacyAIPath.cs", "C#", 0, 0, 141, 0, 0, 0, 99, 53, 293
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Legacy\MiscLegacy.cs", "C#", 0, 0, 22, 0, 0, 0, 21, 6, 49
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Modifiers\AlternativePath.cs", "C#", 0, 0, 62, 0, 0, 0, 17, 18, 97
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Modifiers\FunnelModifier.cs", "C#", 0, 0, 51, 0, 0, 0, 47, 11, 109
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Modifiers\Modifiers.cs", "C#", 0, 0, 48, 0, 0, 0, 26, 16, 90
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Modifiers\RaycastModifier.cs", "C#", 0, 0, 191, 0, 0, 0, 86, 41, 318
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Modifiers\SimpleSmoothModifier.cs", "C#", 0, 0, 235, 0, 0, 0, 52, 80, 367
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Modifiers\StartEndModifier.cs", "C#", 0, 0, 126, 0, 0, 0, 124, 36, 286
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Navmesh\NavmeshUpdates.cs", "C#", 0, 0, 20, 0, 0, 0, 33, 3, 56
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Navmesh\RelevantGraphSurface.cs", "C#", 0, 0, 67, 0, 0, 0, 11, 17, 95
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\PackageTools\Editor\EditorBase.cs", "C#", 0, 0, 200, 0, 0, 0, 9, 38, 247
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\PackageTools\Editor\EditorGUIx.cs", "C#", 0, 0, 164, 0, 0, 0, 39, 43, 246
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\PackageTools\Editor\EnumFlagDrawer.cs", "C#", 0, 0, 32, 0, 0, 0, 3, 5, 40
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\PackageTools\EnumFlagAttribute.cs", "C#", 0, 0, 5, 0, 0, 0, 1, 2, 8
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\PackageTools\UniqueComponentAttribute.cs", "C#", 0, 0, 6, 0, 0, 0, 0, 1, 7
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\PackageTools\VersionedMonoBehaviour.cs", "C#", 0, 0, 31, 0, 0, 0, 12, 11, 54
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Pathfinders\ABPath.cs", "C#", 0, 0, 390, 0, 0, 0, 259, 108, 757
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\TurnBased\BlockManager.cs", "C#", 0, 0, 97, 0, 0, 0, 49, 24, 170
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\TurnBased\SingleNodeBlocker.cs", "C#", 0, 0, 32, 0, 0, 0, 30, 8, 70
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Utilities\AstarChecksum.cs", "C#", 0, 0, 12, 0, 0, 0, 6, 4, 22
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Utilities\AstarMemory.cs", "C#", 0, 0, 50, 0, 0, 0, 48, 12, 110
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Utilities\AstarParallel.cs", "C#", 0, 0, 72, 0, 0, 0, 25, 11, 108
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Utilities\AstarProfiler.cs", "C#", 0, 0, 145, 0, 0, 0, 45, 36, 226
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Utilities\DotNetReplacements.cs", "C#", 0, 0, 118, 0, 0, 0, 11, 35, 164
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Utilities\DynamicGridObstacle.cs", "C#", 0, 0, 127, 0, 0, 0, 73, 36, 236
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Utilities\Funnel.cs", "C#", 0, 0, 267, 0, 0, 0, 91, 75, 433
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Utilities\GraphGizmoHelper.cs", "C#", 0, 0, 125, 0, 0, 0, 18, 22, 165
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Utilities\GraphUpdateUtilities.cs", "C#", 0, 0, 34, 0, 0, 0, 61, 15, 110
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Utilities\PathUtilities.cs", "C#", 0, 0, 263, 0, 0, 0, 193, 81, 537
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Utilities\ProceduralGridMover.cs", "C#", 0, 0, 194, 0, 0, 0, 133, 50, 377
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Utilities\ProfileHelper.cs", "C#", 0, 0, 99, 0, 0, 0, 5, 20, 124
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Utilities\RetainedGizmos.cs", "C#", 0, 0, 243, 0, 0, 0, 80, 54, 377
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs", "C#", 0, 0, 30, 0, 0, 0, 6, 5, 41
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\link.xml", "XML", 0, 22, 0, 0, 0, 0, 0, 0, 22
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\AstarPathfindingProject\package.json", "JSON", 42, 0, 0, 0, 0, 0, 0, 0, 42
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs", "C#", 0, 0, 98, 0, 0, 0, 80, 25, 203
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleEPOOutline.cs", "C#", 0, 0, 109, 0, 0, 0, 18, 20, 147
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs", "C#", 0, 0, 137, 0, 0, 0, 60, 20, 217
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs", "C#", 0, 0, 125, 0, 0, 0, 51, 18, 194
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs", "C#", 0, 0, 63, 0, 0, 0, 17, 14, 94
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs", "C#", 0, 0, 390, 0, 0, 0, 203, 70, 663
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs", "C#", 0, 0, 264, 0, 0, 0, 99, 41, 404
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs", "C#", 0, 0, 123, 0, 0, 0, 27, 18, 168
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\Bullet.cs", "C#", 0, 0, 45, 0, 0, 0, 3, 16, 64
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\DangeSignPopUp.cs", "C#", 0, 0, 17, 0, 0, 0, 1, 4, 22
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\EnemyShooter.cs", "C#", 0, 0, 12, 0, 0, 0, 2, 5, 19
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\Health.cs", "C#", 0, 0, 38, 0, 0, 0, 0, 10, 48
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\Items\Guns.cs", "C#", 0, 0, 145, 0, 0, 0, 8, 36, 189
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\Items\Item_Gun.cs", "C#", 0, 0, 43, 0, 0, 0, 10, 13, 66
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\Items\Item_Melee.cs", "C#", 0, 0, 42, 0, 0, 0, 2, 9, 53
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\Items\Objects_Guns.cs", "C#", 0, 0, 21, 0, 0, 0, 0, 6, 27
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\Items\Objects_Weapons.cs", "C#", 0, 0, 13, 0, 0, 0, 0, 9, 22
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\Items\Weapon.cs", "C#", 0, 0, 111, 0, 0, 0, 5, 25, 141
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\Player\AimWithGun.cs", "C#", 0, 0, 33, 0, 0, 0, 0, 8, 41
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\Player\AimWithWeapon.cs", "C#", 0, 0, 42, 0, 0, 0, 0, 7, 49
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\Player\Mouse.cs", "C#", 0, 0, 17, 0, 0, 0, 0, 5, 22
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\Player\Player.cs", "C#", 0, 0, 68, 0, 0, 0, 2, 23, 93
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\Player\PlayerMovment.cs", "C#", 0, 0, 59, 0, 0, 0, 7, 16, 82
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\Player\ShakeManager.cs", "C#", 0, 0, 15, 0, 0, 0, 1, 3, 19
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\Player\ShowMousePos.cs", "C#", 0, 0, 12, 0, 0, 0, 2, 5, 19
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\Player\UI_ChargeThrow.cs", "C#", 0, 0, 35, 0, 0, 0, 2, 14, 51
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\Player\YoungMechanics.cs", "C#", 0, 0, 129, 0, 0, 0, 16, 30, 175
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\Player\YoungMovment.cs", "C#", 0, 0, 84, 0, 0, 0, 3, 14, 101
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\TimeLineManager.cs", "C#", 0, 0, 22, 0, 0, 0, 1, 11, 34
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\boss\Boss_Egg.cs", "C#", 0, 0, 29, 0, 0, 0, 2, 7, 38
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\boss\bossSystem.cs", "C#", 0, 0, 144, 0, 0, 0, 4, 68, 216
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\Script\screenShakeHandler.cs", "C#", 0, 0, 28, 0, 0, 0, 0, 16, 44
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\Benchmark01.cs", "C#", 0, 0, 63, 0, 0, 0, 29, 37, 129
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\Benchmark01_UGUI.cs", "C#", 0, 0, 59, 0, 0, 0, 37, 40, 136
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\Benchmark02.cs", "C#", 0, 0, 65, 0, 0, 0, 6, 27, 98
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\Benchmark03.cs", "C#", 0, 0, 73, 0, 0, 0, 1, 19, 93
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\Benchmark04.cs", "C#", 0, 0, 41, 0, 0, 0, 26, 19, 86
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\CameraController.cs", "C#", 0, 0, 198, 0, 0, 0, 25, 69, 292
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\ChatController.cs", "C#", 0, 0, 31, 0, 0, 0, 5, 16, 52
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\DropdownSample.cs", "C#", 0, 0, 15, 0, 0, 0, 0, 5, 20
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\EnvMapAnimator.cs", "C#", 0, 0, 23, 0, 0, 0, 4, 9, 36
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\ObjectSpin.cs", "C#", 0, 0, 50, 0, 0, 0, 4, 15, 69
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\ShaderPropAnimator.cs", "C#", 0, 0, 33, 0, 0, 0, 5, 14, 52
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\SimpleScript.cs", "C#", 0, 0, 24, 0, 0, 0, 15, 20, 59
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\SkewTextExample.cs", "C#", 0, 0, 95, 0, 0, 0, 18, 46, 159
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\TMP_DigitValidator.cs", "C#", 0, 0, 19, 0, 0, 0, 5, 4, 28
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\TMP_ExampleScript_01.cs", "C#", 0, 0, 37, 0, 0, 0, 9, 19, 65
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\TMP_FrameRateCounter.cs", "C#", 0, 0, 91, 0, 0, 0, 11, 33, 135
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\TMP_PhoneNumberValidator.cs", "C#", 0, 0, 93, 0, 0, 0, 7, 6, 106
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\TMP_TextEventCheck.cs", "C#", 0, 0, 56, 0, 0, 0, 1, 17, 74
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\TMP_TextEventHandler.cs", "C#", 0, 0, 170, 0, 0, 0, 31, 54, 255
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\TMP_TextInfoDebugTool.cs", "C#", 0, 0, 409, 0, 0, 0, 97, 147, 653
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\TMP_TextSelector_A.cs", "C#", 0, 0, 100, 0, 0, 0, 17, 41, 158
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\TMP_TextSelector_B.cs", "C#", 0, 0, 250, 0, 0, 0, 191, 107, 548
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\TMP_UiFrameRateCounter.cs", "C#", 0, 0, 96, 0, 0, 0, 1, 28, 125
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\TMPro_InstructionOverlay.cs", "C#", 0, 0, 55, 0, 0, 0, 6, 24, 85
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\TeleType.cs", "C#", 0, 0, 40, 0, 0, 0, 15, 28, 83
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\TextConsoleSimulator.cs", "C#", 0, 0, 79, 0, 0, 0, 13, 29, 121
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\TextMeshProFloatingText.cs", "C#", 0, 0, 135, 0, 0, 0, 32, 57, 224
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\TextMeshSpawner.cs", "C#", 0, 0, 46, 0, 0, 0, 13, 21, 80
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\VertexColorCycler.cs", "C#", 0, 0, 48, 0, 0, 0, 13, 24, 85
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\VertexJitter.cs", "C#", 0, 0, 105, 0, 0, 0, 26, 44, 175
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\VertexShakeA.cs", "C#", 0, 0, 99, 0, 0, 0, 23, 39, 161
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\VertexShakeB.cs", "C#", 0, 0, 112, 0, 0, 0, 29, 44, 185
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\VertexZoom.cs", "C#", 0, 0, 112, 0, 0, 0, 32, 48, 192
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Examples & Extras\Scripts\WarpTextExample.cs", "C#", 0, 0, 87, 0, 0, 0, 15, 43, 145
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader", "ShaderLab", 0, 0, 0, 109, 0, 0, 2, 33, 144
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader", "ShaderLab", 0, 0, 0, 112, 0, 0, 3, 31, 146
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader", "ShaderLab", 0, 0, 0, 109, 0, 0, 2, 33, 144
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader", "ShaderLab", 0, 0, 0, 243, 0, 0, 4, 71, 318
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader", "ShaderLab", 0, 0, 0, 241, 0, 0, 4, 66, 311
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader", "ShaderLab", 0, 0, 0, 188, 0, 0, 10, 50, 248
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader", "ShaderLab", 0, 0, 0, 183, 0, 0, 8, 50, 241
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader", "ShaderLab", 0, 0, 0, 82, 0, 0, 4, 21, 107
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader", "ShaderLab", 0, 0, 0, 183, 0, 0, 8, 50, 241
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader", "ShaderLab", 0, 0, 0, 103, 0, 0, 8, 28, 139
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader", "ShaderLab", 0, 0, 0, 122, 0, 0, 4, 33, 159
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Shaders\TMP_SDF.shader", "ShaderLab", 0, 0, 0, 243, 0, 0, 4, 71, 318
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Shaders\TMP_Sprite.shader", "ShaderLab", 0, 0, 0, 97, 0, 0, 0, 20, 117
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Shaders\TMPro.cginc", "ShaderLab", 0, 0, 0, 63, 0, 0, 2, 20, 85
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc", "ShaderLab", 0, 0, 0, 122, 0, 0, 2, 34, 158
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc", "ShaderLab", 0, 0, 0, 62, 0, 0, 10, 14, 86
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc", "ShaderLab", 0, 0, 0, 76, 0, 0, 7, 19, 102
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Assets\TextMesh Pro\Sprites\EmojiOne.json", "JSON", 155, 0, 0, 0, 0, 0, 0, 2, 157
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Packages\manifest.json", "JSON", 47, 0, 0, 0, 0, 0, 0, 1, 48
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\Packages\packages-lock.json", "JSON", 529, 0, 0, 0, 0, 0, 0, 1, 530
+"c:\Programering\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\ShutTheDuckUpBreakOut\README.md", "Markdown", 0, 0, 0, 0, 1, 0, 0, 0, 1
+"Total", "-", 773, 22, 26739, 2604, 1901, 15381, 11974, 10098, 69492

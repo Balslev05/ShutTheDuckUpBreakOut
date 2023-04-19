@@ -1,4 +1,3 @@
-using System.Security.Cryptography.X509Certificates;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,6 +28,7 @@ public class bossSystem : MonoBehaviour
      public int FlyHieght;
      public ParticleSystem Partical_Feathers;
 
+
     [Header ("Attack2")]
     public Vector3 InAirSize;
     public float LaunchSpeed;
@@ -41,8 +41,16 @@ public class bossSystem : MonoBehaviour
     public bool Introduction = false;
     public GameObject Introduction_BossCamera;
     public GameObject Introduction_PlayerCamera;
-    
+    public GameObject playersLight;
+    public GameObject BossBundary;
 
+    [Header ("SoundDesign")]
+    public AudioSource walking;
+    public AudioSource jumping;
+    public AudioSource flying;
+    public AudioSource EggCraking;
+    
+    
     
 
 
@@ -55,6 +63,9 @@ public class bossSystem : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
 
         NormalSize = transform.localScale;
+
+        BossBundary.SetActive(false);
+
     }
 
     void Update()
@@ -67,7 +78,7 @@ public class bossSystem : MonoBehaviour
         {
             if(Introduction == true) // looking if the intrroduction have been played if not it starts the introduction
             {
-            FoundPlayer();
+                FoundPlayer();
             }
             else
             {
@@ -150,7 +161,8 @@ public class bossSystem : MonoBehaviour
     {
         transform.DOScale(InAirSize,1f).SetEase(Ease.InOutSine);
         screenShake.StartShake(0.1f,1,1);
-
+        this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+        
     }
     
      public void FindigPlayerPos()
@@ -165,6 +177,8 @@ public class bossSystem : MonoBehaviour
         transform.DOScale(NormalSize,1);
         // MakeParticals
         transform.DOLocalMove(DangerSignPlacement.transform.position,LaunchSpeed).SetEase(Ease.InOutCubic);
+
+        this.gameObject.GetComponent<CircleCollider2D>().enabled = true;
         
         Destroy(DangerSignPlacement,2);
         
@@ -180,23 +194,21 @@ public class bossSystem : MonoBehaviour
 
     public void StartBossIntroduction()
     {
-        print("start1");
+        Boss_Anim.Play("Introduction");
+
         Introduction_BossCamera.SetActive(true);
         Introduction_PlayerCamera.SetActive(false);
-
-        Boss_Anim.Play("Introduction");
-        print("start2");
+        
+        BossBundary.SetActive(true);
 
     }
     public void EndBossIntroduction()
     {
         Introduction = true;
-        print("End1");
 
+        
         Introduction_BossCamera.SetActive(false);
-    
         Introduction_PlayerCamera.SetActive(true);
-        print("End2");
 
     }
 

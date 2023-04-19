@@ -125,7 +125,7 @@ MonoBehaviour:
   BulletStats: {fileID: 0}
   rb: {fileID: 0}
   BulletDamage: 0
-  BulletDust: {fileID: 6559001905624645299, guid: 9823f4dd37d0d364c8dd4839f161f4df, type: 3}
+  BulletDust: {fileID: 6559001905624645297, guid: 9823f4dd37d0d364c8dd4839f161f4df, type: 3}
 --- !u!58 &6591824845188150740
 CircleCollider2D:
   m_ObjectHideFlags: 0

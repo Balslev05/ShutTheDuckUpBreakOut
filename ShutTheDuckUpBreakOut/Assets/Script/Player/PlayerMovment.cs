@@ -6,6 +6,8 @@ public class PlayerMovment : MonoBehaviour
 {
     public float speed = 250;
     public Rigidbody2D rb;
+    public Animator playerAnim;
+
     [Header("RoleStats")]
     public float RoleLeanght = 1f;
     public float RoleForce = 750f;
@@ -13,7 +15,11 @@ public class PlayerMovment : MonoBehaviour
     private  Vector2 lastDirection;
     private float NormalMoveSpeed;
     UnityEngine.Vector2 Movement;
-  
+
+    [Header("Walking")]
+    public GameObject WalkDust;
+    public GameObject Feet;
+    
   private void Awake() {
    
   }
@@ -55,6 +61,14 @@ public class PlayerMovment : MonoBehaviour
             if(velocity.x != 0 || velocity.y != 0)
             StartCoroutine(Roll());
         }
+        
+        if(velocity.x == 0 && velocity.y == 0)
+        {
+            playerAnim.Play("Idle");
+        } else
+        {
+            playerAnim.Play("Running");
+        }
     }
      IEnumerator Roll()
      {
@@ -70,12 +84,22 @@ public class PlayerMovment : MonoBehaviour
         gameObject.GetComponent<Collider2D>().isTrigger = false;
 
         Roling = false;  
+
         speed = NormalMoveSpeed;
 
         gameObject.GetComponent<SpriteRenderer>().color = Color.blue;
      }
      private void FixedUpdate() {
+
         rb.velocity = new Vector2((Movement.x * speed) * Time.deltaTime,(Movement.y * speed) * Time.deltaTime);
+       
+     } 
+
+     public void SpawnDust()
+     {
+       GameObject dust = Instantiate(WalkDust,Feet.transform.position,Quaternion.identity);
+       Destroy(dust,3f);
+
      }
 }
 

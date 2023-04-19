@@ -27,7 +27,7 @@ public class Guns : MonoBehaviour
     public int BulletFiredPerShot; // how many bullets that are Shots  
     public Vector3 Bulletsize; // how big is the bullet
     public int Gunweight; // Slows the Cooldown
-    public int KnockBack; //knockbacks the enemy
+    public float KnockBack; //knockbacks the enemy
     public bool holdToFire;
     public Sprite GunSprite; // gun sprite
     public float GunScreenShake;
