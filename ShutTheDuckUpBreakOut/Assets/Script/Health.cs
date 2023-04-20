@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
 {
     public int  maxHealth;
     public float currentHealth;
+    public bool YouAreThePlayer; // jeg ved godt det her er en dårlig ide men jeg er UTROLIG TRÆT og burde bare gå i seng men vil gerne lige lave det færidgt ser senere om det var det vær 
 
 
 
@@ -37,6 +38,10 @@ public class Health : MonoBehaviour
         {
             currentHealth -= collider.GetComponent<Bullet>().BulletDamage;
             
+        }
+        if (YouAreThePlayer == true && collider.gameObject.tag == "Boss")
+        {
+
         }
 }
     void Death()

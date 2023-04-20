@@ -51,7 +51,6 @@ public class Guns : MonoBehaviour
 
     void Update()
     {
-        this.gameObject.transform.localScale = GunSize;
 
         if(playerStats.CarryingGun == false)
         {
@@ -137,7 +136,7 @@ public class Guns : MonoBehaviour
         GunSprite = CurrentGun.sprite;
         GunSize = CurrentGun.GunSize; 
 
-
+        this.gameObject.transform.localScale = GunSize;
         SpriteRenderer ItemSprite = this.gameObject.GetComponent<SpriteRenderer>();
         ItemSprite.sprite = CurrentGun.sprite;
 

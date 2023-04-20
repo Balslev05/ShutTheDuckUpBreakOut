@@ -1,3 +1,4 @@
+using System.Security.Principal;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,28 +14,38 @@ public class bossSystem : MonoBehaviour
     public int FinderRange;
     public int TimeBetweenAttack;
     public bool ReadyToAttack = false;
+    public bool Attacking;
+    public float BossSpeed;
+    public int BossAttack;
     
     private Health BossHealth;
     private GameObject player;
     private Vector3 NormalSize;
+    private Vector3 movement;
+    public Vector3 dir;
 
 
 
 
 
-    [Header ("Attack1")]
+    [Header ("Attack 1/ Egg")]
     public screenShakeHandler screenShake;
-     public GameObject EGG;
-     public int FlyHieght;
-     public ParticleSystem Partical_Feathers;
+    public GameObject EGG;
+    public int FlyHieght;
+    public ParticleSystem Partical_Feathers;
 
 
-    [Header ("Attack2")]
+    [Header ("Attack 2 / Jump")]
     public Vector3 InAirSize;
     public float LaunchSpeed;
     public GameObject DangerSign;
     public GameObject DangerSignPlacement;
     
+
+    [Header ("Attack 3 / Healing")]
+    public GameObject BossHealtPotion;
+    public int HowManyHeals;
+    public int GainHealth;
 
 
     [Header ("Introduction")]
@@ -49,11 +60,6 @@ public class bossSystem : MonoBehaviour
     public AudioSource jumping;
     public AudioSource flying;
     public AudioSource EggCraking;
-    
-    
-    
-
-
 
 
     void Start()
@@ -71,12 +77,41 @@ public class bossSystem : MonoBehaviour
     void Update()
     {
         
-          HealthUI.fillAmount = BossHealth.currentHealth / 100;
+        
+        HealthUI.fillAmount = BossHealth.currentHealth / 100;
 
+            print("NotFlip");
+
+        if(movement.x < 0)
+        {
+            print("NotFlip");
+           this.gameObject.GetComponent<SpriteRenderer>().flipX = false;  
+        }
+         if(movement.x > 0)
+        {
+            print("Flip");
+           this.gameObject.GetComponent<SpriteRenderer>().flipX = true;  
+        }
+
+
+        if(Attacking == false && Introduction == true)
+        {
+
+
+             dir = player.transform.position - transform.position;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            dir.Normalize();
+            movement = dir;
+            
+            transform.position = Vector3.MoveTowards(transform.position,player.transform.position, BossSpeed *Time.deltaTime);
+            Boss_Anim.Play("BossRuning");
+            
+
+        }
 
         if(Vector2.Distance(transform.position,player.transform.position) < FinderRange * 10)
         {
-            if(Introduction == true) // looking if the intrroduction have been played if not it starts the introduction
+            if(Introduction == true && Vector2.Distance(transform.position,player.transform.position)< FinderRange * 100) // looking if the intrroduction have been played if not it starts the introduction
             {
                 FoundPlayer();
             }
@@ -86,7 +121,6 @@ public class bossSystem : MonoBehaviour
             }
         }
     }
-
     public void FoundPlayer()
     {
         DOVirtual.Float( Player_Camera.m_Lens.OrthographicSize, BattelCamZoom, 2, LensZoomOut =>{Player_Camera.m_Lens.OrthographicSize = LensZoomOut;}).SetEase(Ease.OutCubic);
@@ -98,9 +132,9 @@ public class bossSystem : MonoBehaviour
     }
     IEnumerator BossWaitingToAttack()
     {
-        
-        yield return new WaitForSeconds(TimeBetweenAttack);
 
+   
+        yield return new WaitForSeconds(TimeBetweenAttack);
 
         if(ReadyToAttack == true)
         {
@@ -109,12 +143,16 @@ public class bossSystem : MonoBehaviour
 
    }
     public void AttackPlayer()
-    {
-        int BossAttack;
+    {               
+        BossAttack = Random.Range(1,3);
         
-        BossAttack = Random.Range(1,4);
+        Attacking = true;
+        
+        if(HowManyHeals == 1 && ReadyToAttack == true && BossHealth.currentHealth < 50)
+        {
+            BossAttack = 3;
+        } 
 
-        BossAttack = 2; // DO to try attacks
         Attack(BossAttack);
 
         
@@ -122,9 +160,8 @@ public class bossSystem : MonoBehaviour
 
     public void Attack(int attackNumber)
     {
-        Boss_Anim.Play("Attack"+attackNumber);
+        Boss_Anim.Play("Attack" + attackNumber);
 
-        print(attackNumber);
 
         ReadyToAttack = false;
     }
@@ -132,6 +169,11 @@ public class bossSystem : MonoBehaviour
     public void FinishAttack()
     {
         ReadyToAttack = true;
+        this.gameObject.GetComponent<CircleCollider2D>().enabled = true;
+        Attacking = false;
+
+        BossAttack = 0;
+
     }
     
     
@@ -140,6 +182,8 @@ public class bossSystem : MonoBehaviour
     {
         transform.DOMoveY(transform.position.y + FlyHieght, 2);
         screenShake.StartShake(0.2f,3,3);       
+        this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+
     }
     public void Flydown()
     {  
@@ -161,10 +205,10 @@ public class bossSystem : MonoBehaviour
     {
         transform.DOScale(InAirSize,1f).SetEase(Ease.InOutSine);
         screenShake.StartShake(0.1f,1,1);
+
         this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
         
     }
-    
      public void FindigPlayerPos()
     {
         GameObject DangerSignPrefab = Instantiate(DangerSign,player.transform.position,Quaternion.identity);
@@ -182,10 +226,28 @@ public class bossSystem : MonoBehaviour
         
         Destroy(DangerSignPlacement,2);
         
-        
     }
    
-    
+    //Attack 3 aka healing
+    public void ChargesToHeal()
+    {
+        HowManyHeals--;
+        BossHealtPotion = Instantiate(BossHealtPotion,transform.position, Quaternion.identity);
+        BossHealtPotion.GetComponent<BossHealingPot>().Up();
+    }
+     public void BeginsToHeal()
+     {
+        BossHealtPotion.GetComponent<BossHealingPot>().Down();
+        StartCoroutine(BossHealing());
+     }
+     private IEnumerator BossHealing()
+     {
+        for (int i = 0; i < GainHealth * 2 ; i++)
+        {
+            BossHealth.currentHealth += 0.5f;
+        yield return new WaitForSeconds(0.05f);
+        }
+     }
     
     
     

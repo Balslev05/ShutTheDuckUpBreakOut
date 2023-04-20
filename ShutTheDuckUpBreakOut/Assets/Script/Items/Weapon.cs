@@ -5,12 +5,12 @@ using UnityEngine;
 using DG.Tweening;
 public class Weapon : MonoBehaviour
 {
+   
     public Objects_Weapons CurrentWeapon;
     public GameObject ItemDrop;
     public Player playerStats;
     public Animator WeaponAnim;
     public float Radius;    
-    public float Attack_Cooldown;
     public Transform circleOrigin;
     public int throwForce;
     public bool ReadyToAttack;
@@ -20,17 +20,14 @@ public class Weapon : MonoBehaviour
 
     //Stats Based on Scriptebal Object
     [Header ("Stats")]
-    [SerializeField] private int Damage;  // the damage you do
-    [SerializeField] private int Durability; // how many hits you can hit 
-    [SerializeField] private int weight; // Slows the Cooldown
-    [SerializeField] private int KnockBack; //knockbacks the enemy
-    [SerializeField] private Sprite WeaponSprite; //knockbacks the enemy
-    
-    void Awake()
-    {
-        KnockBack *= -1;
-        
-    }
+   
+    public int Damage;  // the damage you do
+    public int Durability; // how many hits you can hit 
+    public int weight; // Slows the Cooldown
+    public int KnockBack; //knockbacks the enemy
+    public Sprite WeaponSprite; //knockbacks the enemy
+    public Vector3 WeaponSize; 
+    public Objects_Weapons.Type AttackType = new Objects_Weapons.Type();  
 
     void Update()
     {
@@ -66,37 +63,41 @@ public class Weapon : MonoBehaviour
     {
         if(collider.gameObject.tag == "Enemy")
         {
-            collider.GetComponent<Health>().currentHealth -= Damage;
             Vector3 dirFromAttack = - (collider.transform.position - transform.position).normalized;
-            collider.transform.position += dirFromAttack * -KnockBack;
+            
+            Vector3 knockback;
+            knockback = collider.transform.position += dirFromAttack * -KnockBack;
+            collider.transform.DOMove( new Vector3 (knockback.x,knockback.y,knockback.z),3f).SetEase(Ease.OutCirc);
 
             Durability --;            
         }           
     }
 
-    IEnumerator AttackCooldown()
-    {
-        yield return new WaitForSeconds(Attack_Cooldown + weight / 4);
-        ReadyToAttack = true;
-    }
 
     void Attack()
     {
-        ReadyToAttack = false;
-        WeaponAnim.Play("WeaponAttackAnimation");
-        StartCoroutine(AttackCooldown());
+        ReadyToAttack = false;      
+
+        print("Anim" + AttackType);
+
+        WeaponAnim.Play("Anim" + AttackType);
     }
 
     
     public void PickUpWeapon()
-    {    playerStats.CarryingMelee = true;
+    {   playerStats.CarryingMelee = true;
+
         Damage = CurrentWeapon.Damage;
         KnockBack = CurrentWeapon.KnockBack;
         Durability = CurrentWeapon.Durability;
         weight = CurrentWeapon.weight;
+        WeaponSize = CurrentWeapon.WeaponSize;
+        AttackType = CurrentWeapon.AttackType;
         
-        SpriteRenderer ItemSprite = this.gameObject.GetComponent<SpriteRenderer>();
-        ItemSprite.sprite = CurrentWeapon.sprite;
+        this.gameObject.transform.localScale = WeaponSize;
+        WeaponSprite = CurrentWeapon.sprite;
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = WeaponSprite;
+
         this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
     }
       public void AttemptToThrow()
@@ -131,7 +132,6 @@ public class Weapon : MonoBehaviour
         GetComponent<SpriteRenderer>().enabled = false;
         playerStats.CarryingMelee = false;
     }
-
     public void DestroyWeapon()
     {
         ResetWeapon();

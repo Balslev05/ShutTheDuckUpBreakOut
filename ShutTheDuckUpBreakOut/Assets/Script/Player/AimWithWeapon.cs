@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class AimWithWeapon : MonoBehaviour
 {   
+    public Weapon currentWeapon;
     private Camera maincam;
     private Vector3 mousepos;
     public GameObject player;
@@ -44,5 +45,9 @@ public class AimWithWeapon : MonoBehaviour
     public void DeactivateAttackCollider()
     {
         WeaponCollider.enabled = false;
+    }
+      public void finishAttack()
+    {
+       currentWeapon.ReadyToAttack = true;
     }
 }

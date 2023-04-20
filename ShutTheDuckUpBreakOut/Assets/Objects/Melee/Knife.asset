@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff8fdc283a257db4e8ab8ca0ab712840, type: 3}
-  m_Name: CrowBar
+  m_Name: Knife
   m_EditorClassIdentifier: 
-  sprite: {fileID: -468555503, guid: 67aa647521ab78342a86659b3c2f4e0f, type: 3}
+  sprite: {fileID: 1209573874, guid: 4761c7df1b20a0d489db8b501ad98238, type: 3}
   Damage: 1
   Durability: 234
-  weight: 1
+  weight: 2
   KnockBack: 2
-  throwSpeed: 0.1
-  WeaponSize: {x: 0.8, y: 0.8, z: 0.8}
+  throwSpeed: 2
+  WeaponSize: {x: 0.6, y: 0.6, z: 0.6}
   AttackType: 0

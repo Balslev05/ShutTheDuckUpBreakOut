@@ -64,15 +64,17 @@ public class PlayerMovment : MonoBehaviour
         
         if(velocity.x == 0 && velocity.y == 0)
         {
-            playerAnim.Play("Idle");
+            playerAnim.Play("idleAnim");
+            
         } else
         {
-            playerAnim.Play("Running");
+            playerAnim.Play("walking");
+            
+
         }
     }
      IEnumerator Roll()
      {
-        gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         Roling = true;
         speed = speed + RoleForce;
         DOVirtual.Float( speed, 0, RoleLeanght, RolingSpeed =>{speed = RolingSpeed;});
@@ -87,7 +89,6 @@ public class PlayerMovment : MonoBehaviour
 
         speed = NormalMoveSpeed;
 
-        gameObject.GetComponent<SpriteRenderer>().color = Color.blue;
      }
      private void FixedUpdate() {
 

@@ -35,6 +35,8 @@ public class Item_Melee : MonoBehaviour
         ItemSprite.sprite = MeleeType.sprite;      
         ItemSprite.sprite = MeleeType.sprite;      
         
+        this.gameObject.transform.localScale = MeleeType.WeaponSize;
+        
     }
 
     public void ThrowMelee()

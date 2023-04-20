@@ -81,10 +81,13 @@ public class Player : MonoBehaviour
           UpdateGunUI();
         }
       }
+      if(collider.gameObject.tag == "Enemy" )
+      {
+
+      }   
     }
      void UpdateGunUI()
     {
-
         MaxInMagasin.text = Gun.MaxShots.ToString();
         CurrentInMagasin.text = Gun.ShotsInMagasin.ToString();
         GunName.text = Gun.GunName.ToString();

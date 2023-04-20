@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6bcf4cd6a910e8240a2e4ab61fe428c3
+guid: 16128c9bfea8e9a48baadac94fdbc04e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GooseRun_0
+      name: HeahtUI_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 94
-        height: 64
+        x: 1
+        y: 3
+        width: 65
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,71 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3e2b96702dad8145ba0d1b2f1b4c932
-      internalID: 1131863914
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GooseRun_1
-      rect:
-        serializedVersion: 2
-        x: 94
-        y: 0
-        width: 94
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36c0ea4e60a16734aa08610bce1fb3cc
-      internalID: 901660695
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GooseRun_2
-      rect:
-        serializedVersion: 2
-        x: 188
-        y: 0
-        width: 94
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 92757202701fe9848920cb1ecac5c5be
-      internalID: 1136968422
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GooseRun_3
-      rect:
-        serializedVersion: 2
-        x: 282
-        y: 0
-        width: 94
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d4576c6250de8544d8df618dce01502c
-      internalID: 656447057
+      spriteID: 0a20148fb1953c143bfa5f473e87014e
+      internalID: 841450943
       vertices: []
       indices: 
       edges: []
@@ -199,10 +136,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GooseRun_2: 1136968422
-      GooseRun_0: 1131863914
-      GooseRun_1: 901660695
-      GooseRun_3: 656447057
+      HeahtUI_0: 841450943
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
