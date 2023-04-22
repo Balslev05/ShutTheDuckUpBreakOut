@@ -7,6 +7,8 @@ using TMPro;
 
 public class Player : MonoBehaviour
 {
+  public Health playerHealth;
+  public Image HealthUI;
   public Weapon Weapon;
   public Guns Gun;
   public bool CarryingMelee = false;
@@ -33,6 +35,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      HealthUI.fillAmount = playerHealth.currentHealth / 10;
+
       if(CarryingGun == true)
       {
         UpdateGunUI();
@@ -81,10 +85,7 @@ public class Player : MonoBehaviour
           UpdateGunUI();
         }
       }
-      if(collider.gameObject.tag == "Enemy" )
-      {
-
-      }   
+       
     }
      void UpdateGunUI()
     {

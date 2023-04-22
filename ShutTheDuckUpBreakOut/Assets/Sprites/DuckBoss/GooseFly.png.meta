@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6bcf4cd6a910e8240a2e4ab61fe428c3
+guid: a3d676eac7825834291372d6b5b0a412
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,85 +105,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GooseRun_0
+      name: GooseFly_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 94
-        height: 64
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3e2b96702dad8145ba0d1b2f1b4c932
-      internalID: 1131863914
+      spriteID: 9d4ddcdf6caa419468a5c8fd382a3b61
+      internalID: -1636949010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GooseRun_1
+      name: GooseFly_1
       rect:
         serializedVersion: 2
-        x: 94
+        x: 96
         y: 0
-        width: 94
-        height: 64
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36c0ea4e60a16734aa08610bce1fb3cc
-      internalID: 901660695
+      spriteID: d8a183beaa612f24faa423ff31418523
+      internalID: -1671066501
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GooseRun_2
+      name: GooseFly_2
       rect:
         serializedVersion: 2
-        x: 188
+        x: 192
         y: 0
-        width: 94
-        height: 64
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92757202701fe9848920cb1ecac5c5be
-      internalID: 1136968422
+      spriteID: e1c89f4214a396149a209f44350a4b3a
+      internalID: -206545959
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GooseRun_3
+      name: GooseFly_3
       rect:
         serializedVersion: 2
-        x: 282
+        x: 288
         y: 0
-        width: 94
-        height: 64
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4576c6250de8544d8df618dce01502c
-      internalID: 656447057
+      spriteID: ac21641701d27a64080fdcd7cfd30e25
+      internalID: -1127893666
       vertices: []
       indices: 
       edges: []
@@ -199,10 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GooseRun_2: 1136968422
-      GooseRun_0: 1131863914
-      GooseRun_1: 901660695
-      GooseRun_3: 656447057
+      GooseFly_2: -206545959
+      GooseFly_0: -1636949010
+      GooseFly_1: -1671066501
+      GooseFly_3: -1127893666
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

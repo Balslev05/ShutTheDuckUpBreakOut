@@ -2,12 +2,20 @@ using System.Globalization;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using DG.Tweening;
+using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
     public int  maxHealth;
-    public float currentHealth;
-    public bool YouAreThePlayer; // jeg ved godt det her er en dårlig ide men jeg er UTROLIG TRÆT og burde bare gå i seng men vil gerne lige lave det færidgt ser senere om det var det vær 
+    public float currentHealth; 
+    
+    [Header("PlayerDamage")]
+    public screenShakeHandler screenShake;
+    public bool CanTakeDamage;
+    public Image DamgedOutline;
+    public Color playerdamged;
+    public float ImortalTimer;
+
 
 
 
@@ -23,6 +31,9 @@ public class Health : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        
+        CanTakeDamage = true; 
+
     }
     void Update()
     {
@@ -34,19 +45,40 @@ public class Health : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.gameObject.tag == "Bullet")
+        if(collider.gameObject.tag == ("Bullet"))
         {
-            currentHealth -= collider.GetComponent<Bullet>().BulletDamage;
-            
+        currentHealth -= collider.GetComponent<Bullet>().BulletDamage;
         }
-        if (YouAreThePlayer == true && collider.gameObject.tag == "Boss")
+        if(collider.gameObject.tag == ("MeleeCollider"))
         {
-
+        currentHealth -= collider.GetComponent<Weapon>().Damage; 
         }
 }
     void Death()
     {
         Destroy(this.gameObject);
     }
-    
+    public void PlayerTakeDamage(float Damage)
+    {
+        if(CanTakeDamage == true)
+        {
+        CanTakeDamage = false;
+        currentHealth -= Damage;
+        screenShake.StartShake(0.25f,5,2);
+        StartCoroutine(VirgentetColorChange());
+        }else{return;}
+
+
+          
+    }
+    IEnumerator VirgentetColorChange()
+    {
+        Color NormalCOlor = DamgedOutline.color;
+        DamgedOutline.DOColor(playerdamged,ImortalTimer).SetEase(Ease.OutExpo);
+        
+        yield return new WaitForSeconds(ImortalTimer/2);   
+        
+        DamgedOutline.DOColor(NormalCOlor,ImortalTimer).SetEase(Ease.InSine);
+        CanTakeDamage = true; 
+    }
 }

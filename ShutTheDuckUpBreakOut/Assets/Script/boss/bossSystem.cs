@@ -40,6 +40,8 @@ public class bossSystem : MonoBehaviour
     public float LaunchSpeed;
     public GameObject DangerSign;
     public GameObject DangerSignPlacement;
+    public bool FoundFinalPoint;
+    private GameObject DangerSignPrefab;
     
 
     [Header ("Attack 3 / Healing")]
@@ -54,6 +56,7 @@ public class bossSystem : MonoBehaviour
     public GameObject Introduction_PlayerCamera;
     public GameObject playersLight;
     public GameObject BossBundary;
+    public GameObject BossIntroductionBoundary;
 
     [Header ("SoundDesign")]
     public AudioSource walking;
@@ -77,19 +80,22 @@ public class bossSystem : MonoBehaviour
     void Update()
     {
         
-        
         HealthUI.fillAmount = BossHealth.currentHealth / 100;
 
-            print("NotFlip");
+
+
+
+
+
+
 
         if(movement.x < 0)
         {
-            print("NotFlip");
            this.gameObject.GetComponent<SpriteRenderer>().flipX = false;  
         }
          if(movement.x > 0)
         {
-            print("Flip");
+
            this.gameObject.GetComponent<SpriteRenderer>().flipX = true;  
         }
 
@@ -152,7 +158,7 @@ public class bossSystem : MonoBehaviour
         {
             BossAttack = 3;
         } 
-
+        
         Attack(BossAttack);
 
         
@@ -176,6 +182,15 @@ public class bossSystem : MonoBehaviour
 
     }
     
+
+    void OnCollisionEnter2D(Collision2D collider)
+    {
+        if(collider.gameObject.tag == "Player"){
+            collider.gameObject.GetComponent<Health>().PlayerTakeDamage(2);
+        }
+    }
+
+
     
     //Attack 1
     public void FlyUp()
@@ -211,10 +226,22 @@ public class bossSystem : MonoBehaviour
     }
      public void FindigPlayerPos()
     {
-        GameObject DangerSignPrefab = Instantiate(DangerSign,player.transform.position,Quaternion.identity);
-        DangerSignPlacement = DangerSignPrefab;
+         DangerSignPrefab = Instantiate(DangerSign,player.transform.position,Quaternion.identity);
 
+        
+        DangerSignPlacement = DangerSignPrefab;
+        StartCoroutine(updatingDangerPos());
     }
+    IEnumerator updatingDangerPos()
+    {
+        for (int i = 0; i < 250; i++)
+        {
+        
+        DangerSignPrefab.transform.position = player.transform.position;
+        yield return new WaitForSeconds(0.01f);
+        }
+    }
+
      public void ChargeAtplayer()
     {
         transform.DOScale(InAirSize,1f);
@@ -234,6 +261,7 @@ public class bossSystem : MonoBehaviour
         HowManyHeals--;
         BossHealtPotion = Instantiate(BossHealtPotion,transform.position, Quaternion.identity);
         BossHealtPotion.GetComponent<BossHealingPot>().Up();
+        BossHealtPotion.transform.parent = this.gameObject.transform;
     }
      public void BeginsToHeal()
      {
@@ -262,7 +290,6 @@ public class bossSystem : MonoBehaviour
         Introduction_PlayerCamera.SetActive(false);
         
         BossBundary.SetActive(true);
-
     }
     public void EndBossIntroduction()
     {
@@ -272,6 +299,7 @@ public class bossSystem : MonoBehaviour
         Introduction_BossCamera.SetActive(false);
         Introduction_PlayerCamera.SetActive(true);
 
+        BossIntroductionBoundary.SetActive(false);
     }
 
 

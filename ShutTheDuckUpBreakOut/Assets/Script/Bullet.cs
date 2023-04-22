@@ -45,12 +45,13 @@ public class Bullet : MonoBehaviour
             knockback = collider.transform.position += dirFromAttack * -BulletStats.KnockBack;
             collider.transform.DOMove( new Vector3 (knockback.x,knockback.y,knockback.z),0.3f).SetEase(Ease.OutCirc);
           }
+        
 
-
-        if(collider.gameObject.tag == "Player" || collider.gameObject.tag == "Bullet" || collider.gameObject.tag =="Gun" || collider.gameObject.tag == "Melee")
-        {
+        if(collider.gameObject.tag == "Player" || collider.gameObject.tag == "Bullet" || collider.gameObject.tag =="Gun" || collider.gameObject.tag == "Melee"){
             // do nothing
-        } 
+
+        }
+         
         else
         {
             GameObject Dust = Instantiate(BulletDust,this.transform.position,Quaternion.identity);

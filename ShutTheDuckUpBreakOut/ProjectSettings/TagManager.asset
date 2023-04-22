@@ -11,6 +11,7 @@ TagManager:
   - CMBrain
   - Terrain
   - Bullet
+  - MeleeCollider
   layers:
   - Default
   - TransparentFX

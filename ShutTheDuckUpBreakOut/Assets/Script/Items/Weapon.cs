@@ -67,7 +67,7 @@ public class Weapon : MonoBehaviour
             
             Vector3 knockback;
             knockback = collider.transform.position += dirFromAttack * -KnockBack;
-            collider.transform.DOMove( new Vector3 (knockback.x,knockback.y,knockback.z),3f).SetEase(Ease.OutCirc);
+            collider.transform.DOMove( new Vector3 (knockback.x,knockback.y,knockback.z),0.3f).SetEase(Ease.OutCirc);
 
             Durability --;            
         }           

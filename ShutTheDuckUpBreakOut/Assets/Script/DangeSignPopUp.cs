@@ -9,6 +9,10 @@ public class DangeSignPopUp : MonoBehaviour
     void Start()
     {
         transform.DOScale(new Vector3(3,3,3),0.3f).SetEase(Ease.OutBack);
+
+
+
+        
         StartCoroutine(HidePopUP());
     }
 
