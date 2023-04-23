@@ -43,10 +43,12 @@ public class Guns : MonoBehaviour
         KnockBack *= -1;
 
     }
+
+
     void Start()
     {
         ScreenShake = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<screenShakeHandler>();
-
+    
     }
 
     void Update()
@@ -97,10 +99,16 @@ public class Guns : MonoBehaviour
             //play anim LightAnim
             GunAnim.Play("GunFire");
         }
+
         for (int i = 0; i < BulletFiredPerShot; i++)
         {
-            GameObject bullet = Instantiate(BulletPrefab, ShootPoint.position, transform.parent.rotation);
+            GameObject bullet = Instantiate(BulletPrefab,ShootPoint.position,transform.parent.rotation);
+
+
+            bullet.transform.position = ShootPoint.position;
+            bullet.transform.rotation = transform.parent.rotation;
             bullet.transform.localScale = Bulletsize;
+            
         }
 
         ScreenShake.StartShake(0.1f,GunScreenShake,0.5f);

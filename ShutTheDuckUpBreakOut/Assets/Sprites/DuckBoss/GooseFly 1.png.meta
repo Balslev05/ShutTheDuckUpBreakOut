@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a3d676eac7825834291372d6b5b0a412
+guid: 3628d3876d2fc8c4a9ac76f848fd854d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GooseFly_0
+      name: GooseFly 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d4ddcdf6caa419468a5c8fd382a3b61
-      internalID: -1636949010
+      spriteID: bce1f246f064c6741ac66fbd56b0a924
+      internalID: 1361772040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GooseFly_1
+      name: GooseFly 1_1
       rect:
         serializedVersion: 2
         x: 96
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8a183beaa612f24faa423ff31418523
-      internalID: -1671066501
+      spriteID: 7fc02c63a46d8934f93aabd79a50efaa
+      internalID: 1807847555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GooseFly_2
+      name: GooseFly 1_2
       rect:
         serializedVersion: 2
         x: 192
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1c89f4214a396149a209f44350a4b3a
-      internalID: -206545959
+      spriteID: 3cd8f462e6b39ff4fb6d7854c90a3c07
+      internalID: 1303635294
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GooseFly_3
+      name: GooseFly 1_3
       rect:
         serializedVersion: 2
         x: 288
@@ -182,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac21641701d27a64080fdcd7cfd30e25
-      internalID: -1127893666
+      spriteID: 09e8120e7f19e1c41a91118c47bdfbad
+      internalID: 661665254
       vertices: []
       indices: 
       edges: []
@@ -199,10 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GooseFly_2: -206545959
-      GooseFly_0: -1636949010
-      GooseFly_1: -1671066501
-      GooseFly_3: -1127893666
+      GooseFly 1_0: 1361772040
+      GooseFly 1_2: 1303635294
+      GooseFly 1_3: 661665254
+      GooseFly 1_1: 1807847555
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

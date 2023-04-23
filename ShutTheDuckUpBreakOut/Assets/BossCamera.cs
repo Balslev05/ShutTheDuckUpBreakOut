@@ -32,10 +32,8 @@ public class BossCamera : MonoBehaviour
             cam.m_Follow = Player;
         } else
         {
-            float dist = Vector3.Distance(Player.position,Boss.position);
-
-            cam.m_Lens.OrthographicSize = dist- dist/3;
-            cam.m_Lens.OrthographicSize = Mathf.Clamp(cam.m_Lens.OrthographicSize,5,17);
+            float dist = Vector3.Distance(Player.position, Boss.position);
+            cam.m_Lens.OrthographicSize = Mathf.Clamp(dist - dist / 3, 5, 10000000000);
 
             cam.m_Follow = Mid;
         }

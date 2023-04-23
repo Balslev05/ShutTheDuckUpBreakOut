@@ -56,7 +56,7 @@ public class PlayerMovment : MonoBehaviour
         
         Vector2 velocity = rb.velocity;   
 
-        if(Input.GetKeyDown(KeyCode.Mouse1))
+        if(Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
         {
             if(velocity.x != 0 || velocity.y != 0)
             StartCoroutine(Roll());

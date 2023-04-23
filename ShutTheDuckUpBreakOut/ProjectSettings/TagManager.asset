@@ -12,6 +12,7 @@ TagManager:
   - Terrain
   - Bullet
   - MeleeCollider
+  - Bullets Pool
   layers:
   - Default
   - TransparentFX
