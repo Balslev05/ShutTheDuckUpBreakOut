@@ -56,7 +56,7 @@ public class PlayerMovment : MonoBehaviour
         
         Vector2 velocity = rb.velocity;   
 
-        if(Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift))
         {
             if(velocity.x != 0 || velocity.y != 0)
             StartCoroutine(Roll());
@@ -81,7 +81,7 @@ public class PlayerMovment : MonoBehaviour
         rb.AddForce(lastDirection * speed); 
         //change tag so it canoot be hit
 
-        yield return new WaitForSeconds( RoleLeanght + 0.02f);
+        yield return new WaitForSeconds( RoleLeanght );
 
         gameObject.GetComponent<Collider2D>().isTrigger = false;
 

@@ -9,7 +9,7 @@ public class BossHealingPot : MonoBehaviour
     {
         transform.DOMoveY(transform.position.y + 3 , 2);
         
-        transform.DOLocalRotate(new Vector3(0, 0, 900), 3, RotateMode.FastBeyond360).SetRelative(true).SetEase(Ease.OutBack);    
+        transform.DOLocalRotate(new Vector3(0, 0, 1260), 2, RotateMode.FastBeyond360).SetRelative(true).SetEase(Ease.OutBack);    
     }
     public void Down()
     {

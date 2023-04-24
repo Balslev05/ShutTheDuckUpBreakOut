@@ -19,21 +19,23 @@ AnimationClip:
   m_FloatCurves: []
   m_PPtrCurves:
   - curve:
-    - time: 0.016666668
+    - time: 0
       value: {fileID: 137581675, guid: 8b869a63ea2ddd046b26238192afb1fb, type: 3}
-    - time: 0.16666667
+    - time: 0.083333336
       value: {fileID: 785264929, guid: 8b869a63ea2ddd046b26238192afb1fb, type: 3}
-    - time: 0.31666666
+    - time: 0.18333334
       value: {fileID: -1742839031, guid: 8b869a63ea2ddd046b26238192afb1fb, type: 3}
-    - time: 0.46666667
+    - time: 0.26666668
       value: {fileID: 1861029473, guid: 8b869a63ea2ddd046b26238192afb1fb, type: 3}
-    - time: 2.8166666
+    - time: 2.1333334
       value: {fileID: 1721184384, guid: 8b869a63ea2ddd046b26238192afb1fb, type: 3}
-    - time: 2.9333334
+    - time: 2.3333333
       value: {fileID: -610927594, guid: 8b869a63ea2ddd046b26238192afb1fb, type: 3}
-    - time: 3.0833333
+    - time: 2.5666666
       value: {fileID: 1445461440, guid: 8b869a63ea2ddd046b26238192afb1fb, type: 3}
-    - time: 3.2
+    - time: 2.7666667
+      value: {fileID: 711593397, guid: 8b869a63ea2ddd046b26238192afb1fb, type: 3}
+    - time: 3.0666666
       value: {fileID: 711593397, guid: 8b869a63ea2ddd046b26238192afb1fb, type: 3}
     attribute: m_Sprite
     path: 
@@ -62,12 +64,13 @@ AnimationClip:
     - {fileID: -610927594, guid: 8b869a63ea2ddd046b26238192afb1fb, type: 3}
     - {fileID: 1445461440, guid: 8b869a63ea2ddd046b26238192afb1fb, type: 3}
     - {fileID: 711593397, guid: 8b869a63ea2ddd046b26238192afb1fb, type: 3}
+    - {fileID: 711593397, guid: 8b869a63ea2ddd046b26238192afb1fb, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 3.5
+    m_StopTime: 3.2833333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -94,21 +97,28 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.8
+  - time: 0.33333334
     functionName: FindigPlayerPos
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 2.5166667
+  - time: 2.1
     functionName: ChargeAtplayer
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 3.5
+  - time: 3.1
+    functionName: FinishAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 3.2833333
     functionName: FinishAttack
     data: 
     objectReferenceParameter: {fileID: 0}

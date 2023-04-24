@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff8fdc283a257db4e8ab8ca0ab712840, type: 3}
-  m_Name: Sword
+  m_Name: Pind
   m_EditorClassIdentifier: 
-  sprite: {fileID: -1242261701, guid: 4fd83dc4293e8fc489ab76e6f0c339f4, type: 3}
+  sprite: {fileID: 21300000, guid: 651a803f8faae764a996bf8540ecccaa, type: 3}
   Damage: 2
   Durability: 234
   weight: 1
   KnockBack: 2
   throwSpeed: 1
-  WeaponSize: {x: 0.7, y: 0.7, z: 0.7}
+  WeaponSize: {x: 1, y: 1, z: 1}
   AttackType: 1

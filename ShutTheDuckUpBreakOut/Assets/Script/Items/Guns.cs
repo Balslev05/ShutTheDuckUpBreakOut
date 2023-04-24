@@ -60,12 +60,12 @@ public class Guns : MonoBehaviour
         }
 
         //throw
-        if(Input.GetKey(KeyCode.Space) && playerStats.CarryingGun == true)
+        if(Input.GetKey(KeyCode.Mouse1) && playerStats.CarryingGun == true)
         {
             ChargeTimer += Time.deltaTime;
         }
 
-        if(Input.GetKeyUp(KeyCode.Space) && playerStats.CarryingGun == true)
+        if(Input.GetKeyUp(KeyCode.Mouse1) && playerStats.CarryingGun == true)
         {
             AttemptToThrow();  
         }

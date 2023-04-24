@@ -37,7 +37,7 @@ public class Weapon : MonoBehaviour
         }
 
         //throw
-        if(Input.GetKey(KeyCode.Space) && playerStats.CarryingMelee == true)
+        if(Input.GetKey(KeyCode.Mouse1) && playerStats.CarryingMelee == true)
         {
             ChargeTimer += Time.deltaTime;
         }

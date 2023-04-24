@@ -5,10 +5,13 @@ using DG.Tweening;
 
 public class DangeSignPopUp : MonoBehaviour
 {
+    public float POPUpTimer = 0.3f;
+    public float waitbetweenTween;
+    public float POPDownTimer = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
-        transform.DOScale(new Vector3(3,3,3),0.3f).SetEase(Ease.OutBack);
+        transform.DOScale(new Vector3(3,3,3),POPUpTimer).SetEase(Ease.OutBack);
 
 
 
@@ -18,8 +21,8 @@ public class DangeSignPopUp : MonoBehaviour
 
     IEnumerator HidePopUP()
     {
-        yield return new WaitForSeconds(1);
-        transform.DOScale(new Vector3(0,0,0),0.5f).SetEase(Ease.InCubic);
+        yield return new WaitForSeconds(waitbetweenTween);
+        transform.DOScale(new Vector3(0,0,0),POPDownTimer).SetEase(Ease.InCubic);
 
     }
 }

@@ -38,10 +38,13 @@ public class bossSystem : MonoBehaviour
     [Header ("Attack 2 / Jump")]
     public Vector3 InAirSize;
     public float LaunchSpeed;
-    public GameObject DangerSign;
+    public float chainAttacks;
+    public GameObject DangerSignRed;
+    public GameObject DangerSignBlack;
     public GameObject DangerSignPlacement;
     public bool FoundFinalPoint;
     private GameObject DangerSignPrefab;
+    
     
 
     [Header ("Attack 3 / Healing")]
@@ -156,9 +159,15 @@ public class bossSystem : MonoBehaviour
         
         if(HowManyHeals == 1 && ReadyToAttack == true && BossHealth.currentHealth < 50)
         {
-            BossAttack = 3;
+            BossAttack = 4;
         } 
         
+        if(BossAttack == 2 && HowManyHeals == 0) // animation picked the wrong thing 
+        {
+            BossAttack = 3;
+        } 
+
+        print(BossAttack);
         Attack(BossAttack);
 
         
@@ -166,6 +175,7 @@ public class bossSystem : MonoBehaviour
 
     public void Attack(int attackNumber)
     {
+        
         Boss_Anim.Play("Attack" + attackNumber);
 
 
@@ -226,21 +236,33 @@ public class bossSystem : MonoBehaviour
     }
      public void FindigPlayerPos()
     {
-         DangerSignPrefab = Instantiate(DangerSign,player.transform.position,Quaternion.identity);
+        if(BossAttack == 3)
+        {
+        DangerSignPrefab = Instantiate(DangerSignBlack,player.transform.position,Quaternion.identity);
+        DangerSignPrefab.transform.position = player.transform.position;
 
-        
+        DangerSignPlacement = DangerSignPrefab;
+        } else
+        {
+        DangerSignPrefab = Instantiate(DangerSignRed,player.transform.position,Quaternion.identity);
+        DangerSignPrefab.transform.position = player.transform.position;
+
         DangerSignPlacement = DangerSignPrefab;
         StartCoroutine(updatingDangerPos());
+
+        }
+        
+
     }
-    IEnumerator updatingDangerPos()
+     IEnumerator updatingDangerPos()
     {
-        for (int i = 0; i < 250; i++)
+        for (int i = 0; i < 150; i++)
         {
         
         DangerSignPrefab.transform.position = player.transform.position;
         yield return new WaitForSeconds(0.01f);
         }
-    }
+    } 
 
      public void ChargeAtplayer()
     {

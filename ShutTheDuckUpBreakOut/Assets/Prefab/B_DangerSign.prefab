@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2366280322782265028}
   - component: {fileID: -6387875161911194295}
   m_Layer: 0
-  m_Name: DangerSign
+  m_Name: B_DangerSign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 6b627adbfb49ac74dacb7c2ec5f1da96, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 266785cce8550d549a4f30028d0baa05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,3 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69c93a735efc9d845bc5b3ce469e3f2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  POPUpTimer: 0.1
+  waitbetweenTween: 0.4
+  POPDownTimer: 0.3

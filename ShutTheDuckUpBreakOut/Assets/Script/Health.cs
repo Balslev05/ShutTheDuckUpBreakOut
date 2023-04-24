@@ -15,6 +15,7 @@ public class Health : MonoBehaviour
     public Image DamgedOutline;
     public Color playerdamged;
     public float ImortalTimer;
+    public bool IsPlayer;
 
 
 
@@ -45,7 +46,7 @@ public class Health : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.gameObject.tag == ("Bullet"))
+        if(collider.gameObject.tag == ("Bullet") && IsPlayer == false)
         {
         currentHealth -= collider.GetComponent<Bullet>().BulletDamage;
         }
@@ -74,11 +75,14 @@ public class Health : MonoBehaviour
     IEnumerator VirgentetColorChange()
     {
         Color NormalCOlor = DamgedOutline.color;
-        DamgedOutline.DOColor(playerdamged,ImortalTimer).SetEase(Ease.OutExpo);
+        DamgedOutline.DOColor(playerdamged,ImortalTimer / 5).SetEase(Ease.OutExpo);
         
+        yield return new WaitForSeconds(ImortalTimer/5);   
+        
+        DamgedOutline.DOColor(NormalCOlor,ImortalTimer / 5).SetEase(Ease.InSine);
+
         yield return new WaitForSeconds(ImortalTimer/2);   
         
-        DamgedOutline.DOColor(NormalCOlor,ImortalTimer).SetEase(Ease.InSine);
         CanTakeDamage = true; 
     }
 }
