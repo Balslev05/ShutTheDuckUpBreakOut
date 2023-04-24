@@ -15,6 +15,7 @@ public class ContinueUI : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
     public float timer;
     public TMP_Text Text_Continue;
     public string Text;
+    public float SwitchSceneTimer;
     private string currentText;
     public Color TextColor;
     public bool Ready;
@@ -61,9 +62,14 @@ public class ContinueUI : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
     print("Clickt");
     Text_Continue.color = Color.white;
     Ready = false;
-   // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    Text_Continue.DOFade(0,2).SetEase(Ease.OutCirc);
-    // switch scene
+    Text_Continue.DOFade(0,SwitchSceneTimer).SetEase(Ease.OutCirc);
+    StartCoroutine(switchSceneDelay());
+   }
+   IEnumerator switchSceneDelay()
+   {
+    yield return new WaitForSeconds(SwitchSceneTimer+1);
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
    }
 
 }

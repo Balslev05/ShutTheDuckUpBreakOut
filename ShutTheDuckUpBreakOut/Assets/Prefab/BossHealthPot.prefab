@@ -97,3 +97,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 723f937e88f21e844b3393ae83965d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SrinkDOwnsize: {x: 0.7, y: 0.7, z: 0.7}

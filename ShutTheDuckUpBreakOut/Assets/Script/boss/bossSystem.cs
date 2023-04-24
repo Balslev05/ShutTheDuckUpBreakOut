@@ -54,6 +54,7 @@ public class bossSystem : MonoBehaviour
 
 
     [Header ("Introduction")]
+    public GameObject BossCanvas;
     public bool Introduction = false;
     public GameObject Introduction_BossCamera;
     public GameObject Introduction_PlayerCamera;
@@ -281,12 +282,18 @@ public class bossSystem : MonoBehaviour
     public void ChargesToHeal()
     {
         HowManyHeals--;
+
         BossHealtPotion = Instantiate(BossHealtPotion,transform.position, Quaternion.identity);
+
         BossHealtPotion.GetComponent<BossHealingPot>().Up();
+        
         BossHealtPotion.transform.parent = this.gameObject.transform;
+
     }
+    
      public void BeginsToHeal()
      {
+
         BossHealtPotion.GetComponent<BossHealingPot>().Down();
         StartCoroutine(BossHealing());
      }
@@ -307,6 +314,7 @@ public class bossSystem : MonoBehaviour
     public void StartBossIntroduction()
     {
         Boss_Anim.Play("Introduction");
+        
 
         Introduction_BossCamera.SetActive(true);
         Introduction_PlayerCamera.SetActive(false);
@@ -320,6 +328,8 @@ public class bossSystem : MonoBehaviour
         
         Introduction_BossCamera.SetActive(false);
         Introduction_PlayerCamera.SetActive(true);
+
+        BossCanvas.SetActive(true);
 
         BossIntroductionBoundary.SetActive(false);
     }
