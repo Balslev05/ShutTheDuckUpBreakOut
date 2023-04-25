@@ -51,6 +51,8 @@ public class bossSystem : MonoBehaviour
     public GameObject BossHealtPotion;
     public int HowManyHeals;
     public int GainHealth;
+    [SerializeField] private SpriteRenderer bossRenderer;
+    
 
 
     [Header ("Introduction")]
@@ -78,6 +80,8 @@ public class bossSystem : MonoBehaviour
         NormalSize = transform.localScale;
 
         BossBundary.SetActive(false);
+
+        bossRenderer = this.gameObject.GetComponent<SpriteRenderer>();
 
     }
 
@@ -281,9 +285,21 @@ public class bossSystem : MonoBehaviour
     //Attack 3 aka healing
     public void ChargesToHeal()
     {
+        
         HowManyHeals--;
 
         BossHealtPotion = Instantiate(BossHealtPotion,transform.position, Quaternion.identity);
+         if(bossRenderer.flipX == true)
+        {
+            BossHealtPotion.transform.DOMoveX(transform.position.x + -0.6f , 0.1f);
+            print("Flip");
+        } 
+        if(bossRenderer.flipX == false)
+        {
+            print("NoFlip");
+            BossHealtPotion.transform.DOMoveX(transform.position.x + 0.6f , 0.1f);
+        }
+
 
         BossHealtPotion.GetComponent<BossHealingPot>().Up();
         

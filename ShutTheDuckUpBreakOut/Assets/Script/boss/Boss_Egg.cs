@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using DG.Tweening;
 public class Boss_Egg : MonoBehaviour
 {
     private screenShakeHandler screenshake;
@@ -28,10 +28,18 @@ public class Boss_Egg : MonoBehaviour
     }
     public void EggExploade()
     {
+        
+        
         Instantiate(EggSlices,this.transform.position,Quaternion.identity);
+        StartCoroutine(spawnenemies());        
+    }
+    IEnumerator spawnenemies()
+    {
         for (int i = 0; i < SpawningEnemies; i++)
         {
-        Instantiate(Enemies,this.transform.position,Quaternion.identity);
+        GameObject PrefabEnemies = Instantiate(Enemies,this.transform.position,Quaternion.identity);
+
+        yield return new WaitForSeconds(0.1f);
         }
     }
 }

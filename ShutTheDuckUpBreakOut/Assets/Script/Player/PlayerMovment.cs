@@ -7,6 +7,7 @@ public class PlayerMovment : MonoBehaviour
     public float speed = 250;
     public Rigidbody2D rb;
     public Animator playerAnim;
+    public GameObject WeaponManager;
 
     [Header("RoleStats")]
     public float RoleLeanght = 1f;
@@ -75,13 +76,18 @@ public class PlayerMovment : MonoBehaviour
     }
      IEnumerator Roll()
      {
+       
+
+        WeaponManager.SetActive(false);
         Roling = true;
         speed = speed + RoleForce;
         DOVirtual.Float( speed, 0, RoleLeanght, RolingSpeed =>{speed = RolingSpeed;});
         rb.AddForce(lastDirection * speed); 
         //change tag so it canoot be hit
+        playerAnim.Play("Rolling");
+        yield return new WaitForSeconds(RoleLeanght);
 
-        yield return new WaitForSeconds( RoleLeanght );
+        WeaponManager.SetActive(true);
 
         gameObject.GetComponent<Collider2D>().isTrigger = false;
 

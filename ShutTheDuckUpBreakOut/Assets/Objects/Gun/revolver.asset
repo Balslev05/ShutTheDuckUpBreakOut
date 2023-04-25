@@ -15,7 +15,7 @@ MonoBehaviour:
   GunName: Revolver
   sprite: {fileID: 21300000, guid: 910bb0f0d0623c2458e55296e0d236d1, type: 3}
   TimeBetweenShots: 0.35
-  BulletDamage: 2
+  BulletDamage: 25
   Weight: 2
   SpeedBullet: 30
   ShotsInMagasin: 999
