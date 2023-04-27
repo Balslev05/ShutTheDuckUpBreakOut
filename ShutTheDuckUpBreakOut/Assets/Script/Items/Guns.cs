@@ -111,7 +111,7 @@ public class Guns : MonoBehaviour
             
         }
 
-        ScreenShake.StartShake(0.1f,GunScreenShake,0.5f);
+        ScreenShake.StartShake(100f,GunScreenShake,0.5f);
         
         ShotsInMagasin --;
         

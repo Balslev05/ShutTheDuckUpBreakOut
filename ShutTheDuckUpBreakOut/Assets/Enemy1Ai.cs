@@ -11,7 +11,7 @@ public class Enemy1Ai : MonoBehaviour
     public Vector3 dir;
     private  Vector2 lastDirection;
     private GameObject player;
-    private bool DoingAttack = false;
+    [SerializeField] private bool DoingAttack = false;
     private Vector3 movement;
     private Rigidbody2D rb;
 
@@ -30,9 +30,10 @@ public class Enemy1Ai : MonoBehaviour
     void Update()
     {
         float distance = Vector2.Distance(transform.position, player.transform.position);
+
         if(distance < AttackDistance && DoingAttack == false)
         {  
-            DoingAttack = true;
+            
             enemyAnim.Play("Enemy1Attack");
             print("PLZ");
         }
@@ -67,6 +68,7 @@ public class Enemy1Ai : MonoBehaviour
       public void ActivateCollider()
     {
         AttackPoint.SetActive(true);
+        DoingAttack = true;
     }
     public void DeactivateCollider()
     {
@@ -74,5 +76,6 @@ public class Enemy1Ai : MonoBehaviour
         DoingAttack = false;
 
     }
+    
 
 }
