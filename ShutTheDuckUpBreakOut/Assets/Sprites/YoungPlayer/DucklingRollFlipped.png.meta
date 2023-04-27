@@ -1,39 +1,9 @@
 fileFormatVersion: 2
-guid: 1c4941bb0c5a4324a92bcc70337d4e1e
+guid: 489c6348a6828e34087d85935c9f572d
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 5762364655899415448
-    second: DucklingRoll_0
-  - first:
-      213: -6478353431207129137
-    second: DucklingRoll_1
-  - first:
-      213: -3864487372423921921
-    second: DucklingRoll_2
-  - first:
-      213: 3735329743092907301
-    second: DucklingRoll_3
-  - first:
-      213: -5169299408326690107
-    second: DucklingRoll_4
-  - first:
-      213: -846873408839209996
-    second: DucklingRoll_5
-  - first:
-      213: 2925423600578814190
-    second: DucklingRoll_6
-  - first:
-      213: 3395541570818185460
-    second: DucklingRoll_7
-  - first:
-      213: -7664499990319419685
-    second: DucklingRoll_8
-  - first:
-      213: 4837870615709773333
-    second: DucklingRoll_9
+  internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -93,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -111,7 +82,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -122,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DucklingRoll_0
+      name: DucklingRollFlipped_0
       rect:
         serializedVersion: 2
         x: 16
@@ -136,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 893962dcf1808ff40800000000000000
-      internalID: 5762364655899415448
+      spriteID: 354658689637624409ee7d6b0080a982
+      internalID: 665005278
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DucklingRoll_1
+      name: DucklingRollFlipped_1
       rect:
         serializedVersion: 2
         x: 48
@@ -157,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcf477bc0e34816a0800000000000000
-      internalID: -6478353431207129137
+      spriteID: 42651b4c05667e74291be12df612223c
+      internalID: 166856065
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DucklingRoll_2
+      name: DucklingRollFlipped_2
       rect:
         serializedVersion: 2
         x: 80
@@ -178,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffe70bfa5359e5ac0800000000000000
-      internalID: -3864487372423921921
+      spriteID: e27fa10bbfae867428532746cf1bbf7a
+      internalID: -297769421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DucklingRoll_3
+      name: DucklingRollFlipped_3
       rect:
         serializedVersion: 2
         x: 112
@@ -199,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52df0085c9e86d330800000000000000
-      internalID: 3735329743092907301
+      spriteID: 6e4d4ef78d0391e4cad21db1fbd17f9b
+      internalID: 981269397
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DucklingRoll_4
+      name: DucklingRollFlipped_4
       rect:
         serializedVersion: 2
         x: 16
@@ -220,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cafc058395f248b0800000000000000
-      internalID: -5169299408326690107
+      spriteID: 48d764287770eed44a6c85d412445900
+      internalID: -665567162
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DucklingRoll_5
+      name: DucklingRollFlipped_5
       rect:
         serializedVersion: 2
         x: 48
@@ -241,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fb2a602f1d4f34f0800000000000000
-      internalID: -846873408839209996
+      spriteID: 4c76dbeabc02c3b4d88c98629eb72467
+      internalID: -935381809
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DucklingRoll_6
+      name: DucklingRollFlipped_6
       rect:
         serializedVersion: 2
         x: 80
@@ -262,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee06b02e341399820800000000000000
-      internalID: 2925423600578814190
+      spriteID: b7a0f44b56f1b06478d63de6db5607cc
+      internalID: 901409452
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DucklingRoll_7
+      name: DucklingRollFlipped_7
       rect:
         serializedVersion: 2
         x: 112
@@ -283,14 +266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f890bc71136f1f20800000000000000
-      internalID: 3395541570818185460
+      spriteID: 3428e8d8310ecdf46887115637273589
+      internalID: 516096777
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DucklingRoll_8
+      name: DucklingRollFlipped_8
       rect:
         serializedVersion: 2
         x: 16
@@ -304,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdea608fdd932a590800000000000000
-      internalID: -7664499990319419685
+      spriteID: 6583d8fb8483cf149a331b400bf7701a
+      internalID: -1493355397
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DucklingRoll_9
+      name: DucklingRollFlipped_9
       rect:
         serializedVersion: 2
         x: 48
@@ -325,8 +308,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51e6eae51b1932340800000000000000
-      internalID: 4837870615709773333
+      spriteID: 2d0658491b1b58f48873be0e7c766a90
+      internalID: -1373290708
       vertices: []
       indices: 
       edges: []
@@ -342,16 +325,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DucklingRoll_9: 4837870615709773333
-      DucklingRoll_3: 3735329743092907301
-      DucklingRoll_1: -6478353431207129137
-      DucklingRoll_6: 2925423600578814190
-      DucklingRoll_2: -3864487372423921921
-      DucklingRoll_7: 3395541570818185460
-      DucklingRoll_5: -846873408839209996
-      DucklingRoll_4: -5169299408326690107
-      DucklingRoll_0: 5762364655899415448
-      DucklingRoll_8: -7664499990319419685
+      DucklingRollFlipped_3: 981269397
+      DucklingRollFlipped_2: -297769421
+      DucklingRollFlipped_5: -935381809
+      DucklingRollFlipped_6: 901409452
+      DucklingRollFlipped_0: 665005278
+      DucklingRollFlipped_8: -1493355397
+      DucklingRollFlipped_9: -1373290708
+      DucklingRollFlipped_4: -665567162
+      DucklingRollFlipped_7: 516096777
+      DucklingRollFlipped_1: 166856065
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

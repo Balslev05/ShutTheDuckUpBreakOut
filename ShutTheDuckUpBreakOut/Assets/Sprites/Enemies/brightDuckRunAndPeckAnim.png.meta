@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 32cb0109130bad2499b1cb4a1830a0cd
+guid: 244955ca519c23240b5c5ec5aacf9a8d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,12 +105,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Duckling-R1
+      name: brightDuckRunAndPeckAnim_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 48
-        width: 9
+        x: 15
+        y: 56
+        width: 15
         height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -119,19 +119,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a5a2cd1b37f6424f9190cfa05301040
-      internalID: -2078439460
+      spriteID: cdedf0e9fa4a5ba4e857bfb3035e50d5
+      internalID: 934015013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Duckling-R2
+      name: brightDuckRunAndPeckAnim_1
       rect:
         serializedVersion: 2
-        x: 51
-        y: 48
-        width: 9
+        x: 31
+        y: 56
+        width: 15
         height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -140,19 +140,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d26b60eab9d4f3344a36cacfc501af8d
-      internalID: -1085445526
+      spriteID: 9b7026f97c220b248b7213d75f034cc9
+      internalID: 560945135
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Duckling-R3
+      name: brightDuckRunAndPeckAnim_2
       rect:
         serializedVersion: 2
-        x: 83
-        y: 48
-        width: 9
+        x: 47
+        y: 56
+        width: 15
         height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -161,19 +161,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26e14cc5a4ae2114b8d0d714e73dfcea
-      internalID: -169013311
+      spriteID: f526fb52b7c82d046be94384f86a0453
+      internalID: 1536053545
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Duckling-R4
+      name: brightDuckRunAndPeckAnim_3
       rect:
         serializedVersion: 2
-        x: 115
-        y: 48
-        width: 9
+        x: 63
+        y: 56
+        width: 15
         height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -182,19 +182,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c628b85c768e0a649bbe4d9798ebeb4b
-      internalID: -1694281305
+      spriteID: 72bbbf185dfb89f49a7768fc9dd5c015
+      internalID: 1894997802
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Duckling-R5
+      name: brightDuckRunAndPeckAnim_4
       rect:
         serializedVersion: 2
-        x: 18
-        y: 16
-        width: 11
+        x: 0
+        y: 30
+        width: 15
         height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -203,19 +203,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48b4e9a477da14e4e911cee650185f12
-      internalID: 1380309536
+      spriteID: e9445458aede9574db4eeeb5c6d8d85d
+      internalID: 484599969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Duckling-R6
+      name: brightDuckRunAndPeckAnim_5
       rect:
         serializedVersion: 2
-        x: 50
-        y: 16
-        width: 11
+        x: 17
+        y: 30
+        width: 15
         height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -224,19 +224,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7e1b5181566ee443968af74aec61132
-      internalID: -2120874002
+      spriteID: 4fea0618fec3c054b99c93498801d59e
+      internalID: -976100980
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Duckling-R7
+      name: brightDuckRunAndPeckAnim_6
       rect:
         serializedVersion: 2
-        x: 82
-        y: 16
-        width: 11
+        x: 38
+        y: 30
+        width: 15
         height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -245,19 +245,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 168e4df56a6c0484c9bde7fcc1302413
-      internalID: -786688341
+      spriteID: fc9263044106e784991bd8de606e67d5
+      internalID: -291816564
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Duckling-R8
+      name: brightDuckRunAndPeckAnim_7
       rect:
         serializedVersion: 2
-        x: 113
-        y: 16
-        width: 13
+        x: 58
+        y: 30
+        width: 15
         height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -266,8 +266,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41f9251033c848042804726df6bfa247
-      internalID: 360271322
+      spriteID: 1fecb902dff6025489b0ccd0fe1b63ed
+      internalID: 1119750935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brightDuckRunAndPeckAnim_8
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 30
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436ecdd3eead30641ae60df9eb61a9ed
+      internalID: 1730918201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brightDuckRunAndPeckAnim_9
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 30
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f923aa0083f9e746b9c10b27dc91053
+      internalID: -1690020755
       vertices: []
       indices: 
       edges: []
@@ -283,23 +325,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Duckling-R7: -786688341
-      Duckling-R5: 1380309536
-      Duckling-R4: -1694281305
-      Duckling-R6: -2120874002
-      Duckling-export_5: -399053876
-      Duckling-export_16: -1236406719
-      Duckling-R3: -169013311
-      Duckling-export_2: -1372812573
-      Duckling-export_1: 1614981730
-      Duckling-R2: -1085445526
-      Duckling-export_4: -434602099
-      Duckling-export_0: 158900277
-      Duckling-export_6: -711562867
-      Duckling-R8: 360271322
-      Duckling-export_7: -946533626
-      Duckling-R1: -2078439460
-      Duckling-export_3: 1878711519
+      brightDuckRunAndPeckAnim_9: -1690020755
+      brightDuckRunAndPeckAnim_7: 1119750935
+      brightDuckRunAndPeckAnim_8: 1730918201
+      brightDuckRunAndPeckAnim_0: 934015013
+      brightDuckRunAndPeckAnim_1: 560945135
+      brightDuckRunAndPeckAnim_4: 484599969
+      brightDuckRunAndPeckAnim_3: 1894997802
+      brightDuckRunAndPeckAnim_6: -291816564
+      brightDuckRunAndPeckAnim_2: 1536053545
+      brightDuckRunAndPeckAnim_5: -976100980
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

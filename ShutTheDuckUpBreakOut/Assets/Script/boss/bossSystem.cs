@@ -90,13 +90,6 @@ public class bossSystem : MonoBehaviour
         
         HealthUI.fillAmount = BossHealth.currentHealth / 100;
 
-
-
-
-
-
-
-
         if(movement.x < 0)
         {
            this.gameObject.GetComponent<SpriteRenderer>().flipX = false;  
@@ -112,7 +105,7 @@ public class bossSystem : MonoBehaviour
         {
 
 
-             dir = player.transform.position - transform.position;
+            dir = player.transform.position - transform.position;
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             dir.Normalize();
             movement = dir;
