@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 32cb0109130bad2499b1cb4a1830a0cd
+guid: 073540cc318e1a04185c30dceb8883dc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,169 +105,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Duckling-R1
+      name: GooseConsume_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 48
-        width: 9
-        height: 19
+        x: 0
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a5a2cd1b37f6424f9190cfa05301040
-      internalID: -2078439460
+      spriteID: e7a2257ce2afde04e8505eb5c51457b5
+      internalID: 1204147378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Duckling-R2
+      name: GooseConsume_1
       rect:
         serializedVersion: 2
-        x: 51
-        y: 48
-        width: 9
-        height: 19
+        x: 96
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d26b60eab9d4f3344a36cacfc501af8d
-      internalID: -1085445526
+      spriteID: 9133c3895947fb94e8a8a646c3f10cf6
+      internalID: 1639934778
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Duckling-R3
+      name: GooseConsume_2
       rect:
         serializedVersion: 2
-        x: 83
-        y: 48
-        width: 9
-        height: 19
+        x: 192
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26e14cc5a4ae2114b8d0d714e73dfcea
-      internalID: -169013311
+      spriteID: 0cc829deede4b1a4ba8a6c4535cb85b5
+      internalID: 377088666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Duckling-R4
+      name: GooseConsume_3
       rect:
         serializedVersion: 2
-        x: 115
-        y: 48
-        width: 9
-        height: 19
+        x: 288
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c628b85c768e0a649bbe4d9798ebeb4b
-      internalID: -1694281305
+      spriteID: 346e71af5207ba84b91c72f6132ccf34
+      internalID: 2012136188
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Duckling-R5
+      name: GooseConsume_4
       rect:
         serializedVersion: 2
-        x: 18
-        y: 16
-        width: 11
-        height: 19
+        x: 384
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48b4e9a477da14e4e911cee650185f12
-      internalID: 1380309536
+      spriteID: f55b6501538d290439a4101fe2b6ebeb
+      internalID: -894792137
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Duckling-R6
+      name: GooseConsume_5
       rect:
         serializedVersion: 2
-        x: 50
-        y: 16
-        width: 11
-        height: 19
+        x: 480
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7e1b5181566ee443968af74aec61132
-      internalID: -2120874002
+      spriteID: dda0087bc3600b5469eb50b9a8079961
+      internalID: -2041733151
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Duckling-R7
+      name: GooseConsume_6
       rect:
         serializedVersion: 2
-        x: 82
-        y: 16
-        width: 11
-        height: 19
+        x: 576
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 168e4df56a6c0484c9bde7fcc1302413
-      internalID: -786688341
+      spriteID: 3ab38d60bc242d24cae6e789b8bc850f
+      internalID: -137902853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Duckling-R8
+      name: GooseConsume_7
       rect:
         serializedVersion: 2
-        x: 113
-        y: 16
-        width: 13
-        height: 19
+        x: 672
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41f9251033c848042804726df6bfa247
-      internalID: 360271322
+      spriteID: 1a2e616e39ae245418761cd61eed11b2
+      internalID: 227213850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GooseConsume_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a05a025fff714498002f097f223c1d
+      internalID: 351683525
       vertices: []
       indices: 
       edges: []
@@ -283,23 +304,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Duckling-R7: -786688341
-      Duckling-R5: 1380309536
-      Duckling-R4: -1694281305
-      Duckling-R6: -2120874002
-      Duckling-export_5: -399053876
-      Duckling-export_16: -1236406719
-      Duckling-R3: -169013311
-      Duckling-export_2: -1372812573
-      Duckling-export_1: 1614981730
-      Duckling-R2: -1085445526
-      Duckling-export_4: -434602099
-      Duckling-export_0: 158900277
-      Duckling-export_6: -711562867
-      Duckling-R8: 360271322
-      Duckling-export_7: -946533626
-      Duckling-R1: -2078439460
-      Duckling-export_3: 1878711519
+      GooseConsume_6: -137902853
+      GooseConsume_0: 1204147378
+      GooseConsume_5: -2041733151
+      GooseConsume_1: 1639934778
+      GooseConsume_2: 377088666
+      GooseConsume_7: 227213850
+      GooseConsume_4: -894792137
+      GooseConsume_8: 351683525
+      GooseConsume_3: 2012136188
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

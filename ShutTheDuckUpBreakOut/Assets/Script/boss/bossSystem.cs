@@ -51,6 +51,8 @@ public class bossSystem : MonoBehaviour
     public GameObject BossHealtPotion;
     public int HowManyHeals;
     public int GainHealth;
+    [SerializeField] private SpriteRenderer bossRenderer;
+    
 
 
     [Header ("Introduction")]
@@ -79,19 +81,14 @@ public class bossSystem : MonoBehaviour
 
         BossBundary.SetActive(false);
 
+        bossRenderer = this.gameObject.GetComponent<SpriteRenderer>();
+
     }
 
     void Update()
     {
         
         HealthUI.fillAmount = BossHealth.currentHealth / 100;
-
-
-
-
-
-
-
 
         if(movement.x < 0)
         {
@@ -108,7 +105,7 @@ public class bossSystem : MonoBehaviour
         {
 
 
-             dir = player.transform.position - transform.position;
+            dir = player.transform.position - transform.position;
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             dir.Normalize();
             movement = dir;
@@ -281,9 +278,21 @@ public class bossSystem : MonoBehaviour
     //Attack 3 aka healing
     public void ChargesToHeal()
     {
+        
         HowManyHeals--;
 
         BossHealtPotion = Instantiate(BossHealtPotion,transform.position, Quaternion.identity);
+         if(bossRenderer.flipX == true)
+        {
+            BossHealtPotion.transform.DOMoveX(transform.position.x + -0.6f , 0.1f);
+            print("Flip");
+        } 
+        if(bossRenderer.flipX == false)
+        {
+            print("NoFlip");
+            BossHealtPotion.transform.DOMoveX(transform.position.x + 0.6f , 0.1f);
+        }
+
 
         BossHealtPotion.GetComponent<BossHealingPot>().Up();
         
