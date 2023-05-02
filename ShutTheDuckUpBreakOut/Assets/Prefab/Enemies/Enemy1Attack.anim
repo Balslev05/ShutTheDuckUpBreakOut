@@ -25,9 +25,9 @@ AnimationClip:
       value: {fileID: -976100980, guid: 244955ca519c23240b5c5ec5aacf9a8d, type: 3}
     - time: 0.16666667
       value: {fileID: -291816564, guid: 244955ca519c23240b5c5ec5aacf9a8d, type: 3}
-    - time: 0.3
+    - time: 0.43333334
       value: {fileID: -976100980, guid: 244955ca519c23240b5c5ec5aacf9a8d, type: 3}
-    - time: 0.33333334
+    - time: 0.46666667
       value: {fileID: 484599969, guid: 244955ca519c23240b5c5ec5aacf9a8d, type: 3}
     attribute: m_Sprite
     path: 
@@ -58,7 +58,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.35000002
+    m_StopTime: 0.48333335
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -85,7 +85,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.3
+  - time: 0.45
     functionName: DeactivateCollider
     data: 
     objectReferenceParameter: {fileID: 0}

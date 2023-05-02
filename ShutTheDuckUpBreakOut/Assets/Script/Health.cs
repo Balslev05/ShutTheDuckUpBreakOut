@@ -57,7 +57,11 @@ public class Health : MonoBehaviour
 }
     void Death()
     {
-        Destroy(this.gameObject);
+        if(gameObject.CompareTag("Boss")) 
+        {
+            // do nothing 
+        } 
+        else{Destroy(this.gameObject);}
     }
     public void PlayerTakeDamage(float Damage)
     {

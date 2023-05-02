@@ -78,13 +78,13 @@ public class PlayerMovment : MonoBehaviour
      {
        
 
+        playerAnim.Play("Rolling");
         WeaponManager.SetActive(false);
         Roling = true;
         speed = speed + RoleForce;
         DOVirtual.Float( speed, 0, RoleLeanght, RolingSpeed =>{speed = RolingSpeed;});
         rb.AddForce(lastDirection * speed); 
         //change tag so it canoot be hit
-        playerAnim.Play("Rolling");
         yield return new WaitForSeconds(RoleLeanght);
 
         WeaponManager.SetActive(true);

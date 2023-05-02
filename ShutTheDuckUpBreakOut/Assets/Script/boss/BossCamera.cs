@@ -26,7 +26,7 @@ public class BossCamera : MonoBehaviour
 
         this.gameObject.transform.position = MidPoint;  
 
-        
+
         if(BossSystme.BossAttack == 1 || !BossSystme.Introduction)
         {
             cam.m_Follow = Player;
@@ -36,6 +36,11 @@ public class BossCamera : MonoBehaviour
             cam.m_Lens.OrthographicSize = Mathf.Clamp(dist - dist / 3, 5, 10000000000);
 
             cam.m_Follow = Mid;
+        }
+       
+        if(BossSystme.BossDead == true)
+        {
+            cam.m_Follow = Player;
         }
     }
 }

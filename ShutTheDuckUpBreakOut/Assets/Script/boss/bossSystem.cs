@@ -17,12 +17,14 @@ public class bossSystem : MonoBehaviour
     public bool Attacking;
     public float BossSpeed;
     public int BossAttack;
+    public Vector3 dir;
+    public  GameObject policeLight;
+    public bool BossDead;
     
     private Health BossHealth;
     private GameObject player;
     private Vector3 NormalSize;
     private Vector3 movement;
-    public Vector3 dir;
 
 
 
@@ -87,6 +89,18 @@ public class bossSystem : MonoBehaviour
 
     void Update()
     {
+        /// DEath;
+        if(BossHealth.currentHealth <= 0)
+        {
+            policeLight.SetActive(true);
+            BossDead = true;
+            player.GetComponent<PlayerMovment>().speed = 0;
+            Destroy(this.gameObject);
+            
+        }
+
+
+
         
         HealthUI.fillAmount = BossHealth.currentHealth / 100;
 
@@ -342,6 +356,4 @@ public class bossSystem : MonoBehaviour
 
         BossIntroductionBoundary.SetActive(false);
     }
-
-
 }
