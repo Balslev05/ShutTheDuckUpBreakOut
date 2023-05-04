@@ -1,11 +1,9 @@
-using System.Reflection.Emit;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Enemy1Ai : MonoBehaviour
+using DG.Tweening;
+public class Enemy3AI : MonoBehaviour
 {
-    public GameObject AttackPoint;
     private float timer;
     public float AttackDistance;
     private Animator enemyAnim;
@@ -15,7 +13,11 @@ public class Enemy1Ai : MonoBehaviour
     [SerializeField] private bool ShouldAttack = false;
     private Vector3 movement;
     private Rigidbody2D rb;
-    
+    public GameObject AttackCirle;
+    public GameObject ShockWave;
+    private GameObject PrefabShockWave;
+    public Vector3 AttackCirk;
+    private Vector3 NormalAttackCirk;
 
 
     // Start is called before the first frame update
@@ -24,6 +26,9 @@ public class Enemy1Ai : MonoBehaviour
         rb = this.gameObject.GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player"); 
         enemyAnim = this.gameObject.GetComponent<Animator>();
+
+        NormalAttackCirk = AttackCirle.gameObject.transform.localScale;
+
         
     }
 
@@ -34,25 +39,20 @@ public class Enemy1Ai : MonoBehaviour
 
         if(distance < AttackDistance )
         {   
-            ShouldAttack =true;
+            ShouldAttack = true;
 
             if(ShouldAttack == true)
             {
-            enemyAnim.Play("Enemy1Attack");
-            print("PLZ");
+            enemyAnim.Play("Enemy3Attack");
 
             this.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-
-
-
-
-            }
-        }   
+            }   
+        }
         
-            dir = player.transform.position - transform.position;
-            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            dir.Normalize();
-            movement = dir; 
+        dir = player.transform.position - transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        dir.Normalize();
+        movement = dir; 
         
             if(movement.x < 0)
             {
@@ -63,37 +63,37 @@ public class Enemy1Ai : MonoBehaviour
                 this.gameObject.GetComponent<SpriteRenderer>().flipX = true;  
             }
             
-            Vector2 Rbdir = rb.transform.position - transform.position;
-            Rbdir = Rbdir.normalized;
-            lastDirection = Rbdir;
-            Vector2 velocity = rb.velocity;   
+        Vector2 Rbdir = rb.transform.position - transform.position;
+        Rbdir = Rbdir.normalized;
+        lastDirection = Rbdir;
+        Vector2 velocity = rb.velocity;   
             
-            if(velocity.x > 0 || velocity.y  > 0 && ShouldAttack == false)
-        {
-           enemyAnim.Play("Enemy1Run");
-           print("1");
-        } 
-        if(velocity.x < 0 || velocity.y  < 0 && ShouldAttack == false)
-        {
-           enemyAnim.Play("Enemy1Run");
-           print("2");
-
-        } 
-        print(velocity.x);
-    }
-      public void ActivateCollider()
-    {
-        AttackPoint.SetActive(true);
-
-    }
-    public void DeactivateCollider()
-    {
-        AttackPoint.SetActive(false);
-        ShouldAttack = false;
         
-        this.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-
+            if( ShouldAttack == false)
+            {
+                enemyAnim.Play("Enemy3Run");
+                print("1");
+            }  
     }
-    
+    public void ChargeAttack()
+    {
+        //AttackPoint.SetActive(false); 
+        AttackCirle.transform.DOScale(AttackCirk,0.5f).SetEase(Ease.Linear);
+       
+    }
 
+    public void SpawnAttack()
+    {
+        PrefabShockWave = Instantiate(ShockWave,transform.position,Quaternion.identity);
+    }
+     public void FinishAttack()
+    {
+        ShouldAttack = false;
+        this.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        Destroy(PrefabShockWave);
+    }
+    public void RemoveShockWaveOutline() 
+    {
+        AttackCirle.transform.DOScale(NormalAttackCirk,0.001f).SetEase(Ease.Linear);
+    }
 }

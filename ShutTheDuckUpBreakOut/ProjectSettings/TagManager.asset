@@ -15,6 +15,7 @@ TagManager:
   - Bullets Pool
   - Boss
   - EnemyBullet
+  - EnemyBluntAttack
   layers:
   - Default
   - TransparentFX
