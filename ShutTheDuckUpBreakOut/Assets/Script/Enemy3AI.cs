@@ -8,9 +8,12 @@ public class Enemy3AI : MonoBehaviour
     public float AttackDistance;
     private Animator enemyAnim;
     public Vector3 dir;
+    public float SlamColdown;
     private  Vector2 lastDirection;
     private GameObject player;
+    public screenShakeHandler screenShake;
     [SerializeField] private bool ShouldAttack = false;
+    public bool ColdownOff;
     private Vector3 movement;
     private Rigidbody2D rb;
     public GameObject AttackCirle;
@@ -37,7 +40,7 @@ public class Enemy3AI : MonoBehaviour
     {
         float distance = Vector2.Distance(transform.position, player.transform.position);
 
-        if(distance < AttackDistance )
+        if(distance < AttackDistance && ColdownOff == true)
         {   
             ShouldAttack = true;
 
@@ -78,22 +81,34 @@ public class Enemy3AI : MonoBehaviour
     public void ChargeAttack()
     {
         //AttackPoint.SetActive(false); 
-        AttackCirle.transform.DOScale(AttackCirk,0.5f).SetEase(Ease.Linear);
-       
+        AttackCirle.transform.DOScale(AttackCirk,0.8f).SetEase(Ease.OutBack);  
     }
 
     public void SpawnAttack()
     {
-        PrefabShockWave = Instantiate(ShockWave,transform.position,Quaternion.identity);
+        PrefabShockWave = Instantiate(ShockWave, AttackCirle.transform.position,Quaternion.identity);
+        screenShake.StartShake(0.3f,6,3);       
+
     }
      public void FinishAttack()
     {
-        ShouldAttack = false;
         this.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
         Destroy(PrefabShockWave);
+        StartCoroutine(AttackColdown());
     }
     public void RemoveShockWaveOutline() 
     {
-        AttackCirle.transform.DOScale(NormalAttackCirk,0.001f).SetEase(Ease.Linear);
+        AttackCirle.transform.DOScale(NormalAttackCirk,0.3f).SetEase(Ease.InBack);
+    }
+    public IEnumerator AttackColdown()
+    {
+        print("Start");
+        ShouldAttack = false;
+        ColdownOff = false;
+        yield return new WaitForSeconds(SlamColdown);
+        ShouldAttack = true;
+        ColdownOff = true;
+        print("ends");
+
     }
 }

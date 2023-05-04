@@ -7,7 +7,7 @@ public class DialogTrigger : MonoBehaviour
 {
     public Dialog dialog;
     public GameObject player;
-
+    public DialogManger Dialogmanger;
     public GameObject dialogBox;
     public GameObject key;
 
@@ -34,10 +34,6 @@ public class DialogTrigger : MonoBehaviour
         } //else{key.SetActive(false);}
        
        
-       /*  if(Input.GetKey(KeyCode.KeypadEnter))
-        {
-            
-        } */
     }
 
 

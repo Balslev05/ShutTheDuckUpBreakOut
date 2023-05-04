@@ -37,7 +37,8 @@ public class DialogManger : MonoBehaviour
             Sentence.Enqueue(senntence);
         }   
         DisplayNextSentence();
-    }
+        }
+
     public void DisplayNextSentence()
     {
         print("IT works ");

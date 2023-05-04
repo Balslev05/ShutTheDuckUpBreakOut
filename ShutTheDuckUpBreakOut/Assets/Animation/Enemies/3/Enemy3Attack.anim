@@ -21,17 +21,17 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: -934713439, guid: 6a5fa86383f61b84e8752e59f885073c, type: 3}
-    - time: 0.6666667
+    - time: 0.6166667
       value: {fileID: 1607860618, guid: 6a5fa86383f61b84e8752e59f885073c, type: 3}
-    - time: 0.78333336
+    - time: 0.73333335
       value: {fileID: -1999181791, guid: 6a5fa86383f61b84e8752e59f885073c, type: 3}
-    - time: 0.85
+    - time: 0.8
       value: {fileID: 662943037, guid: 6a5fa86383f61b84e8752e59f885073c, type: 3}
-    - time: 0.8833333
+    - time: 0.8333333
       value: {fileID: -1455986569, guid: 6a5fa86383f61b84e8752e59f885073c, type: 3}
-    - time: 1
+    - time: 0.95
       value: {fileID: -1455986569, guid: 6a5fa86383f61b84e8752e59f885073c, type: 3}
-    - time: 1.6666666
+    - time: 1.5666667
       value: {fileID: -1455986569, guid: 6a5fa86383f61b84e8752e59f885073c, type: 3}
     attribute: m_Sprite
     path: 
@@ -64,7 +64,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.6833333
+    m_StopTime: 1.8166667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -91,21 +91,21 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.78333336
+  - time: 0.6333333
     functionName: RemoveShockWaveOutline
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.8666667
+  - time: 0.93333334
     functionName: SpawnAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.65
+  - time: 1.8166667
     functionName: FinishAttack
     data: 
     objectReferenceParameter: {fileID: 0}

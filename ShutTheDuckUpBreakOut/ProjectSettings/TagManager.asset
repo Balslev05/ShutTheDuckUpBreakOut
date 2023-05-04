@@ -16,6 +16,7 @@ TagManager:
   - Boss
   - EnemyBullet
   - EnemyBluntAttack
+  - ShockWave
   layers:
   - Default
   - TransparentFX

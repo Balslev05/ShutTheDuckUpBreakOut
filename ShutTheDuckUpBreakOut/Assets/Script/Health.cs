@@ -58,8 +58,12 @@ public class Health : MonoBehaviour
         if(collider.gameObject.tag == ("EnemyBluntAttack") && IsPlayer == true)
         {
             PlayerTakeDamage(1); 
-            print("AW");
         }
+        if(collider.gameObject.tag == ("ShockWave") && IsPlayer == true)
+        {
+            PlayerTakeDamage(3); 
+        }
+        
 
 }
     void Death()

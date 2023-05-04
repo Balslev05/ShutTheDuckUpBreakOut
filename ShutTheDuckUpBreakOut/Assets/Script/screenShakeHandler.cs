@@ -18,9 +18,13 @@ public class screenShakeHandler : MonoBehaviour
     public void StartShake(float Duration ,float Streangth, float Freqency)
     {
 
-        noise.m_AmplitudeGain = Streangth;
-        noise.m_FrequencyGain = Freqency;
-        ScreenShakeDuration = Duration;
+        float UpdatetStreangt =+ Streangth;
+        float UpdatetDuration =+ Duration;
+        float UpdatetFreqency =+ Freqency;
+
+        noise.m_AmplitudeGain = UpdatetStreangt;
+        noise.m_FrequencyGain = UpdatetFreqency;
+        ScreenShakeDuration = UpdatetDuration;
 
         StartCoroutine(ShakeScreen());
     
