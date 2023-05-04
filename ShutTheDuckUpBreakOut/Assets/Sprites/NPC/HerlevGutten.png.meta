@@ -1,0 +1,269 @@
+fileFormatVersion: 2
+guid: a9af630deec0cc54ba962b454199b878
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 355, z: 345, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HerlevGutten_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 352
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b3e404f9aae354da1a163ab011fdba
+      internalID: -701340854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HerlevGutten_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 352
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83b85268cbe4ad84b8f5ed6f06fe85b5
+      internalID: 1031399667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      HerlevGutten_9: -96823944
+      HerlevGutten_16: 1185707778
+      HerlevGutten_53: -1479834653
+      HerlevGutten_51: -1123637267
+      HerlevGutten_81: -239668048
+      HerlevGutten_92: 1833502472
+      HerlevGutten_0: -701340854
+      HerlevGutten_17: 503612671
+      HerlevGutten_24: -31638932
+      HerlevGutten_95: 220481454
+      HerlevGutten_52: 1919288664
+      HerlevGutten_101: -1131885175
+      HerlevGutten_33: 305432608
+      HerlevGutten_79: 1262970164
+      HerlevGutten_26: -1821258776
+      HerlevGutten_57: 1787259507
+      HerlevGutten_49: 1348408599
+      HerlevGutten_4: -1621858308
+      HerlevGutten_69: -1137581344
+      HerlevGutten_87: -1391433337
+      HerlevGutten_13: -935474082
+      HerlevGutten_89: -429223289
+      HerlevGutten_76: 203516086
+      HerlevGutten_29: -1625184028
+      HerlevGutten_63: -252889670
+      HerlevGutten_98: 1642086485
+      HerlevGutten_31: -1193667764
+      HerlevGutten_55: 475224695
+      HerlevGutten_73: 286228465
+      HerlevGutten_22: 892873679
+      HerlevGutten_70: -1606212185
+      HerlevGutten_39: 1661675386
+      HerlevGutten_11: 1858224509
+      HerlevGutten_43: -1987163585
+      HerlevGutten_68: 1561604386
+      HerlevGutten_5: -397824562
+      HerlevGutten_60: -2141263865
+      HerlevGutten_38: 571047357
+      HerlevGutten_83: 997341492
+      HerlevGutten_50: 1371251861
+      HerlevGutten_102: 1252880547
+      HerlevGutten_75: -1800118331
+      HerlevGutten_23: -2014465447
+      HerlevGutten_85: -1966148213
+      HerlevGutten_93: 1684350467
+      HerlevGutten_88: 413218492
+      HerlevGutten_44: 1108527659
+      HerlevGutten_84: -651372794
+      HerlevGutten_25: -994699461
+      HerlevGutten_36: -1239802498
+      HerlevGutten_8: -1945773106
+      HerlevGutten_14: -164147645
+      HerlevGutten_41: 2107440050
+      HerlevGutten_2: 754936595
+      HerlevGutten_96: 1311856103
+      HerlevGutten_7: 2038893825
+      HerlevGutten_72: -1931199990
+      HerlevGutten_19: -541881471
+      HerlevGutten_58: 302285588
+      HerlevGutten_48: -54219514
+      HerlevGutten_28: 23719634
+      HerlevGutten_30: -1288219328
+      HerlevGutten_40: -428196247
+      HerlevGutten_65: 1554630163
+      HerlevGutten_59: 653582750
+      HerlevGutten_80: 1155422937
+      HerlevGutten_90: 121227690
+      HerlevGutten_54: -796639546
+      HerlevGutten_86: 859367478
+      HerlevGutten_10: 247178402
+      HerlevGutten_37: -1852113092
+      HerlevGutten_3: 2059352548
+      HerlevGutten_47: -1284211945
+      HerlevGutten_67: 1354215387
+      HerlevGutten_56: -730147334
+      HerlevGutten_12: 1386968272
+      HerlevGutten_1: 1031399667
+      HerlevGutten_97: 377782629
+      HerlevGutten_103: -516118624
+      HerlevGutten_64: 552009765
+      HerlevGutten_18: 948644783
+      HerlevGutten_78: 1292833893
+      HerlevGutten_82: -709238282
+      HerlevGutten_61: -424658454
+      HerlevGutten_77: 408557340
+      HerlevGutten_46: -693575338
+      HerlevGutten_62: -614489276
+      HerlevGutten_66: 1061375869
+      HerlevGutten_100: -1317535818
+      HerlevGutten_45: 435096449
+      HerlevGutten_20: -627514610
+      HerlevGutten_6: 1718727052
+      HerlevGutten_15: -520862924
+      HerlevGutten_35: -549218534
+      HerlevGutten_32: -1551455454
+      HerlevGutten_34: 1664503216
+      HerlevGutten_71: -1002368167
+      HerlevGutten_91: 600518414
+      HerlevGutten_99: -882649554
+      HerlevGutten_21: -761779410
+      HerlevGutten_42: 904365012
+      HerlevGutten_74: 1630855593
+      HerlevGutten_27: -1258681517
+      HerlevGutten_94: -1768868825
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

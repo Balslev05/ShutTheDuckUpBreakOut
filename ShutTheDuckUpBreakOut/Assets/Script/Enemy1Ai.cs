@@ -1,3 +1,4 @@
+using System.Reflection.Emit;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,10 +12,10 @@ public class Enemy1Ai : MonoBehaviour
     public Vector3 dir;
     private  Vector2 lastDirection;
     private GameObject player;
-    [SerializeField] private bool DoingAttack = false;
+    [SerializeField] private bool ShouldAttack = false;
     private Vector3 movement;
     private Rigidbody2D rb;
-
+    
 
 
     // Start is called before the first frame update
@@ -31,49 +32,60 @@ public class Enemy1Ai : MonoBehaviour
     {
         float distance = Vector2.Distance(transform.position, player.transform.position);
 
-        if(distance < AttackDistance && DoingAttack == false)
-        {  
-            
+        if(distance < AttackDistance )
+        {   
+            ShouldAttack = true;
+
+            if(ShouldAttack == true)
+            {
             enemyAnim.Play("Enemy1Attack");
             print("PLZ");
-        }
+
+            this.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+
+
+
+
+            }
+        }   
         
-            dir = player.transform.position - transform.position;
-            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            dir.Normalize();
-            movement = dir; 
+        dir = player.transform.position - transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        dir.Normalize();
+        movement = dir; 
         
-            if(movement.x < 0 && DoingAttack == true)
+            if(movement.x < 0)
             {
                 this.gameObject.GetComponent<SpriteRenderer>().flipX = false;  
             }
-            if(movement.x > 0 && DoingAttack == true)
+            if(movement.x > 0 )
             {
                 this.gameObject.GetComponent<SpriteRenderer>().flipX = true;  
             }
             
-            Vector2 Rbdir = rb.transform.position - transform.position;
-            Rbdir = dir.normalized;
-            lastDirection = dir;
-            Vector2 velocity = rb.velocity;   
+        Vector2 Rbdir = rb.transform.position - transform.position;
+        Rbdir = Rbdir.normalized;
+        lastDirection = Rbdir;
+        Vector2 velocity = rb.velocity;   
             
-             if(velocity.x == 0 && velocity.y == 0)
-        {
-            enemyAnim.Play("Enemy1Run");
-        } else
-        {
-            enemyAnim.Play("Enemy1Run");
-        }
+        
+            if( ShouldAttack == false)
+            {
+                enemyAnim.Play("Enemy1Run");
+                print("1");
+            }  
     }
       public void ActivateCollider()
     {
         AttackPoint.SetActive(true);
-        DoingAttack = true;
+
     }
     public void DeactivateCollider()
     {
         AttackPoint.SetActive(false);
-        DoingAttack = false;
+        ShouldAttack = false;
+        
+        this.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
 
     }
     

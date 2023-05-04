@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
     public int  maxHealth;
     public float currentHealth; 
     
+    
     [Header("PlayerDamage")]
     public screenShakeHandler screenShake;
     public bool CanTakeDamage;
@@ -50,14 +51,28 @@ public class Health : MonoBehaviour
         {
         currentHealth -= collider.GetComponent<Bullet>().BulletDamage;
         }
-        if(collider.gameObject.tag == ("MeleeCollider"))
+        if(collider.gameObject.tag == ("MeleeCollider") && IsPlayer == false)
         {
         currentHealth -= collider.GetComponent<Weapon>().Damage; 
         }
+        if(collider.gameObject.tag == ("EnemyBluntAttack") && IsPlayer == true)
+        {
+            PlayerTakeDamage(1); 
+        }
+        if(collider.gameObject.tag == ("ShockWave") && IsPlayer == true)
+        {
+            PlayerTakeDamage(3); 
+        }
+        
+
 }
     void Death()
     {
-        Destroy(this.gameObject);
+        if(gameObject.CompareTag("Boss")) 
+        {
+            // do nothing 
+        } 
+        else{Destroy(this.gameObject);}
     }
     public void PlayerTakeDamage(float Damage)
     {
