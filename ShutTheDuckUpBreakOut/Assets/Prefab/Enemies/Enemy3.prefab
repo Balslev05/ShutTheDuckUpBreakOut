@@ -118,7 +118,7 @@ Transform:
   m_GameObject: {fileID: 3709790458777936532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.1, y: -0.2, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6727206396561094548}
@@ -166,7 +166,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 934015013, guid: 244955ca519c23240b5c5ec5aacf9a8d, type: 3}
+  m_Sprite: {fileID: 2072305384, guid: a467e3f62caa105479d42a1f2aececbc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -310,15 +310,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c31ec34b56ef5a24d8bef2432549ee4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackDistance: 0
+  AttackDistance: 3
   dir: {x: 0, y: 0, z: 0}
-  SlamColdown: 0
+  SlamColdown: 1
   screenShake: {fileID: 0}
   ShouldAttack: 0
-  ColdownOff: 0
-  AttackCirle: {fileID: 0}
-  ShockWave: {fileID: 0}
-  AttackCirk: {x: 0, y: 0, z: 0}
+  ColdownOff: 1
+  AttackCirle: {fileID: 67653074444706649}
+  ShockWave: {fileID: 8068783234583408828, guid: 6cd9be240a17f2c4c9a335810ddee4cc, type: 3}
+  AttackCirk: {x: 2, y: 2, z: 2}
 --- !u!114 &8099156277120282847
 MonoBehaviour:
   m_ObjectHideFlags: 0

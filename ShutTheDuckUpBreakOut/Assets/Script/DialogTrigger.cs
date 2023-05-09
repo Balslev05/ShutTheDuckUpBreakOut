@@ -6,10 +6,16 @@ using UnityEngine;
 public class DialogTrigger : MonoBehaviour
 {
     public Dialog dialog;
+    public GameObject NpcCharecter;
     public GameObject player;
     public DialogManger Dialogmanger;
     public GameObject dialogBox;
     public GameObject key;
+    public bool Speaking;
+    bool HasDropedItem = false;
+    
+    [Header("Drop")]
+    public GameObject ItemDrop;
 
     void Start()
     {
@@ -18,12 +24,11 @@ public class DialogTrigger : MonoBehaviour
     }
     void Update()
     {
-         if(Vector2.Distance(transform.position,player.transform.position) > 4 || Input.GetKeyDown(KeyCode.Escape) ) 
+          if( /* Vector2.Distance(NpcCharecter.transform.position,player.transform.position) > 4 || */  Input.GetKeyDown(KeyCode.Escape) ) 
          {
             dialogBox.SetActive(false);
-         }
-
-        if(Vector2.Distance(transform.position,player.transform.position) <3)
+         } 
+        if(Vector2.Distance(NpcCharecter.transform.position,player.transform.position) <3)
         {
             key.SetActive(true);
             if(Input.GetKeyDown(KeyCode.E))
@@ -41,5 +46,8 @@ public class DialogTrigger : MonoBehaviour
     public void triggerDialogue()
     {
         FindObjectOfType<DialogManger>().StartDialog(dialog);
+
+        ItemDrop.SetActive(true);
+        
     }
 }

@@ -12,6 +12,7 @@ public class Enemy3AI : MonoBehaviour
     private  Vector2 lastDirection;
     private GameObject player;
     public screenShakeHandler screenShake;
+    private GameObject MainCameraa;
     [SerializeField] private bool ShouldAttack = false;
     public bool ColdownOff;
     private Vector3 movement;
@@ -29,6 +30,8 @@ public class Enemy3AI : MonoBehaviour
         rb = this.gameObject.GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player"); 
         enemyAnim = this.gameObject.GetComponent<Animator>();
+        MainCameraa = GameObject.FindGameObjectWithTag("MainCamera"); 
+       screenShake = MainCameraa.GetComponent<screenShakeHandler>();
 
         NormalAttackCirk = AttackCirle.gameObject.transform.localScale;
 

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 public class PlayerMovment : MonoBehaviour
@@ -8,6 +7,8 @@ public class PlayerMovment : MonoBehaviour
     public Rigidbody2D rb;
     public Animator playerAnim;
     public GameObject WeaponManager;
+    private Player PlayerMechics;
+    
 
     [Header("RoleStats")]
     public float RoleLeanght = 1f;
@@ -29,16 +30,17 @@ public class PlayerMovment : MonoBehaviour
     {
         NormalMoveSpeed = speed;
         rb.GetComponent<Rigidbody2D>();
+       PlayerMechics = this.gameObject.GetComponent<Player>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-       // if(mechanics.ArmsActive == false)
-       /*  {
-            anim.SetBool("Gun",false);
-        } else{anim.SetBool("Gun",true); } */
+        if(PlayerMechics.CarryingGun! && PlayerMechics.CarryingMelee!)
+        {
+            print("yeas");
+        } 
 
         //  Moving 
         Vector2 dir = rb.transform.position - transform.position;
@@ -89,8 +91,6 @@ public class PlayerMovment : MonoBehaviour
 
         WeaponManager.SetActive(true);
 
-        gameObject.GetComponent<Collider2D>().isTrigger = false;
-
         Roling = false;  
 
         speed = NormalMoveSpeed;
@@ -99,14 +99,12 @@ public class PlayerMovment : MonoBehaviour
      private void FixedUpdate() {
 
         rb.velocity = new Vector2((Movement.x * speed) * Time.deltaTime,(Movement.y * speed) * Time.deltaTime);
-       
      } 
 
      public void SpawnDust()
      {
        GameObject dust = Instantiate(WalkDust,Feet.transform.position,Quaternion.identity);
        Destroy(dust,3f);
-
      }
 }
 

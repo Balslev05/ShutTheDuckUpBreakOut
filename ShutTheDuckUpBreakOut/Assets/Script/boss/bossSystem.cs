@@ -329,9 +329,6 @@ public class bossSystem : MonoBehaviour
         }
      }
     
-    
-    
-    
     // introduction's
 
     public void StartBossIntroduction()

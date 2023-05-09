@@ -786,10 +786,13 @@ MonoBehaviour:
     - so movement is W,A,D,S and you roll on Space
     - Theres a weapon over there and you can pick it up by pressing E
     - GLHF
+  NpcCharecter: {fileID: 0}
   player: {fileID: 366710768}
   Dialogmanger: {fileID: 1424358660}
   dialogBox: {fileID: 1654020380}
   key: {fileID: 662603695}
+  Speaking: 0
+  ItemDrop: {fileID: 0}
 --- !u!212 &143108788
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2336,7 +2339,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.21133333}
@@ -3705,7 +3708,7 @@ Transform:
   m_Children:
   - {fileID: 143108786}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &671605155
 GameObject:
@@ -7552,7 +7555,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1192906253
 PrefabInstance:
@@ -125824,12 +125827,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424358659}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 990.04596, y: 503.4536, z: 5.8503194}
+  m_LocalPosition: {x: 30.04596, y: -36.546387, z: 5.8503194}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_Father: {fileID: 1748843436}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1427376174
 GameObject:
@@ -127431,6 +127434,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1654020383}
+  - {fileID: 1424358661}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -127591,9 +127595,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1849094703}
-  m_Layer: 6
+  - component: {fileID: 1849094704}
+  m_Layer: 0
   m_Name: Feet
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127613,6 +127618,32 @@ Transform:
   m_Father: {fileID: 366710772}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1849094704
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849094702}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &1850585590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -127810,7 +127841,7 @@ PrefabInstance:
     - target: {fileID: 5239790540738655101, guid: d0347dfd9cd4f9a4591d76ec7b4a6e63, type: 3}
       propertyPath: GunType
       value: 
-      objectReference: {fileID: 11400000, guid: eafcbb49f8b6c2343991a2565f84a2c8, type: 2}
+      objectReference: {fileID: 11400000, guid: b54339cb7603fc94fbd79fbb14569fd6, type: 2}
     - target: {fileID: 6725028838312082345, guid: d0347dfd9cd4f9a4591d76ec7b4a6e63, type: 3}
       propertyPath: m_Name
       value: Gun_Item (8)
