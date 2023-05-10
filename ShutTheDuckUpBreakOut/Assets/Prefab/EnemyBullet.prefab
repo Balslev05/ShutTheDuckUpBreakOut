@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5487863444669519968}
   - component: {fileID: 6591824845188150740}
   - component: {fileID: -7212818229637522425}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyBullet
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 15
+  Damage: 0
 --- !u!1 &5806614357338813451
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,7 +149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6223630415626961192}
   - component: {fileID: 7519032383204459711}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TrailRender
   m_TagString: Untagged
   m_Icon: {fileID: 0}

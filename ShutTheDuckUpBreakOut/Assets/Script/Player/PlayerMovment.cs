@@ -3,6 +3,7 @@ using UnityEngine;
 using DG.Tweening;
 public class PlayerMovment : MonoBehaviour
 {
+    public bool InPrison;
     public float speed = 250;
     public Rigidbody2D rb;
     public Animator playerAnim;
@@ -62,25 +63,43 @@ public class PlayerMovment : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift))
         {
             if(velocity.x != 0 || velocity.y != 0)
-            StartCoroutine(Roll());
+            {
+                if(InPrison)
+                {
+                playerAnim.Play("JailRolling");
+                } else {playerAnim.Play("Rolling");}
+
+                StartCoroutine(Roll());
+            }
+
         }
-        
-        if(velocity.x == 0 && velocity.y == 0)
+        //! NOEL DONT LOOK
+        if(!InPrison && velocity.x == 0 && velocity.y == 0)
         {
             playerAnim.Play("idleAnim");
             
-        } else
+        } else if ( !InPrison && velocity.x != 0 ||!InPrison && velocity.y !=0 )
         {
             playerAnim.Play("walking");
-            
-
         }
+       
+        if( InPrison && velocity.x == 0 && velocity.y == 0)
+        {
+            playerAnim.Play("JailIdleAnim");
+            
+        } else if ( InPrison && velocity.x != 0 || InPrison && velocity.y != 0)
+        {
+            playerAnim.Play("JailWalking");
+        }
+
+
+
+
     }
      IEnumerator Roll()
      {
        
 
-        playerAnim.Play("Rolling");
         WeaponManager.SetActive(false);
         Roling = true;
         speed = speed + RoleForce;

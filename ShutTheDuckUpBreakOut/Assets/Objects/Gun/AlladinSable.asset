@@ -18,11 +18,11 @@ MonoBehaviour:
   BulletDamage: 1
   Weight: 250
   SpeedBullet: 5
-  ShotsInMagasin: 20
-  bulletFiredPerShot: 8
+  ShotsInMagasin: 1
+  bulletFiredPerShot: 100
   knockBack: 0
-  bulletSPread: 10
+  bulletSPread: 5
   HoldToFire: 0
   BulletSize: {x: 0.6, y: 0.6, z: 0.6}
-  GunSize: {x: 0.7, y: 0.7, z: 0.7}
+  GunSize: {x: 1, y: 1, z: 1}
   GunScreenshake: 10

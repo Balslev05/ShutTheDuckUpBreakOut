@@ -8,7 +8,8 @@ public class DialogManger : MonoBehaviour
 {
 
     public TMP_Text DialogText;
-    public TMP_Text nameText;
+    public TMP_Text nameText; 
+    public GameObject dialogBox;
 
 
     private Queue <string> Sentence;
@@ -41,7 +42,6 @@ public class DialogManger : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        print("IT works ");
         if(Sentence.Count == 0)
         {
             EndDialog();
@@ -65,5 +65,7 @@ public class DialogManger : MonoBehaviour
     void  EndDialog()
     {
         Debug.Log("End og Con");
+        dialogBox.SetActive(false);
+
     }
 }

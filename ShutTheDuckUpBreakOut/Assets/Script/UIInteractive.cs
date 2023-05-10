@@ -25,13 +25,13 @@ public class UIInteractive : MonoBehaviour,IPointerEnterHandler,IPointerExitHand
     }
      public void OnPointerEnter(PointerEventData eventData)
     {
-        this.gameObject.GetComponent<TMP_Text>().color = HoverOverTextColor;
         this.gameObject.transform.DOScale(HoverOverSize,2f).SetEase(Ease.OutQuint);
+        this.gameObject.GetComponent<TMP_Text>().color = HoverOverTextColor;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        this.gameObject.GetComponent<TMP_Text>().color = TextColor;
         this.gameObject.transform.DOScale(contineueSize,2f).SetEase(Ease.OutQuint);
+        this.gameObject.GetComponent<TMP_Text>().color = TextColor;
     }
 }

@@ -47,7 +47,7 @@ public class Bullet : MonoBehaviour
           }
         
 
-        if(collider.gameObject.tag == "Player" || collider.gameObject.tag == "Bullet" || collider.gameObject.tag =="Gun" || collider.gameObject.tag == "Melee"){
+        if(collider.gameObject.tag == "Player" || collider.gameObject.tag == "Bullet" || collider.gameObject.tag =="Gun" || collider.gameObject.tag == "Melee" || collider.gameObject.tag =="Constraints") {
             // do nothing
 
         }
