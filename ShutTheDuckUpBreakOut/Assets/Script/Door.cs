@@ -10,14 +10,27 @@ public class Door : MonoBehaviour
     void Start()
     {
         DoorAnim = this.gameObject.GetComponent<Animator>();
+        GetComponent<SpriteRenderer>().sortingOrder = 1;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Open == true){
+        if(Open == true)
+        {
             DoorAnim.Play("DoorOpen");
-            GetComponent<Collider2D>().enabled = false;
         }
+
     }
+
+
+    void doorOpen()
+    {
+            GetComponent<Collider2D>().enabled = false;
+            GetComponent<SpriteRenderer>().sortingOrder = 3;
+    }
+
+
+
 }

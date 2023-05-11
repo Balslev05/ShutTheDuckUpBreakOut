@@ -34,8 +34,8 @@ public class DialogManger : MonoBehaviour
 
         Sentence.Clear();
 
-        foreach(string senntence in dialog.sentnce){
-            Sentence.Enqueue(senntence);
+        foreach(string sentence in dialog.sentence){
+            Sentence.Enqueue(sentence);
         }   
         DisplayNextSentence();
         }

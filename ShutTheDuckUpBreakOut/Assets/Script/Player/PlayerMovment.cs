@@ -9,6 +9,8 @@ public class PlayerMovment : MonoBehaviour
     public Animator playerAnim;
     public GameObject WeaponManager;
     private Player PlayerMechics;
+     Vector2 PlayerNormalScale;
+
     
 
     [Header("RoleStats")]
@@ -17,7 +19,8 @@ public class PlayerMovment : MonoBehaviour
     public bool Roling;
     private  Vector2 lastDirection;
     private float NormalMoveSpeed;
-    UnityEngine.Vector2 Movement;
+    Vector2 Movement;
+    public Vector3 RoleHight;
 
     [Header("Walking")]
     public GameObject WalkDust;
@@ -29,6 +32,8 @@ public class PlayerMovment : MonoBehaviour
     
     void Start()
     {
+        PlayerNormalScale = transform.localScale;
+
         NormalMoveSpeed = speed;
         rb.GetComponent<Rigidbody2D>();
        PlayerMechics = this.gameObject.GetComponent<Player>();
@@ -73,7 +78,7 @@ public class PlayerMovment : MonoBehaviour
             }
 
         }
-        //! NOEL DONT LOOK
+        //! NOEL DONT LOOK  
         if(!InPrison && velocity.x == 0 && velocity.y == 0)
         {
             playerAnim.Play("idleAnim");
@@ -99,12 +104,17 @@ public class PlayerMovment : MonoBehaviour
      IEnumerator Roll()
      {
        
-
         WeaponManager.SetActive(false);
         Roling = true;
         speed = speed + RoleForce;
         DOVirtual.Float( speed, 0, RoleLeanght, RolingSpeed =>{speed = RolingSpeed;});
         rb.AddForce(lastDirection * speed); 
+
+        transform.DOScale(RoleHight,RoleLeanght/3).SetEase(Ease.OutSine).OnComplete(() => 
+            transform.DOScale(PlayerNormalScale,RoleLeanght/3).SetEase(Ease.InSine)
+        );
+
+
         //change tag so it canoot be hit
         yield return new WaitForSeconds(RoleLeanght);
 

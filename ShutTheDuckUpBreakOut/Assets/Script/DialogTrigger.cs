@@ -26,26 +26,23 @@ public class DialogTrigger : MonoBehaviour
     void Update()
     {
 
-        if(Vector2.Distance(this.gameObject.transform.position,player.transform.position) <1)
+        if(Vector2.Distance(this.gameObject.transform.position,player.transform.position) <3 )
         {
 
             key.SetActive(true);
-
             if(Input.GetKeyDown(KeyCode.E))
             {
                 TalkingTo = this.gameObject;
-
                 dialogBox.SetActive(true);
-                triggerDialogue();
                 DorOpen.Open = true;
-
-                if(Vector2.Distance(TalkingTo.transform.position,player.transform.position) > 2 ||   Input.GetKeyDown(KeyCode.Escape) ) 
-                {
-                    dialogBox.SetActive(false);
-                } 
+                triggerDialogue();
             }
         }
-       
+
+        if(Vector2.Distance(TalkingTo.transform.position,player.transform.position) > 5 || Input.GetKeyDown(KeyCode.Escape)) 
+            dialogBox.SetActive(false);
+            TalkingTo = null;
+
     }
 
 
