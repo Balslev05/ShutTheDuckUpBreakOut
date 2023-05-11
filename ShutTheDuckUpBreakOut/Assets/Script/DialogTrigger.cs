@@ -6,13 +6,14 @@ using UnityEngine;
 public class DialogTrigger : MonoBehaviour
 {
     public Dialog dialog;
-    [SerializeField] private GameObject TalkingTo;
+    [SerializeField]private GameObject TalkingTo;
+    public GameObject Karakter;
     public GameObject player;
     public DialogManger Dialogmanger;
     public GameObject dialogBox;
     public GameObject key;
     public bool Speaking;
-    bool HasDropedItem = false;
+    bool HasDroppedItem = false;
     public Door DorOpen;
     
     [Header("Drop")]
@@ -26,22 +27,27 @@ public class DialogTrigger : MonoBehaviour
     void Update()
     {
 
-        if(Vector2.Distance(this.gameObject.transform.position,player.transform.position) <3 )
+        if(Vector2.Distance(Karakter.transform.position,player.transform.position) < 3 )
         {
+            
 
             key.SetActive(true);
             if(Input.GetKeyDown(KeyCode.E))
             {
-                TalkingTo = this.gameObject;
+                TalkingTo = Karakter;
                 dialogBox.SetActive(true);
-                DorOpen.Open = true;
                 triggerDialogue();
+                DorOpen.Open = true;
             }
         }
 
-        if(Vector2.Distance(TalkingTo.transform.position,player.transform.position) > 5 || Input.GetKeyDown(KeyCode.Escape)) 
+        if(Vector2.Distance(TalkingTo.transform.position,player.transform.position) > 5 || Input.GetKeyDown(KeyCode.Escape))
+        {
             dialogBox.SetActive(false);
             TalkingTo = null;
+        }
+        
+            
 
     }
 

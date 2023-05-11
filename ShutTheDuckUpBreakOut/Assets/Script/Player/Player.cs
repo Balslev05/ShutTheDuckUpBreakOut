@@ -15,8 +15,8 @@ public class Player : MonoBehaviour
   public bool CarryingGun = false;
   [Header  ("UI") ]
   public Image GunIcon;
-  public TMP_Text MaxInMagasin;
-  public TMP_Text CurrentInMagasin;
+  public TMP_Text MaxInMagazine;
+  public TMP_Text CurrentInMagazine;
   public TMP_Text GunName;
   public GameObject GunUI;
 
@@ -89,8 +89,8 @@ public class Player : MonoBehaviour
     }
      void UpdateGunUI()
     {
-        MaxInMagasin.text = Gun.MaxShots.ToString();
-        CurrentInMagasin.text = Gun.ShotsInMagasin.ToString();
+        MaxInMagazine.text = Gun.MaxShots.ToString();
+        CurrentInMagazine.text = Gun.ShotsInMagazine.ToString();
         GunName.text = Gun.GunName.ToString();
         GunIcon.sprite = Gun.GunSprite;
     }

@@ -22,7 +22,7 @@ public class Guns : MonoBehaviour
     public float BulletSpread;
     public float BulletDamage; // damage that you do
     public float TimeBetweenShots; // how fast you realode
-    public int ShotsInMagasin; // how many times it can shoots
+    public int ShotsInMagazine; // how many times it can shoots
     public int SpeedBullet; // how fast bullet goes
     public int BulletFiredPerShot; // how many bullets that are Shots  
     public Vector3 Bulletsize; // how big is the bullet
@@ -70,7 +70,7 @@ public class Guns : MonoBehaviour
             AttemptToThrow();  
         }
         //destroy the weapon
-        if(ShotsInMagasin <= 0 && playerStats.CarryingGun == true)
+        if(ShotsInMagazine <= 0 && playerStats.CarryingGun == true)
         {
             DestroyWeapon();
         }
@@ -113,7 +113,7 @@ public class Guns : MonoBehaviour
 
         ScreenShake.StartShake(0.1f,GunScreenShake,0.5f);
         
-        ShotsInMagasin --;
+        ShotsInMagazine --;
         
         StartCoroutine(AttackCooldown());
     }
@@ -131,7 +131,7 @@ public class Guns : MonoBehaviour
         BulletDamage = CurrentGun.BulletDamage;
         TimeBetweenShots = CurrentGun.TimeBetweenShots;
         SpeedBullet = CurrentGun.SpeedBullet;
-        ShotsInMagasin = CurrentGun.ShotsInMagasin;
+        ShotsInMagazine = CurrentGun.ShotsInMagasin;
         BulletFiredPerShot = CurrentGun.bulletFiredPerShot;
         Gunweight = CurrentGun.Weight;
         BulletSpread = CurrentGun.bulletSPread;
@@ -176,8 +176,8 @@ public class Guns : MonoBehaviour
     {
         BulletDamage = 0;
         KnockBack = 0;
-        ShotsInMagasin = 0;
-        ShotsInMagasin = 0;
+        ShotsInMagazine = 0;
+        ShotsInMagazine = 0;
         Gunweight = 0;
         this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         playerStats.CarryingGun = false;

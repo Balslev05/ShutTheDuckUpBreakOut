@@ -72,7 +72,6 @@ public class Enemy1Ai : MonoBehaviour
             if( ShouldAttack == false)
             {
                 enemyAnim.Play("Enemy1Run");
-                print("1");
             }  
     }
       public void ActivateCollider()

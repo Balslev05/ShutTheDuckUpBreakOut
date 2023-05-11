@@ -4,19 +4,20 @@ using DG.Tweening;
 public class PlayerMovment : MonoBehaviour
 {
     public bool InPrison;
+    
     public float speed = 250;
     public Rigidbody2D rb;
     public Animator playerAnim;
     public GameObject WeaponManager;
-    private Player PlayerMechics;
+    private Player PlayerMechanics;
      Vector2 PlayerNormalScale;
 
     
 
     [Header("RoleStats")]
-    public float RoleLeanght = 1f;
+    public float RoleLength = 1f;
     public float RoleForce = 750f;
-    public bool Roling;
+    public bool Rolling;
     private  Vector2 lastDirection;
     private float NormalMoveSpeed;
     Vector2 Movement;
@@ -36,14 +37,14 @@ public class PlayerMovment : MonoBehaviour
 
         NormalMoveSpeed = speed;
         rb.GetComponent<Rigidbody2D>();
-       PlayerMechics = this.gameObject.GetComponent<Player>();
+       PlayerMechanics = this.gameObject.GetComponent<Player>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if(PlayerMechics.CarryingGun! && PlayerMechics.CarryingMelee!)
+        if(PlayerMechanics.CarryingGun! && PlayerMechanics.CarryingMelee!)
         {
             print("yeas");
         } 
@@ -53,7 +54,7 @@ public class PlayerMovment : MonoBehaviour
         dir = dir.normalized;
         lastDirection = dir;
         
-        if(Roling == true)
+        if(Rolling == true)
         {
          return;
 
@@ -78,23 +79,37 @@ public class PlayerMovment : MonoBehaviour
             }
 
         }
-        //! NOEL DONT LOOK  
+        //! NOEL DON'T LOOK  
         if(!InPrison && velocity.x == 0 && velocity.y == 0)
         {
-            playerAnim.Play("idleAnim");
+            if(PlayerMechanics.CarryingGun == false || PlayerMechanics.CarryingMelee == false)
+            {
+
+            } else{playerAnim.Play("idleAnim");}
             
         } else if ( !InPrison && velocity.x != 0 ||!InPrison && velocity.y !=0 )
         {
-            playerAnim.Play("walking");
+            if(PlayerMechanics.CarryingGun == false || PlayerMechanics.CarryingMelee == false)
+            {
+
+            } else{playerAnim.Play("walking");}
         }
        
         if( InPrison && velocity.x == 0 && velocity.y == 0)
         {
-            playerAnim.Play("JailIdleAnim");
+           if(PlayerMechanics.CarryingGun == false || PlayerMechanics.CarryingMelee == false)
+            {
+                playerAnim.Play("JailIdleAnimArms");
+
+            } else{playerAnim.Play("JailIdleAnim");}
             
         } else if ( InPrison && velocity.x != 0 || InPrison && velocity.y != 0)
         {
-            playerAnim.Play("JailWalking");
+            if(PlayerMechanics.CarryingGun == false || PlayerMechanics.CarryingMelee == false)
+            {
+                playerAnim.Play("JailWalkingArms");
+
+            } else{playerAnim.Play("JailWalking");}
         }
 
 
@@ -105,22 +120,22 @@ public class PlayerMovment : MonoBehaviour
      {
        
         WeaponManager.SetActive(false);
-        Roling = true;
+        Rolling = true;
         speed = speed + RoleForce;
-        DOVirtual.Float( speed, 0, RoleLeanght, RolingSpeed =>{speed = RolingSpeed;});
+        DOVirtual.Float( speed, 0, RoleLength, RollingSpeed =>{speed = RollingSpeed;});
         rb.AddForce(lastDirection * speed); 
 
-        transform.DOScale(RoleHight,RoleLeanght/3).SetEase(Ease.OutSine).OnComplete(() => 
-            transform.DOScale(PlayerNormalScale,RoleLeanght/3).SetEase(Ease.InSine)
+        transform.DOScale(RoleHight,RoleLength/3).SetEase(Ease.OutSine).OnComplete(() => 
+            transform.DOScale(PlayerNormalScale,RoleLength/3).SetEase(Ease.InSine)
         );
 
 
-        //change tag so it canoot be hit
-        yield return new WaitForSeconds(RoleLeanght);
+        //change tag so it cannot be hit
+        yield return new WaitForSeconds(RoleLength);
 
         WeaponManager.SetActive(true);
 
-        Roling = false;  
+        Rolling = false;  
 
         speed = NormalMoveSpeed;
 

@@ -491,7 +491,7 @@ MonoBehaviour:
   BulletSpread: 0
   BulletDamage: 0
   TimeBetweenShots: 0
-  ShotsInMagasin: 0
+  ShotsInMagazine: 0
   SpeedBullet: 0
   BulletFiredPerShot: 4
   Bulletsize: {x: 0, y: 0, z: 0}
@@ -781,17 +781,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     name: Toturial Duck
-    sentnce:
-    - 'This is a Toturial '
-    - so movement is W,A,D,S and you roll on Space
-    - Theres a weapon over there and you can pick it up by pressing E
-    - GLHF
-  NpcCharecter: {fileID: 143108785}
+    sentence:
+    - You Move on W,A,S,D
+    - You can use on [E]
+    - Hold [Right Click] to throw your picked up Item
+    - 
+  TalkingTo: {fileID: 0}
+  Karakter: {fileID: 143108785}
   player: {fileID: 366710768}
   Dialogmanger: {fileID: 1424358660}
   dialogBox: {fileID: 1654020380}
   key: {fileID: 662603695}
   Speaking: 0
+  DorOpen: {fileID: 0}
   ItemDrop: {fileID: 0}
 --- !u!212 &143108788
 SpriteRenderer:
@@ -125906,6 +125908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogText: {fileID: 82516541}
   nameText: {fileID: 831323291}
+  dialogBox: {fileID: 0}
 --- !u!4 &1424358661
 Transform:
   m_ObjectHideFlags: 0
@@ -128131,9 +128134,10 @@ MonoBehaviour:
   rb: {fileID: 366710769}
   playerAnim: {fileID: 2134313177}
   WeaponManager: {fileID: 1472195354}
-  RoleLeanght: 0.8
+  RoleLength: 1
   RoleForce: 800
-  Roling: 0
+  Rolling: 0
+  RoleHight: {x: 1.5, y: 1.5, z: 0}
   WalkDust: {fileID: 3495725655789194881, guid: 22e117f130258754294527fd4ce30693, type: 3}
   Feet: {fileID: 1849094702}
 --- !u!114 &2134313176
@@ -128155,8 +128159,8 @@ MonoBehaviour:
   CarryingMelee: 0
   CarryingGun: 0
   GunIcon: {fileID: 1566627501}
-  MaxInMagasin: {fileID: 1262704256}
-  CurrentInMagasin: {fileID: 36332464}
+  MaxInMagazine: {fileID: 0}
+  CurrentInMagazine: {fileID: 0}
   GunName: {fileID: 2114539443}
   GunUI: {fileID: 1503934670}
 --- !u!95 &2134313177
