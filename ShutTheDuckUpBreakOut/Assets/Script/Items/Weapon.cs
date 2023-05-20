@@ -42,7 +42,7 @@ public class Weapon : MonoBehaviour
             ChargeTimer += Time.deltaTime;
         }
 
-        if(Input.GetKeyUp(KeyCode.Space) && playerStats.CarryingMelee == true)
+        if(Input.GetKeyUp(KeyCode.Mouse1) && playerStats.CarryingMelee == true)
         {
             AttemptToThrow();  
         }

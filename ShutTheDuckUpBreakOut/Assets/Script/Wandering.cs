@@ -9,7 +9,8 @@ public class Wandering : MonoBehaviour
     public Transform[] waypoints;
 
   
-    
+     Vector3 LastPos;
+     Vector3 CurrentPos;
     public float moveSpeed = 2f;
 
     
@@ -18,6 +19,26 @@ public class Wandering : MonoBehaviour
     public GameObject Duck;
 
 	
+	private void Update () 
+    {
+        LastPos = CurrentPos;
+        CurrentPos = transform.position;
+        if(CurrentPos.x > LastPos.x)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().flipX = true;  
+        }
+        if ( CurrentPos.x < LastPos.x){
+                this.gameObject.GetComponent<SpriteRenderer>().flipX = false;  
+
+        }
+
+        if(waypointIndex == waypoints.Length)
+        {
+            waypointIndex = 0;
+            print("Reset");
+        }
+        Move();
+	}
 	private void Start () 
     {
         Duck.transform.position = waypoints[waypointIndex].transform.position;
@@ -25,11 +46,6 @@ public class Wandering : MonoBehaviour
 	}
 	
 
-	private void Update () 
-    {
-        
-        Move();
-	}
 
 
     private void Move()

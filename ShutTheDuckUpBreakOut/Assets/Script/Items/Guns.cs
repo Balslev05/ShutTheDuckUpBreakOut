@@ -88,6 +88,7 @@ public class Guns : MonoBehaviour
 
     void Shoot()
     {
+        playerStats.Heat = true;
         
         ReadyToShoot = false;
 

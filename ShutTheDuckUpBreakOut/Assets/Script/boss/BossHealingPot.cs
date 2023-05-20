@@ -22,7 +22,6 @@ public class BossHealingPot : MonoBehaviour
 
         transform.DOMoveY(transform.position.y + 2.5f , 0.3f);       
 
-        
         transform.DOLocalRotate(new Vector3(0, 0, 180), 1f, RotateMode.FastBeyond360).SetRelative(true).SetEase(Ease.OutBack);
 
     }

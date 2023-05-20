@@ -85,6 +85,7 @@ public class Enemy1Ai : MonoBehaviour
         ShouldAttack = false;
         
         this.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        
 
     }
     

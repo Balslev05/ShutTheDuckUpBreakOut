@@ -78,7 +78,6 @@ public class Enemy3AI : MonoBehaviour
             if( ShouldAttack == false)
             {
                 enemyAnim.Play("Enemy3Run");
-                print("1");
             }  
     }
     public void ChargeAttack()

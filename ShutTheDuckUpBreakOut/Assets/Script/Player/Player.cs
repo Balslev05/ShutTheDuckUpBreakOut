@@ -19,25 +19,26 @@ public class Player : MonoBehaviour
   public TMP_Text CurrentInMagazine;
   public TMP_Text GunName;
   public GameObject GunUI;
-
-
-    // Start is called before the first frame update
-
-    void Awake()
-    {
-      
-    }
-    void Start()
-    {
-        
-    }
-
+  
+  public bool CarryingItem = false;
+  public bool Heat = false;
     // Update is called once per frame
     void Update()
     {
+
+      if(CarryingGun || CarryingMelee)
+      {
+        CarryingItem = true;
+      } 
+      else
+      { 
+        CarryingItem = false;
+      }
+
+
       HealthUI.fillAmount = playerHealth.currentHealth / 10;
 
-      if(CarryingGun == true)
+      if(CarryingGun == true )
       {
         UpdateGunUI();
         GunUI.SetActive(true);
@@ -67,12 +68,11 @@ public class Player : MonoBehaviour
           Weapon.PickUpWeapon();
 
         }
-    
       }
       if(collider.gameObject.tag == "Gun")
       {
       
-        if(Input.GetKey(KeyCode.E)  && CarryingGun == false && CarryingMelee == false)
+        if(Input.GetKey(KeyCode.E) && CarryingGun == false && CarryingMelee == false)
         {
           
           CarryingGun = true;

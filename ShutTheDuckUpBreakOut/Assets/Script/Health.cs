@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
     public int  maxHealth;
@@ -29,7 +30,7 @@ public class Health : MonoBehaviour
     private Rigidbody2D rb2D;              // Reference to the Rigidbody2D component
     private Vector2 knockbackDirection;   // The direction of the knockback
     private float knockbackTimer;        // Timer for the knockback effect
-
+    public GameObject BloodParticals;
     void Start()
     {
         currentHealth = maxHealth;
@@ -47,14 +48,24 @@ public class Health : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collider)
     {
+        //enemy
         if(collider.gameObject.tag == ("Bullet") && IsPlayer == false)
         {
         currentHealth -= collider.GetComponent<Bullet>().BulletDamage;
+
+        SpawnBlood();
         }
         if(collider.gameObject.tag == ("MeleeCollider") && IsPlayer == false)
         {
         currentHealth -= collider.GetComponent<Weapon>().Damage; 
+
+        SpawnBlood();
         }
+
+
+
+
+        //player 
         if(collider.gameObject.tag == ("EnemyBluntAttack") && IsPlayer == true)
         {
             PlayerTakeDamage(1); 
@@ -99,5 +110,9 @@ public class Health : MonoBehaviour
         yield return new WaitForSeconds(ImortalTimer/2);   
         
         CanTakeDamage = true; 
+    }
+    public void SpawnBlood()
+    {
+        Instantiate(BloodParticals,this.gameObject.transform.position,Quaternion.identity);
     }
 }

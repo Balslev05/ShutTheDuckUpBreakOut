@@ -1,3 +1,5 @@
+using System.Runtime.Serialization.Formatters;
+using System.Runtime.InteropServices;
 using System.Collections;
 using UnityEngine;
 using DG.Tweening;
@@ -43,17 +45,15 @@ public class PlayerMovment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if(PlayerMechanics.CarryingGun! && PlayerMechanics.CarryingMelee!)
         {
             print("yeas");
         } 
-
         //  Moving 
         Vector2 dir = rb.transform.position - transform.position;
         dir = dir.normalized;
         lastDirection = dir;
-        
+
         if(Rolling == true)
         {
          return;
@@ -79,42 +79,57 @@ public class PlayerMovment : MonoBehaviour
             }
 
         }
-        //! NOEL DON'T LOOK  
+        
         if(!InPrison && velocity.x == 0 && velocity.y == 0)
         {
-            if(PlayerMechanics.CarryingGun == false || PlayerMechanics.CarryingMelee == false)
+            if(!PlayerMechanics.CarryingItem)
             {
+                playerAnim.Play("idleArms");
+            } 
 
-            } else{playerAnim.Play("idleAnim");}
+            if(PlayerMechanics.CarryingItem)
+            {
+                playerAnim.Play("idleAnim");
+            }
             
-        } else if ( !InPrison && velocity.x != 0 ||!InPrison && velocity.y !=0 )
+        } else if (!InPrison && velocity.x != 0 ||!InPrison && velocity.y != 0 )
         {
-            if(PlayerMechanics.CarryingGun == false || PlayerMechanics.CarryingMelee == false)
+            if(!PlayerMechanics.CarryingItem)
             {
+                playerAnim.Play("walkingArms");
+            }  
 
-            } else{playerAnim.Play("walking");}
+            if(PlayerMechanics.CarryingItem)
+            {
+                playerAnim.Play("walking"); 
+            }
         }
        
         if( InPrison && velocity.x == 0 && velocity.y == 0)
         {
-           if(PlayerMechanics.CarryingGun == false || PlayerMechanics.CarryingMelee == false)
+           if(!PlayerMechanics.CarryingItem)
             {
                 playerAnim.Play("JailIdleAnimArms");
 
-            } else{playerAnim.Play("JailIdleAnim");}
+            } 
+            if(PlayerMechanics.CarryingItem)
+            {
+                playerAnim.Play("JailIdleAnim");
+
+            }
             
         } else if ( InPrison && velocity.x != 0 || InPrison && velocity.y != 0)
         {
-            if(PlayerMechanics.CarryingGun == false || PlayerMechanics.CarryingMelee == false)
+            if(!PlayerMechanics.CarryingItem)
             {
                 playerAnim.Play("JailWalkingArms");
 
-            } else{playerAnim.Play("JailWalking");}
+            } 
+            if(PlayerMechanics.CarryingItem)
+            {
+                playerAnim.Play("JailWalking");
+            }
         }
-
-
-
-
     }
      IEnumerator Roll()
      {
@@ -125,10 +140,7 @@ public class PlayerMovment : MonoBehaviour
         DOVirtual.Float( speed, 0, RoleLength, RollingSpeed =>{speed = RollingSpeed;});
         rb.AddForce(lastDirection * speed); 
 
-        transform.DOScale(RoleHight,RoleLength/3).SetEase(Ease.OutSine).OnComplete(() => 
-            transform.DOScale(PlayerNormalScale,RoleLength/3).SetEase(Ease.InSine)
-        );
-
+      
 
         //change tag so it cannot be hit
         yield return new WaitForSeconds(RoleLength);

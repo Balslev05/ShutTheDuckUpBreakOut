@@ -5,6 +5,7 @@ using UnityEngine;
 using Cinemachine;
 using DG.Tweening;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class bossSystem : MonoBehaviour
 {
     public Image HealthUI;
@@ -71,6 +72,10 @@ public class bossSystem : MonoBehaviour
     public AudioSource jumping;
     public AudioSource flying;
     public AudioSource EggCraking;
+    public AudioSource PoliceSound;
+    public GameObject BossIntroduction;
+    public GameObject NatureSound;
+    
 
 
     void Start()
@@ -96,7 +101,6 @@ public class bossSystem : MonoBehaviour
             BossDead = true;
             player.GetComponent<PlayerMovment>().speed = 0;
             Destroy(this.gameObject);
-            
         }
 
 
@@ -335,10 +339,12 @@ public class bossSystem : MonoBehaviour
     {
         Boss_Anim.Play("Introduction");
         
-
+        NatureSound.SetActive(false);
+        BossIntroduction.SetActive(true);
         Introduction_BossCamera.SetActive(true);
         Introduction_PlayerCamera.SetActive(false);
         
+
         BossBundary.SetActive(true);
     }
     public void EndBossIntroduction()
@@ -353,4 +359,5 @@ public class bossSystem : MonoBehaviour
 
         BossIntroductionBoundary.SetActive(false);
     }
+  
 }

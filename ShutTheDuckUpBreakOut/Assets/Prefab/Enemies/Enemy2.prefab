@@ -310,6 +310,7 @@ MonoBehaviour:
   IsPlayer: 0
   knockbackForce: 5
   knockbackDuration: 0.5
+  BloodParticals: {fileID: 7996713765133330523, guid: 7c21ea95c33fe2843833fa3caa143a54, type: 3}
 --- !u!114 &3309249982236031865
 MonoBehaviour:
   m_ObjectHideFlags: 0
