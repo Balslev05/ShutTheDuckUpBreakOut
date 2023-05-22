@@ -15,12 +15,12 @@ public class UIInteractive : MonoBehaviour,IPointerEnterHandler,IPointerExitHand
     public Color HoverOverTextColor;
     private Vector3 contineueSize;
     private Color TextColor = Color.white;
-
+    public MenuSystem Menu;
 
     // Start is called before the first frame update
     void Start()
     {
-        contineueSize = this.gameObject.transform.localScale;
+        contineueSize = new Vector3(1,1,1);
         this.gameObject.GetComponent<TMP_Text>().color = TextColor;
     }
      public void OnPointerEnter(PointerEventData eventData)
@@ -32,6 +32,6 @@ public class UIInteractive : MonoBehaviour,IPointerEnterHandler,IPointerExitHand
     public void OnPointerExit(PointerEventData eventData)
     {
         this.gameObject.transform.DOScale(contineueSize,2f).SetEase(Ease.OutQuint);
-        this.gameObject.GetComponent<TMP_Text>().color = TextColor;
+        this.gameObject.GetComponent<TMP_Text>().color = TextColor;        
     }
 }

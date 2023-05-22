@@ -13,29 +13,48 @@ public class Wandering : MonoBehaviour
      Vector3 CurrentPos;
     public float moveSpeed = 2f;
 
-    
-    private int waypointIndex = 0;
 
     public GameObject Duck;
 
+    public bool Statinary;
+    public bool flip;
 	
+    private int waypointIndex = 0;
 	private void Update () 
     {
+        if(Statinary == true)
+        {
+            if(Duck.GetComponent<Enemy1Ai>().Injail == true)
+            {
+                Duck.GetComponent<Animator>().Play("EnemyIdleJail");
+            } else
+            {
+                Duck.GetComponent<Animator>().Play("EnemyIdle");
+            }
+
+            if(flip == true)
+            {
+                Duck.GetComponent<SpriteRenderer>().flipX = true;  
+            } else
+            {
+                Duck.GetComponent<SpriteRenderer>().flipX = false;
+            }
+        }
+
         LastPos = CurrentPos;
         CurrentPos = transform.position;
         if(CurrentPos.x > LastPos.x)
         {
-            this.gameObject.GetComponent<SpriteRenderer>().flipX = true;  
+            Duck.GetComponent<SpriteRenderer>().flipX = true;  
         }
         if ( CurrentPos.x < LastPos.x){
-                this.gameObject.GetComponent<SpriteRenderer>().flipX = false;  
+            Duck.GetComponent<SpriteRenderer>().flipX = false;  
 
         }
 
         if(waypointIndex == waypoints.Length)
         {
             waypointIndex = 0;
-            print("Reset");
         }
         Move();
 	}

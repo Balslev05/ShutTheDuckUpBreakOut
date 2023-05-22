@@ -31,6 +31,7 @@ public class Health : MonoBehaviour
     private Vector2 knockbackDirection;   // The direction of the knockback
     private float knockbackTimer;        // Timer for the knockback effect
     public GameObject BloodParticals;
+    public GameObject BigBloodParticals;
     void Start()
     {
         currentHealth = maxHealth;
@@ -114,5 +115,6 @@ public class Health : MonoBehaviour
     public void SpawnBlood()
     {
         Instantiate(BloodParticals,this.gameObject.transform.position,Quaternion.identity);
+        Instantiate(BigBloodParticals,this.gameObject.transform.position,Quaternion.identity);
     }
 }

@@ -10,6 +10,7 @@ public class Enemy1Ai : MonoBehaviour
     public float AttackDistance;
     private Animator enemyAnim;
     public Vector3 dir;
+    public bool Injail;
     private  Vector2 lastDirection;
     private GameObject player;
     [SerializeField] private bool ShouldAttack = false;
@@ -38,14 +39,14 @@ public class Enemy1Ai : MonoBehaviour
 
             if(ShouldAttack == true)
             {
-            enemyAnim.Play("Enemy1Attack");
-            print("PLZ");
-
+                if(Injail == true)
+                {
+                    enemyAnim.Play("Enemy1AttackJail");
+                } else
+                {
+                    enemyAnim.Play("Enemy1Attack");
+                }
             this.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-
-
-
-
             }
         }   
         
@@ -53,7 +54,7 @@ public class Enemy1Ai : MonoBehaviour
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         dir.Normalize();
         movement = dir; 
-        
+            
             if(movement.x < 0)
             {
                 this.gameObject.GetComponent<SpriteRenderer>().flipX = false;  
@@ -71,8 +72,15 @@ public class Enemy1Ai : MonoBehaviour
         
             if( ShouldAttack == false)
             {
-                enemyAnim.Play("Enemy1Run");
-            }  
+                if(Injail == true)
+                {
+                    enemyAnim.Play("Enemy1RunJail");
+                } else
+                {
+                    enemyAnim.Play("Enemy1Run");
+                }
+            } 
+
     }
       public void ActivateCollider()
     {

@@ -13,6 +13,14 @@ public class EnemyAlertet : MonoBehaviour
 
     public Wandering  wandering;
 
+    void Awake()
+    {
+            AIBrain.enabled = false; 
+            
+            AttackAi.enabled = false;
+
+            wandering.enabled = true;
+    }
     void Update()
     {
         if(PlayerMechanics.Heat == true)

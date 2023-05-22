@@ -21,7 +21,7 @@ public class ContinueUI : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
     public bool Ready;
     void Start()
     {
-        ContineueSize= this.gameObject.transform.localScale;
+        ContineueSize = this.gameObject.transform.localScale;
         StartCoroutine(TypinContinue());
     }
 
@@ -67,7 +67,7 @@ public class ContinueUI : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
    }
    IEnumerator switchSceneDelay()
    {
-    yield return new WaitForSeconds(SwitchSceneTimer+1);
+    yield return new WaitForSeconds(SwitchSceneTimer + 1);
     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
    }

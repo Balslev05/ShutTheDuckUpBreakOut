@@ -343,6 +343,7 @@ MonoBehaviour:
   knockbackForce: 5
   knockbackDuration: 0.5
   BloodParticals: {fileID: 7996713765133330523, guid: 7c21ea95c33fe2843833fa3caa143a54, type: 3}
+  BigBloodParticals: {fileID: 7996713765133330523, guid: d47851ad90f82454789222fc499e52ec, type: 3}
 --- !u!95 &2981647936105983745
 Animator:
   serializedVersion: 4
