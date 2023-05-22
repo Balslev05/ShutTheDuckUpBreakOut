@@ -10,8 +10,11 @@ public class EnemyShooter : MonoBehaviour
     public Transform bulletPos;
     private float timer;
     public float Shots;
-    private GameObject player;
+    public GameObject arms;
     public bool Shooting = false;
+    private GameObject player;
+    private bool LoosingArmor = false;
+    private bool LostArmor = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +24,21 @@ public class EnemyShooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(LoosingArmor == true)
+        {
+            return;
+        }
+        if(LostArmor == true)
+        {
+            GetComponent<Animator>().Play("Running");
+        } else
+        {
+            GetComponent<Animator>().Play("ArmorRunning");
+
+        }
 
         float distance = Vector2.Distance(transform.position, player.transform.position);
+        
         
 
         if(distance < 10)
@@ -49,6 +65,22 @@ public class EnemyShooter : MonoBehaviour
         }
         timer = 0;
         Shooting = false;
+
+    }
+     public void LosingArmor()
+    {
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        LoosingArmor = true;
+        arms.SetActive(false);
+    }
+     public void ArmorLost()
+    {
+        GetComponent<Collider2D>().enabled = true;
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        LostArmor = true;
+        arms.SetActive(true);
+        LoosingArmor = false;
 
     }
 }

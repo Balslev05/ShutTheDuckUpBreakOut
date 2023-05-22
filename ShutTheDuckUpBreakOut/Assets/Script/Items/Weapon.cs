@@ -24,7 +24,7 @@ public class Weapon : MonoBehaviour
     public int Damage;  // the damage you do
     public int Durability; // how many hits you can hit 
     public int weight; // Slows the Cooldown
-    public int KnockBack; //knockbacks the enemy
+    public float KnockBack; //knockbacks the enemy
     public Sprite WeaponSprite; //knockbacks the enemy
     public Vector3 WeaponSize; 
     public Objects_Weapons.Type AttackType = new Objects_Weapons.Type();  
@@ -76,6 +76,7 @@ public class Weapon : MonoBehaviour
 
     void Attack()
     {
+        playerStats.Heat = true;
         ReadyToAttack = false;      
 
         print("Anim" + AttackType);

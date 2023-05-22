@@ -8,7 +8,9 @@ public class EnemyCollecter : MonoBehaviour
     public GameObject[] Enemies;
     [Header("Doors")]
     public Door Outdoor;
+    public Door Outdoor2;
     public Door office;
+    public Door office2;
     public Door Out;
     public Door door1;
     public Door door2;
@@ -36,8 +38,11 @@ public class EnemyCollecter : MonoBehaviour
         if(Enemies.Length == 0)
         {
             print("Open");
+
             Outdoor.Open = true;
+            Outdoor2.Open = true;
             office.Open = true;
+            office2.Open = true;
             Out.Open = true;
             
             door1.Open = true;

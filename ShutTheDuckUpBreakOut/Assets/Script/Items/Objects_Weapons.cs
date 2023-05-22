@@ -16,7 +16,7 @@ public class Objects_Weapons : ScriptableObject
     public int Damage;  // the damage you do
     public int Durability; // how many hits you can hit 
     public int weight; // Slows the Cooldown
-    public int KnockBack; //knockbacks the enemy
+    public float KnockBack; //knockbacks the enemy
     public  float throwSpeed;
     public Vector3 WeaponSize; 
     public Type AttackType = new Type();

@@ -17,6 +17,7 @@ public class EnemySpawner : MonoBehaviour
     {
         for (int i = 0; i < NumberOfEnemy; i++)
         {
+            yield return new WaitForSeconds(Timebetween);
             Instantiate(Enemy,transform.position,Quaternion.identity);
             yield return new WaitForSeconds(Timebetween);
         }

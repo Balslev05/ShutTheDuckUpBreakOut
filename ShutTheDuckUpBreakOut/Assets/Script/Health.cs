@@ -10,6 +10,9 @@ public class Health : MonoBehaviour
     public int  maxHealth;
     public float currentHealth; 
     public float Armor;
+    private bool LostArmor = false;
+    public GameObject Drop;
+
     
     [Header("PlayerDamage")]
     public screenShakeHandler screenShake;
@@ -42,9 +45,10 @@ public class Health : MonoBehaviour
     void Update()
     {
         this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
-        if(Armor <= 0)
+        if(Armor <= 0 && LostArmor == false)
         {
-            //armorFallingoF
+            LostArmor = true;
+            GetComponent<Animator>().Play("LoseArmor");
         }
 
         if(currentHealth <= 0)
@@ -57,7 +61,7 @@ public class Health : MonoBehaviour
         //enemy
         if(collider.gameObject.tag == ("Bullet") && IsPlayer == false)
         {
-            if(Armor <0)
+            if(Armor > 0)
             {
                 Armor -= collider.GetComponent<Bullet>().BulletDamage;
             } else
@@ -91,11 +95,19 @@ public class Health : MonoBehaviour
 }
     void Death()
     {
+        
+        GameObject ItemDrop = Instantiate(Drop,transform.position,Quaternion.identity);
+        
+        GetComponent<Animator>().Play("Death");
+        
         if(gameObject.CompareTag("Boss")) 
         {
             // do nothing 
         } 
-        else{Destroy(this.gameObject);}
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
     public void PlayerTakeDamage(float Damage)
     {
@@ -128,4 +140,5 @@ public class Health : MonoBehaviour
         Instantiate(BloodParticals,this.gameObject.transform.position,Quaternion.identity);
         Instantiate(BigBloodParticals,this.gameObject.transform.position,Quaternion.identity);
     }
+
 }

@@ -39,6 +39,10 @@ public class EnemyBulletScript : MonoBehaviour
 
      void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.CompareTag("Bullet"))
+        {
+            //Nothing
+        }
         if (other.gameObject.CompareTag("Player"))
         {
             other.GetComponent<Health>().PlayerTakeDamage(1);

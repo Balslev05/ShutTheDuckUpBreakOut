@@ -291,6 +291,7 @@ MonoBehaviour:
   bullet: {fileID: 5487863444669519971, guid: 69fb548b40d20874dae24cb1c445caa0, type: 3}
   bulletPos: {fileID: 6371919900456178634}
   Shots: 1
+  Shooting: 0
 --- !u!114 &5577026008860027957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,6 +306,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
+  Armor: 0
+  Drop: {fileID: 6725028838312082345, guid: 6e017f6c459d5d54a8c09197e7c25175, type: 3}
   screenShake: {fileID: 0}
   CanTakeDamage: 0
   DamgedOutline: {fileID: 0}
