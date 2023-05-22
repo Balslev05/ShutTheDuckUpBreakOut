@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,9 @@ public class EnemyShooter : MonoBehaviour
     public GameObject bullet;
     public Transform bulletPos;
     private float timer;
+    public float Shots;
     private GameObject player;
+    public bool Shooting = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,14 +31,24 @@ public class EnemyShooter : MonoBehaviour
 
             if (timer > 2)
             {
-                timer = 0;
-                shoot();
+                if(Shooting ==false)
+                {
+                StartCoroutine(shoot());
+                }
             }
         }
 
     }
-    void shoot()
+    public IEnumerator shoot()
     {
-        Instantiate(bullet, bulletPos.position, Quaternion.identity);
+        for (int i = 0; i < Shots; i++)
+        {
+            Shooting = true;
+            Instantiate(bullet, bulletPos.position, Quaternion.identity);
+            yield return new WaitForSeconds(0.25f);
+        }
+        timer = 0;
+        Shooting = false;
+
     }
 }

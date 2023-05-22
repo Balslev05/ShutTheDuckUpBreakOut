@@ -1088,6 +1088,7 @@ GameObject:
   - component: {fileID: 2155355205544739440}
   - component: {fileID: 2155355205544739455}
   - component: {fileID: 2155355205544739454}
+  - component: {fileID: 7123665546836009153}
   m_Layer: 6
   m_Name: Player 1
   m_TagString: Player
@@ -1140,6 +1141,8 @@ MonoBehaviour:
   CurrentInMagazine: {fileID: 2155355205127923754}
   GunName: {fileID: 2155355205127923754}
   GunUI: {fileID: 2155355205116205235}
+  CarryingItem: 0
+  Heat: 0
 --- !u!114 &2155355205544739443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1304,6 +1307,20 @@ MonoBehaviour:
   IsPlayer: 1
   knockbackForce: 5
   knockbackDuration: 0.5
+  BloodParticals: {fileID: 0}
+  BigBloodParticals: {fileID: 0}
+--- !u!114 &7123665546836009153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2155355205544739453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9492ee3a12dd7094d8c1903bea10c75c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2155355205626589090
 GameObject:
   m_ObjectHideFlags: 0

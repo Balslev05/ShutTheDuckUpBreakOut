@@ -9,7 +9,7 @@ public class Health : MonoBehaviour
 {
     public int  maxHealth;
     public float currentHealth; 
-    
+    public float Armor;
     
     [Header("PlayerDamage")]
     public screenShakeHandler screenShake;
@@ -42,6 +42,11 @@ public class Health : MonoBehaviour
     void Update()
     {
         this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+        if(Armor <= 0)
+        {
+            //armorFallingoF
+        }
+
         if(currentHealth <= 0)
         {
             Death();
@@ -52,9 +57,15 @@ public class Health : MonoBehaviour
         //enemy
         if(collider.gameObject.tag == ("Bullet") && IsPlayer == false)
         {
-        currentHealth -= collider.GetComponent<Bullet>().BulletDamage;
-
-        SpawnBlood();
+            if(Armor <0)
+            {
+                Armor -= collider.GetComponent<Bullet>().BulletDamage;
+            } else
+            {
+                currentHealth -= collider.GetComponent<Bullet>().BulletDamage;
+                SpawnBlood();
+            }
+                
         }
         if(collider.gameObject.tag == ("MeleeCollider") && IsPlayer == false)
         {
