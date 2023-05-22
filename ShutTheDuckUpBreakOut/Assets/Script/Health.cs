@@ -12,6 +12,7 @@ public class Health : MonoBehaviour
     public float Armor;
     private bool LostArmor = false;
     public GameObject Drop;
+    public int DeathScenario;
 
     
     [Header("PlayerDamage")]
@@ -95,10 +96,11 @@ public class Health : MonoBehaviour
 }
     void Death()
     {
-        
+        DeathScenario = Random.Range(1,3);
+
         GameObject ItemDrop = Instantiate(Drop,transform.position,Quaternion.identity);
         
-        GetComponent<Animator>().Play("Death");
+        GetComponent<Animator>().Play("Death" + DeathScenario);
         
         if(gameObject.CompareTag("Boss")) 
         {
