@@ -8,6 +8,7 @@ public class Guns : MonoBehaviour
     public GameObject BulletPrefab;
     public Objects_Guns CurrentGun;
     public Player playerStats;
+    public PlayerMovment movement;
     public Transform ShootPoint;
     public Animator GunAnim;
     public bool HasAGun;
@@ -74,12 +75,12 @@ public class Guns : MonoBehaviour
         {
             DestroyWeapon();
         }
-        if(holdToFire == true && Input.GetKey(KeyCode.Mouse0) && ReadyToShoot && playerStats.CarryingGun == true)
+        if(holdToFire == true && Input.GetKey(KeyCode.Mouse0) && ReadyToShoot && playerStats.CarryingGun == true && movement.Rolling == false)
         {
             Shoot();
         }
         //Attack
-        if(holdToFire == false && Input.GetKeyDown(KeyCode.Mouse0) && ReadyToShoot == true && playerStats.CarryingGun == true)
+        if(holdToFire == false && Input.GetKeyDown(KeyCode.Mouse0) && ReadyToShoot == true && playerStats.CarryingGun == true && movement.Rolling == false)
         {
             
             Shoot();
@@ -89,8 +90,9 @@ public class Guns : MonoBehaviour
     void Shoot()
     {
         playerStats.Heat = true;
-        
+       
         ReadyToShoot = false;
+        
 
         if(Gunweight >= 3){
             //play anim HeavyAnim

@@ -8,6 +8,7 @@ public class PlayerMovment : MonoBehaviour
     public bool InPrison;
     
     public float speed = 250;
+    public Guns GunHolder;
     public Rigidbody2D rb;
     public Animator playerAnim;
     public GameObject WeaponManager;
@@ -133,7 +134,7 @@ public class PlayerMovment : MonoBehaviour
     }
      IEnumerator Roll()
      {
-       
+        gameObject.tag = "Rolll";
         WeaponManager.SetActive(false);
         Rolling = true;
         speed = speed + RoleForce;
@@ -144,6 +145,7 @@ public class PlayerMovment : MonoBehaviour
 
         //change tag so it cannot be hit
         yield return new WaitForSeconds(RoleLength);
+        gameObject.tag = "Player";
 
         WeaponManager.SetActive(true);
 
@@ -151,6 +153,8 @@ public class PlayerMovment : MonoBehaviour
 
         speed = NormalMoveSpeed;
 
+        GunHolder.ReadyToShoot = true;
+        
      }
      private void FixedUpdate() {
 

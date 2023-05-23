@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 3309249982236031865}
   - component: {fileID: 2846955586042871953}
   - component: {fileID: 6877683116508331419}
-  - component: {fileID: 1367816280690634032}
+  - component: {fileID: 8116946785986158731}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Enemy
@@ -290,8 +290,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 5487863444669519971, guid: 69fb548b40d20874dae24cb1c445caa0, type: 3}
   bulletPos: {fileID: 6371919900456178634}
+  AIBrain: {fileID: 2846955586042871953}
   Shots: 1
+  arms: {fileID: 8372453225419967946}
   Shooting: 0
+  DeathScenario: 0
+  health: {fileID: 5577026008860027957}
+  rotat: {fileID: 6877683116508331419}
+  isDead: 0
 --- !u!114 &5577026008860027957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,6 +320,7 @@ MonoBehaviour:
   playerdamged: {r: 0, g: 0, b: 0, a: 0}
   ImortalTimer: 0
   IsPlayer: 0
+  ISdead: 0
   knockbackForce: 5
   knockbackDuration: 0.5
   BloodParticals: {fileID: 7996713765133330523, guid: 7c21ea95c33fe2843833fa3caa143a54, type: 3}
@@ -387,7 +394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dir: {x: 0, y: 0, z: 0}
---- !u!95 &1367816280690634032
+--- !u!95 &8116946785986158731
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0

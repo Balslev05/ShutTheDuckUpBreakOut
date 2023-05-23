@@ -1,10 +1,11 @@
-using System.Reflection.Emit;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy1Ai : MonoBehaviour
 {
+    public Pathfinding.AIPath AIBrain;
     public GameObject AttackPoint;
     private float timer;
     public float AttackDistance;
@@ -16,6 +17,10 @@ public class Enemy1Ai : MonoBehaviour
     [SerializeField] private bool ShouldAttack = false;
     private Vector3 movement;
     private Rigidbody2D rb;
+    public bool isDead = false;
+    public Health health;
+    public int DeathScenario;
+
     
 
 
@@ -31,13 +36,25 @@ public class Enemy1Ai : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(isDead == true)
+        {
+            this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+            return;
+        }
+        if(health .currentHealth <= 0)
+        {
+            death();
+        }
+
+
         float distance = Vector2.Distance(transform.position, player.transform.position);
 
         if(distance < AttackDistance )
         {   
             ShouldAttack = true;
 
-            if(ShouldAttack == true)
+            if(ShouldAttack == true && isDead == false)
             {
                 if(Injail == true)
                 {
@@ -93,9 +110,36 @@ public class Enemy1Ai : MonoBehaviour
         ShouldAttack = false;
         
         this.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+
         
 
     }
-    
+    public void death()
+    {
+        isDead = true;
+        AIBrain.enabled = false;
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        DeathScenario = UnityEngine.Random.Range(1,3);
 
+        if(DeathScenario == 3)
+        {
+            Destroy(gameObject);
+        }
+        if(Injail == false)
+        {
+            GetComponent<Animator>().Play("Dead" + DeathScenario);
+        } else
+        {
+            GetComponent<Animator>().Play("JailDead" + DeathScenario);
+        }
+        
+
+        print("death" + DeathScenario);
+        health.enabled = false;
+        AttackPoint.SetActive(false);
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        this.gameObject.GetComponent<Enemy1Ai>().enabled = false;
+
+    }
 }

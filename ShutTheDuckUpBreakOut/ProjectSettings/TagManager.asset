@@ -17,6 +17,8 @@ TagManager:
   - EnemyBullet
   - EnemyBluntAttack
   - Constraints
+  - ShockWave
+  - Dead
   layers:
   - Default
   - TransparentFX

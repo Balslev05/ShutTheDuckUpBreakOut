@@ -118,7 +118,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.6371522, y: 0.18342209}
+  m_Offset: {x: 0.51436234, y: 0.091329336}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -129,7 +129,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2743044, y: 0.6331558}
+  m_Size: {x: 1.7422123, y: 0.8173413}
   m_EdgeRadius: 0
 --- !u!1 &8996733421795918911
 GameObject:
@@ -203,7 +203,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: ddef07d05c6e36a4082dc97da2ca10bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -390,12 +390,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
+  Armor: 0
+  Drop: {fileID: 0}
   screenShake: {fileID: 0}
   CanTakeDamage: 0
   DamgedOutline: {fileID: 0}
   playerdamged: {r: 0, g: 0, b: 0, a: 0}
   ImortalTimer: 0
   IsPlayer: 0
+  ISdead: 0
   knockbackForce: 5
   knockbackDuration: 0.5
   BloodParticals: {fileID: 7996713765133330523, guid: 7c21ea95c33fe2843833fa3caa143a54, type: 3}
@@ -446,11 +449,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f009a41c19d6b94fab4ac98a18670ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AIBrain: {fileID: 3922874471550192134}
   AttackPoint: {fileID: 7100388441335483507}
-  AttackDistance: 2
+  AttackDistance: 1.3
   dir: {x: 0, y: 0, z: 0}
   Injail: 1
   ShouldAttack: 0
+  isDead: 0
+  health: {fileID: 6959311487744361214}
+  DeathScenario: 0
 --- !u!114 &6771144836202296633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -466,7 +473,7 @@ MonoBehaviour:
   AIBrain: {fileID: 3922874471550192134}
   PlayerMechanics: {fileID: 0}
   AttackAi: {fileID: 4933683736457873460}
-  wandering: {fileID: 0}
+  wandering: {fileID: 7578489922216090348}
 --- !u!114 &3922874471550192134
 MonoBehaviour:
   m_ObjectHideFlags: 0

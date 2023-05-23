@@ -77,9 +77,7 @@ public class Weapon : MonoBehaviour
     void Attack()
     {
         playerStats.Heat = true;
-        ReadyToAttack = false;      
-
-        print("Anim" + AttackType);
+        ReadyToAttack = false;    
 
         WeaponAnim.Play("Anim" + AttackType);
     }

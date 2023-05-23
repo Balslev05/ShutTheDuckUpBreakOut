@@ -12,7 +12,6 @@ public class Health : MonoBehaviour
     public float Armor;
     private bool LostArmor = false;
     public GameObject Drop;
-    public int DeathScenario;
 
     
     [Header("PlayerDamage")]
@@ -22,6 +21,7 @@ public class Health : MonoBehaviour
     public Color playerdamged;
     public float ImortalTimer;
     public bool IsPlayer;
+    public bool ISdead = false;
 
 
 
@@ -45,6 +45,10 @@ public class Health : MonoBehaviour
     }
     void Update()
     {
+        if(currentHealth <= 0 && ISdead == false)
+        {
+            Death();
+        }
         this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
         if(Armor <= 0 && LostArmor == false)
         {
@@ -52,10 +56,6 @@ public class Health : MonoBehaviour
             GetComponent<Animator>().Play("LoseArmor");
         }
 
-        if(currentHealth <= 0)
-        {
-            Death();
-        }
     }
     public void OnTriggerEnter2D(Collider2D collider)
     {
@@ -79,9 +79,6 @@ public class Health : MonoBehaviour
         SpawnBlood();
         }
 
-
-
-
         //player 
         if(collider.gameObject.tag == ("EnemyBluntAttack") && IsPlayer == true)
         {
@@ -96,20 +93,16 @@ public class Health : MonoBehaviour
 }
     void Death()
     {
-        DeathScenario = Random.Range(1,3);
-
+        this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+        gameObject.tag = "Dead";
+        ISdead = true;
+        
         GameObject ItemDrop = Instantiate(Drop,transform.position,Quaternion.identity);
-        
-        GetComponent<Animator>().Play("Death" + DeathScenario);
-        
-        if(gameObject.CompareTag("Boss")) 
+          if(gameObject.CompareTag("Boss")) 
         {
             // do nothing 
-        } 
-        else
-        {
-            Destroy(this.gameObject);
-        }
+        }    
     }
     public void PlayerTakeDamage(float Damage)
     {
@@ -139,8 +132,12 @@ public class Health : MonoBehaviour
     }
     public void SpawnBlood()
     {
-        Instantiate(BloodParticals,this.gameObject.transform.position,Quaternion.identity);
-        Instantiate(BigBloodParticals,this.gameObject.transform.position,Quaternion.identity);
+       GameObject blood = Instantiate(BloodParticals,this.gameObject.transform.position,Quaternion.identity);
+       GameObject Bigblood = Instantiate(BigBloodParticals,this.gameObject.transform.position,Quaternion.identity);
+       Destroy(Bigblood,2);
+       Destroy(blood,2);
+
+        
     }
 
 }

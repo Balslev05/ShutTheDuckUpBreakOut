@@ -6,6 +6,7 @@ public class EnemyCollecter : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject[] Enemies;
+
     [Header("Doors")]
     public Door Outdoor;
     public Door Outdoor2;
@@ -26,6 +27,7 @@ public class EnemyCollecter : MonoBehaviour
     public GameObject EnemySpawner5;
     public GameObject EnemySpawner6;
     public Door[] DoorsOpen;
+     
     void Start()
     {
     }
@@ -37,7 +39,7 @@ public class EnemyCollecter : MonoBehaviour
 
         if(Enemies.Length == 0)
         {
-            print("Open");
+            
 
             Outdoor.Open = true;
             Outdoor2.Open = true;

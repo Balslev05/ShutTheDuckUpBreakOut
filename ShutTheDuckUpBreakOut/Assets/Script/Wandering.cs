@@ -43,6 +43,7 @@ public class Wandering : MonoBehaviour
 
         LastPos = CurrentPos;
         CurrentPos = transform.position;
+        
         if(CurrentPos.x > LastPos.x)
         {
             Duck.GetComponent<SpriteRenderer>().flipX = true;  

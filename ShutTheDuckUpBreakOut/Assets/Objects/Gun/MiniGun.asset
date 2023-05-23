@@ -15,7 +15,7 @@ MonoBehaviour:
   GunName: MiniGun
   sprite: {fileID: 21300000, guid: dedc6d1b31b889d46b9c02a901209a50, type: 3}
   TimeBetweenShots: 0.06
-  BulletDamage: 0.5
+  BulletDamage: 2
   Weight: 10
   SpeedBullet: 35
   ShotsInMagasin: 999

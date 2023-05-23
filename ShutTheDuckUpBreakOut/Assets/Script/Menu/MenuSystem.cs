@@ -21,11 +21,11 @@ public class MenuSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)&& MenuOpen == true &&  MenuSwitch == true)
+        if(Input.GetKeyDown(KeyCode.Tab)&& MenuOpen == true &&  MenuSwitch == true)
         {
               StartCoroutine(UIGoindAway());
         } 
-        if(Input.GetKeyDown(KeyCode.Escape) && MenuOpen == false && MenuSwitch == true)
+        if(Input.GetKeyDown(KeyCode.Tab) && MenuOpen == false && MenuSwitch == true)
         {
           StartCoroutine(OpenMenu());
         }

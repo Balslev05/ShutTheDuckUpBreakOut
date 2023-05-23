@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EggSlices: {fileID: 2270436191829951495, guid: 8e1ecd9915520864f9e6814ee7052b4c, type: 3}
-  Enemies: {fileID: 2297045215340590428, guid: 98b99b45fc49a60419b7b318a1a7c79d, type: 3}
+  Enemies: {fileID: 5989185988922837823, guid: 61792c3a9cf4c29459cdc067fd54b4a4, type: 3}
   SpawningEnemies: 4
 --- !u!95 &5050261287940115210
 Animator:

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 651a803f8faae764a996bf8540ecccaa, type: 3}
   Damage: 2
-  Durability: 10
+  Durability: 15
   weight: 1
   KnockBack: 0.2
   throwSpeed: 1

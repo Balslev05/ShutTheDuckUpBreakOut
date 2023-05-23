@@ -5,6 +5,7 @@ using DG.Tweening;
 public class Enemy3AI : MonoBehaviour
 {
     private float timer;
+    public Pathfinding.AIPath AIBrain;
     public float AttackDistance;
     private Animator enemyAnim;
     public Vector3 dir;
@@ -22,6 +23,9 @@ public class Enemy3AI : MonoBehaviour
     private GameObject PrefabShockWave;
     public Vector3 AttackCirk;
     private Vector3 NormalAttackCirk;
+    public Health health;
+    public bool isDead = false;
+
 
 
     // Start is called before the first frame update
@@ -41,6 +45,19 @@ public class Enemy3AI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+         if(isDead == true)
+        {
+            this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+
+            return;
+        }
+
+        if(health.currentHealth <= 0)
+        {
+            	death();
+        }
+
         float distance = Vector2.Distance(transform.position, player.transform.position);
 
         if(distance < AttackDistance && ColdownOff == true)
@@ -95,6 +112,7 @@ public class Enemy3AI : MonoBehaviour
      public void FinishAttack()
     {
         this.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         Destroy(PrefabShockWave);
         StartCoroutine(AttackColdown());
     }
@@ -111,6 +129,21 @@ public class Enemy3AI : MonoBehaviour
         ShouldAttack = true;
         ColdownOff = true;
         print("ends");
+
+    }
+    public void death()
+    {
+        AIBrain.enabled = false;
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        isDead = true;       
+        
+        GetComponent<Animator>().Play("Enemy3Death");
+        Destroy(PrefabShockWave);
+
+        health.enabled = false;
+        this.gameObject.GetComponent<Enemy3AI>().enabled=false;
 
     }
 }

@@ -311,6 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c31ec34b56ef5a24d8bef2432549ee4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AIBrain: {fileID: 5180376715742931258}
   AttackDistance: 3
   dir: {x: 0, y: 0, z: 0}
   SlamColdown: 1
@@ -320,6 +321,8 @@ MonoBehaviour:
   AttackCirle: {fileID: 67653074444706649}
   ShockWave: {fileID: 8068783234583408828, guid: 6cd9be240a17f2c4c9a335810ddee4cc, type: 3}
   AttackCirk: {x: 2, y: 2, z: 2}
+  health: {fileID: 8099156277120282847}
+  isDead: 0
 --- !u!114 &8099156277120282847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,14 +335,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 825de761ee5a735438caa0e36e96355f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 25
+  maxHealth: 15
   currentHealth: 0
+  Armor: 0
+  Drop: {fileID: 6725028838312082345, guid: 26a45c3f27010ef41b330ac24af70228, type: 3}
   screenShake: {fileID: 0}
   CanTakeDamage: 0
   DamgedOutline: {fileID: 0}
   playerdamged: {r: 0, g: 0, b: 0, a: 0}
   ImortalTimer: 0
   IsPlayer: 0
+  ISdead: 0
   knockbackForce: 5
   knockbackDuration: 0.5
   BloodParticals: {fileID: 7996713765133330523, guid: 7c21ea95c33fe2843833fa3caa143a54, type: 3}
@@ -436,7 +442,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: cd946039e54ba064f890fc19f4a92eb2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

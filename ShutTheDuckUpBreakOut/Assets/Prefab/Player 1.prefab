@@ -126,6 +126,7 @@ MonoBehaviour:
   BulletPrefab: {fileID: 5487863444669519971, guid: 0e39514b820d58549b0064e882667e46, type: 3}
   CurrentGun: {fileID: 0}
   playerStats: {fileID: 2155355205544739444}
+  movement: {fileID: 2155355205544739443}
   ShootPoint: {fileID: 2155355205438519986}
   GunAnim: {fileID: 2155355204931755129}
   HasAGun: 0
@@ -1157,6 +1158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InPrison: 1
   speed: 250
+  GunHolder: {fileID: 0}
   rb: {fileID: 2155355205544739441}
   playerAnim: {fileID: 2155355205544739455}
   WeaponManager: {fileID: 2155355204834545171}
@@ -1299,12 +1301,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 0
+  Armor: 0
+  Drop: {fileID: 0}
   screenShake: {fileID: 0}
   CanTakeDamage: 1
   DamgedOutline: {fileID: 2155355206060879289}
   playerdamged: {r: 1, g: 0.11698109, b: 0.11698109, a: 0.2627451}
   ImortalTimer: 1
   IsPlayer: 1
+  ISdead: 0
   knockbackForce: 5
   knockbackDuration: 0.5
   BloodParticals: {fileID: 0}
@@ -1321,6 +1326,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9492ee3a12dd7094d8c1903bea10c75c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimeScaleFX: {fileID: 0}
+  BulletTimeGoing: 0
+  ChargeSan: 0
+  ghostSpawn: 0
+  Movement: {fileID: 0}
+  DrainSan: 0
 --- !u!1 &2155355205626589090
 GameObject:
   m_ObjectHideFlags: 0
