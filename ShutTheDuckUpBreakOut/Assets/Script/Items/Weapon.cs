@@ -11,7 +11,6 @@ public class Weapon : MonoBehaviour
     public Player playerStats;
     public Animator WeaponAnim;
     public float Radius;    
-    public Transform circleOrigin;
     public int throwForce;
     public bool ReadyToAttack;
 
@@ -27,6 +26,7 @@ public class Weapon : MonoBehaviour
     public float KnockBack; //knockbacks the enemy
     public Sprite WeaponSprite; //knockbacks the enemy
     public Vector3 WeaponSize; 
+    private GameObject thrownWeapon;
     public Objects_Weapons.Type AttackType = new Objects_Weapons.Type();  
 
     void Update()
@@ -114,8 +114,11 @@ public class Weapon : MonoBehaviour
     {
         playerStats.CarryingMelee = false;
         ResetWeapon();
-        GameObject thrownWeapon = Instantiate(ItemDrop, transform.position, transform.rotation); 
+        thrownWeapon = Instantiate(ItemDrop, transform.position, transform.rotation); 
         thrownWeapon.GetComponent<Item_Melee>().MeleeType = CurrentWeapon;
+
+        thrownWeapon.tag = "MeleeCollider";
+        StartCoroutine(PickUpreadyWeapon());
 
         thrownWeapon.GetComponent<Item_Melee>().IsItThrown = true;
         
@@ -135,5 +138,16 @@ public class Weapon : MonoBehaviour
     {
         ResetWeapon();
     }
+
+
+    public IEnumerator PickUpreadyWeapon()
+    {
+        thrownWeapon.tag = "MeleeCollider";
+        yield return new WaitForSeconds(0.8f);
+        thrownWeapon.tag = "Melee";
+
+    }
+
+
 }
 

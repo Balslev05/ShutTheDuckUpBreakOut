@@ -17,7 +17,7 @@ public class SceneController : MonoBehaviour
     public IEnumerator BossIsDead()
     {
         PoliceSound.DOFade(0.8f,10);
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
 

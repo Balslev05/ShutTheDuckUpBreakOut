@@ -35,11 +35,10 @@ public class Enemy3AI : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player"); 
         enemyAnim = this.gameObject.GetComponent<Animator>();
         MainCameraa = GameObject.FindGameObjectWithTag("MainCamera"); 
-       screenShake = MainCameraa.GetComponent<screenShakeHandler>();
+        screenShake = MainCameraa.GetComponent<screenShakeHandler>();
 
-        NormalAttackCirk = AttackCirle.gameObject.transform.localScale;
-
-        
+        NormalAttackCirk = new Vector3(0,0,0);
+        RemoveShockWaveOutline();
     }
 
     // Update is called once per frame
@@ -134,8 +133,19 @@ public class Enemy3AI : MonoBehaviour
     public void death()
     {
         AIBrain.enabled = false;
+        transform.eulerAngles = new Vector3(0,0,0);
+        
+        for (int i = 0; i < this.gameObject.transform.childCount; i++)
+{
+        var child = this.gameObject.transform.GetChild(i).gameObject;
+        if (child != null)
+        child.SetActive(false);
+}
+
+        GetComponent<CircleCollider2D>().enabled = false;
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+        Destroy(PrefabShockWave);
 
         isDead = true;       
         
@@ -143,7 +153,11 @@ public class Enemy3AI : MonoBehaviour
         Destroy(PrefabShockWave);
 
         health.enabled = false;
-        this.gameObject.GetComponent<Enemy3AI>().enabled=false;
+        this.gameObject.GetComponent<Enemy3AI>().enabled = false;
+
+
+        transform.GetComponent<SpriteRenderer>().DOFade(0,6).SetEase(Ease.InCirc);
+        Destroy(this.gameObject,7f);
 
     }
 }

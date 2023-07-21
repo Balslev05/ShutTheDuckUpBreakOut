@@ -66,6 +66,7 @@ public class bossSystem : MonoBehaviour
     public GameObject playersLight;
     public GameObject BossBundary;
     public GameObject BossIntroductionBoundary;
+    public Guns PlayerGuns;
 
     [Header ("SoundDesign")]
     public AudioSource walking;
@@ -339,6 +340,7 @@ public class bossSystem : MonoBehaviour
     {
         Boss_Anim.Play("Introduction");
         
+        PlayerGuns.ReadyToShoot = false;
         NatureSound.SetActive(false);
         BossIntroduction.SetActive(true);
         Introduction_BossCamera.SetActive(true);
@@ -350,6 +352,8 @@ public class bossSystem : MonoBehaviour
     public void EndBossIntroduction()
     {
         Introduction = true;
+        
+        PlayerGuns.ReadyToShoot = true;
 
         
         Introduction_BossCamera.SetActive(false);

@@ -170,6 +170,8 @@ public class Guns : MonoBehaviour
         GameObject thrownWeapon = Instantiate(ItemDrop, transform.position, transform.rotation); 
         thrownWeapon.GetComponent<Item_Gun>().GunType = CurrentGun;
 
+        thrownWeapon.tag = "MeleeCollider";
+
         thrownWeapon.GetComponent<Item_Gun>().IsItThrown = true;
 
         //thrownWeapon.AddComponent<>

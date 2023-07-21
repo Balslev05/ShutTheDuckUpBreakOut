@@ -22,6 +22,7 @@ public class Health : MonoBehaviour
     public float ImortalTimer;
     public bool IsPlayer;
     public bool ISdead = false;
+    
 
 
 
@@ -45,6 +46,13 @@ public class Health : MonoBehaviour
     }
     void Update()
     {
+
+
+
+        if(currentHealth <=0 && IsPlayer == true)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
         if(currentHealth <= 0 && ISdead == false)
         {
             Death();
@@ -65,7 +73,9 @@ public class Health : MonoBehaviour
             if(Armor > 0)
             {
                 Armor -= collider.GetComponent<Bullet>().BulletDamage;
-            } else
+                print("Bullethitarmor");
+            } 
+            if (Armor <= 0)
             {
                 currentHealth -= collider.GetComponent<Bullet>().BulletDamage;
                 SpawnBlood();
@@ -74,8 +84,19 @@ public class Health : MonoBehaviour
         }
         if(collider.gameObject.tag == ("MeleeCollider") && IsPlayer == false)
         {
-        currentHealth -= collider.GetComponent<Weapon>().Damage; 
 
+            if(Armor > 0)
+            {
+                Armor -= collider.GetComponent<Weapon>().Damage;
+                print("Melee_hitarmor");
+                
+            }
+
+            if(Armor <= 0)
+            {
+                currentHealth -= collider.GetComponent<Weapon>().Damage;
+                SpawnBlood();
+            }
         SpawnBlood();
         }
 
@@ -93,7 +114,9 @@ public class Health : MonoBehaviour
 }
     void Death()
     {
+
         this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         gameObject.tag = "Dead";
         ISdead = true;
@@ -109,7 +132,7 @@ public class Health : MonoBehaviour
         if(CanTakeDamage == true)
         {
         CanTakeDamage = false;
-        currentHealth -= Damage;
+       // currentHealth -= Damage;
         screenShake.StartShake(0.25f,5,2);
         StartCoroutine(VirgentetColorChange());
         }else{return;}

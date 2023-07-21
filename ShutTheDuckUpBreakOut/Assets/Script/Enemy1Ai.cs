@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
+
 
 public class Enemy1Ai : MonoBehaviour
 {
@@ -141,5 +143,7 @@ public class Enemy1Ai : MonoBehaviour
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         this.gameObject.GetComponent<Enemy1Ai>().enabled = false;
 
+        transform.GetComponent<SpriteRenderer>().DOFade(0,6).SetEase(Ease.InCirc);
+        Destroy(this.gameObject,7f);
     }
 }

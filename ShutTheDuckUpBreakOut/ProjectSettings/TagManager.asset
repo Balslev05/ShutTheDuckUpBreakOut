@@ -12,7 +12,6 @@ TagManager:
   - Terrain
   - Bullet
   - MeleeCollider
-  - Bullets Pool
   - Boss
   - EnemyBullet
   - EnemyBluntAttack

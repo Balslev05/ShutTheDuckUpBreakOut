@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
+
 
 public class EnemyShooter : MonoBehaviour
 {
@@ -34,7 +36,7 @@ public class EnemyShooter : MonoBehaviour
         {
             return;
         }
-        if(health .currentHealth <= 0)
+        if(health.currentHealth <= 0)
         {
             death();
         }
@@ -124,6 +126,9 @@ public class EnemyShooter : MonoBehaviour
         arms.SetActive(false);
         GetComponent<Collider2D>().enabled = false;
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        
+        transform.GetComponent<SpriteRenderer>().DOFade(0,6).SetEase(Ease.InCirc);
+        Destroy(this.gameObject,7f);
 
     }
 }

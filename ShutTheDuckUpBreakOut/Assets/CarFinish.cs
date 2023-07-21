@@ -22,8 +22,7 @@ public class CarFinish : MonoBehaviour
             Key.SetActive(true);
             if(Input.GetKey(KeyCode.E))
             {
-                //finishGame
-                //StartCoroutine(());
+                StartCoroutine(FinishGame());
             }
          }
          if(Vector2.Distance(transform.position,Player.transform.position) > 3 )

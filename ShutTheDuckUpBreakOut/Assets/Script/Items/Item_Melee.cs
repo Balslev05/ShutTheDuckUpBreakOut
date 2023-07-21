@@ -12,7 +12,7 @@ public class Item_Melee : MonoBehaviour
     Vector3 mousePos;
 
     [SerializeField] private float thrownForce = 250;   
-    private float speed;
+    public float speed;
     private Vector3 lastPos;
     void Awake()
     {
@@ -45,6 +45,8 @@ public class Item_Melee : MonoBehaviour
         Vector2 tempPos = transform.position;
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = mousePos - tempPos;
+
+        
 
         transform.DOLocalRotate(new Vector3(0, 0, 600), 1, RotateMode.FastBeyond360).SetRelative(true).SetEase(Ease.OutCubic);
 
