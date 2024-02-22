@@ -10,11 +10,19 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //StartCoroutine(SpawnEnemy());
+         StartCoroutine(SpawnEnemy());
+    }
+
+
+    public void EnemyStarter()
+    {
         StartCoroutine(SpawnEnemy());
     }
 
-     IEnumerator SpawnEnemy()
+    public IEnumerator SpawnEnemy()
     {
+        print("Brinrser");
         for (int i = 0; i < NumberOfEnemy; i++)
         {
             yield return new WaitForSeconds(Timebetween);

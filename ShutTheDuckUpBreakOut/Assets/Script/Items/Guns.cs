@@ -34,6 +34,10 @@ public class Guns : MonoBehaviour
     public float GunScreenShake;
     public Vector3 GunSize;
     public string GunName;
+    public Color BulletColor;
+    public Color TrailColor;
+
+    private GameObject thrownWeapon;
     
 
 
@@ -75,7 +79,7 @@ public class Guns : MonoBehaviour
         {
             DestroyWeapon();
         }
-        if(holdToFire == true && Input.GetKey(KeyCode.Mouse0) && ReadyToShoot && playerStats.CarryingGun == true && movement.Rolling == false)
+    if(holdToFire == true && Input.GetKey(KeyCode.Mouse0) && ReadyToShoot && playerStats.CarryingGun == true && movement.Rolling == false && DialogTrigger.Speaking == false)
         {
             Shoot();
         }
@@ -89,6 +93,7 @@ public class Guns : MonoBehaviour
 
     void Shoot()
     {
+         ChargeTimer = 0;  
         playerStats.Heat = true;
        
         ReadyToShoot = false;
@@ -106,7 +111,9 @@ public class Guns : MonoBehaviour
         for (int i = 0; i < BulletFiredPerShot; i++)
         {
             GameObject bullet = Instantiate(BulletPrefab,ShootPoint.position,transform.parent.rotation);
-
+            
+            bullet.GetComponent<SpriteRenderer>().color = BulletColor;
+            bullet.GetComponent<TrailRenderer>().startColor = TrailColor;
 
             bullet.transform.position = ShootPoint.position;
             bullet.transform.rotation = transform.parent.rotation;
@@ -146,7 +153,8 @@ public class Guns : MonoBehaviour
         GunName = CurrentGun.GunName;
         GunSprite = CurrentGun.sprite;
         GunSize = CurrentGun.GunSize; 
-
+        BulletColor = CurrentGun.BulletColor;
+        TrailColor = CurrentGun.TrailColor;
         this.gameObject.transform.localScale = GunSize;
         SpriteRenderer ItemSprite = this.gameObject.GetComponent<SpriteRenderer>();
         ItemSprite.sprite = CurrentGun.sprite;
@@ -166,13 +174,15 @@ public class Guns : MonoBehaviour
     public void ThrowWeapon()
     {
         playerStats.CarryingGun = false;
-        resetsweapon();
         GameObject thrownWeapon = Instantiate(ItemDrop, transform.position, transform.rotation); 
+        thrownWeapon.GetComponent<Item_Gun>().AmmoLeft = ShotsInMagazine;
+        resetsweapon();
         thrownWeapon.GetComponent<Item_Gun>().GunType = CurrentGun;
-
-        thrownWeapon.tag = "MeleeCollider";
-
+      
         thrownWeapon.GetComponent<Item_Gun>().IsItThrown = true;
+
+
+        
 
         //thrownWeapon.AddComponent<>
         //Throw your current Weapon
@@ -186,8 +196,6 @@ public class Guns : MonoBehaviour
         Gunweight = 0;
         this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         playerStats.CarryingGun = false;
-
-        
        
     }
 
@@ -195,6 +203,4 @@ public class Guns : MonoBehaviour
     {
         resetsweapon();
     }
-
-
-}
+  }

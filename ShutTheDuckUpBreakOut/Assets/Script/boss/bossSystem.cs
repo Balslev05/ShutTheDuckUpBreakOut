@@ -26,6 +26,7 @@ public class bossSystem : MonoBehaviour
     private GameObject player;
     private Vector3 NormalSize;
     private Vector3 movement;
+    [SerializeField] GameObject[] EnemiCollecter;
 
 
 
@@ -68,19 +69,20 @@ public class bossSystem : MonoBehaviour
     public GameObject BossIntroductionBoundary;
     public Guns PlayerGuns;
 
-    [Header ("SoundDesign")]
+    /* [Header ("SoundDesign")]
     public AudioSource walking;
     public AudioSource jumping;
     public AudioSource flying;
     public AudioSource EggCraking;
     public AudioSource PoliceSound;
     public GameObject BossIntroduction;
-    public GameObject NatureSound;
+    public GameObject NatureSound; */
     
 
 
     void Start()
     {
+      
         BossHealth = this.gameObject.GetComponent<Health>();
 
         player = GameObject.FindGameObjectWithTag("Player");
@@ -95,6 +97,8 @@ public class bossSystem : MonoBehaviour
 
     void Update()
     {
+        EnemiCollecter = GameObject.FindGameObjectsWithTag("Enemy");
+
         /// DEath;
         if(BossHealth.currentHealth <= 0)
         {
@@ -102,6 +106,10 @@ public class bossSystem : MonoBehaviour
             BossDead = true;
             player.GetComponent<PlayerMovment>().speed = 0;
             Destroy(this.gameObject);
+            for (int i = 0; i < EnemiCollecter.Length; i++)
+            {
+                Destroy(EnemiCollecter[i]);
+            }
         }
 
 
@@ -341,8 +349,8 @@ public class bossSystem : MonoBehaviour
         Boss_Anim.Play("Introduction");
         
         PlayerGuns.ReadyToShoot = false;
-        NatureSound.SetActive(false);
-        BossIntroduction.SetActive(true);
+       /*  NatureSound.SetActive(false);
+        BossIntroduction.SetActive(true); */
         Introduction_BossCamera.SetActive(true);
         Introduction_PlayerCamera.SetActive(false);
         

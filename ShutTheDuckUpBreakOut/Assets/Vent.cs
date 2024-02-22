@@ -7,18 +7,13 @@ public class Vent : MonoBehaviour
     // Start is called before the first frame update
     public GameObject Key;
     public GameObject EndOfVent;
-    public CinemachineConfiner Cam;
 
+    [SerializeField] GameObject[] EnemiCollecter;
 
+    public GameObject FinalWaves;
 
-    public GameObject EnemySpawner1;
-    public GameObject EnemySpawner2;
-    public GameObject EnemySpawner3;
-    public GameObject EnemySpawner4;
-    public GameObject EnemySpawner5;
-    public GameObject EnemySpawner6;
-    public GameObject EnemySpawner7;
-    public GameObject EnemySpawner8;
+    public GameObject x;
+    
     
     void Start()
     {
@@ -26,27 +21,31 @@ public class Vent : MonoBehaviour
     }
     void Update()
     {
-        if(Input.GetKey(KeyCode.U))
-        {
-
-        }
+        EnemiCollecter = GameObject.FindGameObjectsWithTag("Enemy");
+        
     }
 
    void OnCollisionStay2D(Collision2D other)
    {
+        
+        if(EnemiCollecter.Length == 0){
         Key.SetActive(true);
-        if(Input.GetKey(KeyCode.E))
+            x.SetActive(false);
+
+        }
+         if(EnemiCollecter.Length > 0){
+            x.SetActive(true);
+            Key.SetActive(true);
+        //! somthing else LIKE A X Key.SetActive(true);
+        }
+
+
+
+        if(Input.GetKey(KeyCode.E) && EnemiCollecter.Length == 0)
         {
             other.transform.position = EndOfVent.transform.position;
-
-            EnemySpawner1.SetActive(true);
-            EnemySpawner2.SetActive(true);
-            EnemySpawner3.SetActive(true);
-            EnemySpawner4.SetActive(true);
-            EnemySpawner5.SetActive(true);
-            EnemySpawner6.SetActive(true);
-            EnemySpawner7.SetActive(true);
-            EnemySpawner8.SetActive(true);
+            
+            FinalWaves.SetActive(true);
         }
    }
    void OnCollisionExit2D(Collision2D other)

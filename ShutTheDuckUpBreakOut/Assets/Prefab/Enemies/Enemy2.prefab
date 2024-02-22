@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1183169591930066360}
   m_Layer: 0
   m_Name: Shadow
-  m_TagString: Untagged
+  m_TagString: New tag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 6371919900456178634}
   m_Layer: 0
   m_Name: ShootPoint
-  m_TagString: Untagged
+  m_TagString: New tag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -313,6 +313,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 0
   Armor: 0
+  hundred_Drop: 0
   Drop: {fileID: 6725028838312082345, guid: 6e017f6c459d5d54a8c09197e7c25175, type: 3}
   screenShake: {fileID: 0}
   CanTakeDamage: 0
@@ -352,8 +353,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 1.5
-  height: 2
+  radius: 0.75
+  height: 0.01
   canMove: 1
   maxSpeed: 3
   gravity: {x: NaN, y: NaN, z: NaN}
@@ -368,9 +369,9 @@ MonoBehaviour:
   autoRepath:
     mode: 2
     interval: 0.5
-    sensitivity: 10
+    sensitivity: 20
     maximumInterval: 2
-    visualizeSensitivity: 0
+    visualizeSensitivity: 1
   targetCompatibility: {fileID: 0}
   maxAcceleration: 20
   rotationSpeed: 360
@@ -427,7 +428,7 @@ GameObject:
   - component: {fileID: 8275769835105373585}
   m_Layer: 0
   m_Name: Arms
-  m_TagString: Untagged
+  m_TagString: New tag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

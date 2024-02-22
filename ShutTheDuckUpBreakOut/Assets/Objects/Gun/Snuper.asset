@@ -15,14 +15,16 @@ MonoBehaviour:
   GunName: Snuper
   sprite: {fileID: -928212842, guid: a7b779d9b5150e9439777f56757e32ea, type: 3}
   TimeBetweenShots: 6
-  BulletDamage: 10
+  BulletDamage: 100
   Weight: 7
   SpeedBullet: 60
   ShotsInMagasin: 2
   bulletFiredPerShot: 1
-  knockBack: 5
+  knockBack: 0
   bulletSPread: 0
   HoldToFire: 0
-  BulletSize: {x: 1.2, y: 1.2, z: 0}
+  BulletSize: {x: 0.8, y: 0.6, z: 0}
   GunSize: {x: 1, y: 1, z: 1}
+  BulletColor: {r: 1, g: 0, b: 0, a: 1}
+  TrailColor: {r: 1, g: 0, b: 0, a: 1}
   GunScreenshake: 6

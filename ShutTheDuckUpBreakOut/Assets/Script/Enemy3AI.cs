@@ -132,8 +132,10 @@ public class Enemy3AI : MonoBehaviour
     }
     public void death()
     {
+        Instantiate(health.Drop,transform.position,Quaternion.identity);
         AIBrain.enabled = false;
         transform.eulerAngles = new Vector3(0,0,0);
+        
         
         for (int i = 0; i < this.gameObject.transform.childCount; i++)
 {

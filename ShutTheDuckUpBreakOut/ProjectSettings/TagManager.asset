@@ -18,6 +18,7 @@ TagManager:
   - Constraints
   - ShockWave
   - Dead
+  - RedBullet
   layers:
   - Default
   - TransparentFX

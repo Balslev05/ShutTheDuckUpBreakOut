@@ -52,7 +52,7 @@ public class Weapon : MonoBehaviour
             DestroyWeapon();
         }
         //Attack
-        if(Input.GetKeyDown(KeyCode.Mouse0) && ReadyToAttack && playerStats.CarryingMelee == true)
+        if(Input.GetKeyDown(KeyCode.Mouse0) && ReadyToAttack && playerStats.CarryingMelee == true && DialogTrigger.Speaking == false)
         {
             Attack();
         }
@@ -117,9 +117,6 @@ public class Weapon : MonoBehaviour
         thrownWeapon = Instantiate(ItemDrop, transform.position, transform.rotation); 
         thrownWeapon.GetComponent<Item_Melee>().MeleeType = CurrentWeapon;
 
-        thrownWeapon.tag = "MeleeCollider";
-        StartCoroutine(PickUpreadyWeapon());
-
         thrownWeapon.GetComponent<Item_Melee>().IsItThrown = true;
         
         //Throw your current Weapon
@@ -137,15 +134,6 @@ public class Weapon : MonoBehaviour
     public void DestroyWeapon()
     {
         ResetWeapon();
-    }
-
-
-    public IEnumerator PickUpreadyWeapon()
-    {
-        thrownWeapon.tag = "MeleeCollider";
-        yield return new WaitForSeconds(0.8f);
-        thrownWeapon.tag = "Melee";
-
     }
 
 

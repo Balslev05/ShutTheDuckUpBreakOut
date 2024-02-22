@@ -15,14 +15,16 @@ MonoBehaviour:
   GunName: Thomas gun
   sprite: {fileID: 21300000, guid: 5da67bc4f049eca40b925fd1d84874f4, type: 3}
   TimeBetweenShots: 0.1
-  BulletDamage: 0.7
+  BulletDamage: 1
   Weight: 3
   SpeedBullet: 35
-  ShotsInMagasin: 50
+  ShotsInMagasin: 100
   bulletFiredPerShot: 1
   knockBack: 0.2
   bulletSPread: 0.2
   HoldToFire: 1
   BulletSize: {x: 0.4, y: 0.4, z: 0.4}
   GunSize: {x: 1.2, y: 1.2, z: 1.2}
+  BulletColor: {r: 1, g: 0.69411767, b: 0, a: 1}
+  TrailColor: {r: 1, g: 0.69411767, b: 0, a: 1}
   GunScreenshake: 0.5

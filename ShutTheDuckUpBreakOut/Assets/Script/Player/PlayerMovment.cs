@@ -5,10 +5,11 @@ using UnityEngine;
 using DG.Tweening;
 public class PlayerMovment : MonoBehaviour
 {
+    public BulletTime TimeControl;
     public bool InPrison;
-    
     public float speed = 250;
     public Guns GunHolder;
+    public Weapon weaponholder;
     public Rigidbody2D rb;
     public Animator playerAnim;
     public GameObject WeaponManager;
@@ -67,16 +68,25 @@ public class PlayerMovment : MonoBehaviour
         
         Vector2 velocity = rb.velocity;   
 
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift))
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift) && TimeControl.timeSlowActiv == false)
         {
+
             if(velocity.x != 0 || velocity.y != 0)
             {
-                if(InPrison)
+                if(TimeControl.timeSlowActiv == false)
                 {
-                playerAnim.Play("JailRolling");
-                } else {playerAnim.Play("Rolling");}
+                    if(InPrison)
+                    {
+                        playerAnim.Play("JailRolling");
+                    } else {playerAnim.Play("Rolling");}
 
-                StartCoroutine(Roll());
+                    Rolling = true;
+                    StartCoroutine(Roll());
+
+                } else if (TimeControl.timeSlowActiv == true)
+                {
+                    return;
+                }
             }
 
         }
@@ -140,6 +150,9 @@ public class PlayerMovment : MonoBehaviour
         speed = speed + RoleForce;
         DOVirtual.Float( speed, 0, RoleLength, RollingSpeed =>{speed = RollingSpeed;});
         rb.AddForce(lastDirection * speed); 
+        weaponholder.ChargeTimer = 0;
+        GunHolder.ChargeTimer = 0;
+
 
       
 

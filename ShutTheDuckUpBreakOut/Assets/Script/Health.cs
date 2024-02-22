@@ -7,12 +7,12 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
-    public int  maxHealth;
+    public float  maxHealth;
     public float currentHealth; 
     public float Armor;
     private bool LostArmor = false;
+    [SerializeField] bool hundred_Drop;
     public GameObject Drop;
-
     
     [Header("PlayerDamage")]
     public screenShakeHandler screenShake;
@@ -112,8 +112,22 @@ public class Health : MonoBehaviour
         
 
 }
-    void Death()
+   public void Death()
     {
+        int DropChange = Random.Range(0,3);
+
+        if(DropChange == 1 && hundred_Drop == false)
+        {
+        GameObject ItemDrop = Instantiate(Drop,transform.position,Quaternion.identity);
+            print("Dropt gun");
+
+        } 
+        
+        else if(hundred_Drop == true)
+        {
+            GameObject ItemDrop = Instantiate(Drop,transform.position,Quaternion.identity);
+            print("Dropt gun");
+        }
 
         this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
@@ -121,7 +135,7 @@ public class Health : MonoBehaviour
         gameObject.tag = "Dead";
         ISdead = true;
         
-        GameObject ItemDrop = Instantiate(Drop,transform.position,Quaternion.identity);
+
           if(gameObject.CompareTag("Boss")) 
         {
             // do nothing 
@@ -132,7 +146,7 @@ public class Health : MonoBehaviour
         if(CanTakeDamage == true)
         {
         CanTakeDamage = false;
-       // currentHealth -= Damage;
+        currentHealth -= Damage;
         screenShake.StartShake(0.25f,5,2);
         StartCoroutine(VirgentetColorChange());
         }else{return;}

@@ -313,6 +313,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 0
   Armor: 7
+  hundred_Drop: 0
   Drop: {fileID: 6725028838312082345, guid: 69ccbe1e55306e74f850b96508c6fc77, type: 3}
   screenShake: {fileID: 0}
   CanTakeDamage: 0
@@ -352,8 +353,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 1.5
-  height: 2
+  radius: 0.98
+  height: 0.01
   canMove: 1
   maxSpeed: 3
   gravity: {x: NaN, y: NaN, z: NaN}

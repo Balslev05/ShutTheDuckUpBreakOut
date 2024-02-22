@@ -14,15 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GunName: 'MangeSkudSkyder '
   sprite: {fileID: 21300000, guid: 9c41b36c52e5c0749bb6c1eded347d03, type: 3}
-  TimeBetweenShots: 1
-  BulletDamage: 1
+  TimeBetweenShots: 0.5
+  BulletDamage: 3
   Weight: 2
   SpeedBullet: 25
-  ShotsInMagasin: 4
-  bulletFiredPerShot: 5
-  knockBack: 0.4
+  ShotsInMagasin: 20
+  bulletFiredPerShot: 7
+  knockBack: 0.2
   bulletSPread: 0.3
   HoldToFire: 0
   BulletSize: {x: 0.6, y: 0.6, z: 0.6}
   GunSize: {x: 1, y: 1, z: 1}
+  BulletColor: {r: 1, g: 0.69411767, b: 0, a: 1}
+  TrailColor: {r: 1, g: 0.69411767, b: 0, a: 1}
   GunScreenshake: 3

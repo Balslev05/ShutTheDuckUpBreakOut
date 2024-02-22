@@ -5,32 +5,17 @@ using UnityEngine;
 public class EnemyCollecter : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject[] Enemies;
 
-    [Header("Doors")]
-    public Door Outdoor;
-    public Door Outdoor2;
-    public Door office;
-    public Door office2;
-    public Door Out;
-    public Door door1;
-    public Door door2;
-    public Door door3;
-    public Door door4;
-    public Door door5;
 
-    [Header("Spawners")]
-    public GameObject EnemySpawner1;
-    public GameObject EnemySpawner2;
-    public GameObject EnemySpawner3;
-    public GameObject EnemySpawner4;
-    public GameObject EnemySpawner5;
-    public GameObject EnemySpawner6;
+    public GameObject EnemiManager2;
     public Door[] DoorsOpen;
-     
-    void Start()
-    {
-    }
+    public GameObject[] Spawners;
+    [SerializeField] GameObject[] Enemies;
+
+    
+    
+    
+
 
     // Update is called once per frame
     void Update()
@@ -39,29 +24,20 @@ public class EnemyCollecter : MonoBehaviour
 
         if(Enemies.Length == 0)
         {
-            
-
-            Outdoor.Open = true;
-            Outdoor2.Open = true;
-            office.Open = true;
-            office2.Open = true;
-            Out.Open = true;
-            
-            door1.Open = true;
-            door2.Open = true;
-            door3.Open = true;
-            door4.Open = true;
-            door5.Open = true;
-
-
-
-
-            EnemySpawner1.SetActive(true);
-            EnemySpawner2.SetActive(true);
-            EnemySpawner3.SetActive(true);
-            EnemySpawner4.SetActive(true);
-            EnemySpawner5.SetActive(true);
-            EnemySpawner6.SetActive(true);
+            for (int i = 0; i < DoorsOpen.Length; i++)
+            {
+                DoorsOpen[i].GetComponent<Door>().Open = true;
+            }
+            for (int i = 0; i < Spawners.Length; i++)
+            {
+                Spawners[i].SetActive(true);
+            }
+            StartCoroutine(NewManager());
         }
+    }
+    IEnumerator NewManager()
+    {
+        yield return new WaitForSeconds(1f);
+        EnemiManager2.SetActive(true);
     }
 }

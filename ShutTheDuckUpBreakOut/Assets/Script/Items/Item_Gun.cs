@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
@@ -11,6 +11,7 @@ public class Item_Gun : MonoBehaviour
     Vector3 mouseDir;
     Vector3 mousePos;
     [SerializeField] private float thrownForce = 250;
+    public int AmmoLeft;
 
     private SpriteRenderer ItemSprite;
     
@@ -23,6 +24,8 @@ public class Item_Gun : MonoBehaviour
     }
     void Start()
     {
+       // AmmoLeft = GunType.ShotsInMagasin;
+
         ItemSprite.sprite = GunType.sprite;    
 
         //starts with a raondom Rotation
@@ -31,6 +34,7 @@ public class Item_Gun : MonoBehaviour
         transform.eulerAngles = euler;
 
         if(IsItThrown == true){
+         //   AmmoLeft = GunType.
             Thrown();
         }
     }
@@ -42,7 +46,7 @@ public class Item_Gun : MonoBehaviour
 
     public void Thrown()
     {
-
+        
         //Finds the mouse place to throw
         Vector2 tempPos = transform.position;
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -51,6 +55,7 @@ public class Item_Gun : MonoBehaviour
         transform.DOLocalRotate(new Vector3(0, 0, 600), 1, RotateMode.FastBeyond360).SetRelative(true).SetEase(Ease.OutCubic);
 
         rb.AddForce( direction * thrownForce);
+
     }
     /* public void SlowDown()
     {

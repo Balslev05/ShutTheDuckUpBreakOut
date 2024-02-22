@@ -12,7 +12,7 @@ public class DialogTrigger : MonoBehaviour
     public DialogManger Dialogmanger;
     public GameObject dialogBox;
     public GameObject key;
-    public bool Speaking;
+    public static bool Speaking;
     bool HasDroppedItem = false;
     public Door DorOpen;
     
@@ -34,17 +34,21 @@ public class DialogTrigger : MonoBehaviour
             key.SetActive(true);
             if(Input.GetKeyDown(KeyCode.E))
             {
-                TalkingTo = Karakter;
+                Speaking = true;
                 dialogBox.SetActive(true);
-                triggerDialogue();
+                TalkingTo = Karakter;
                 DorOpen.Open = true;
+                triggerDialogue();  
             }
         }
 
         if(Vector2.Distance(TalkingTo.transform.position,player.transform.position) > 5 || Input.GetKeyDown(KeyCode.Escape))
         {
+            key.SetActive(false);
             dialogBox.SetActive(false);
+            Speaking = false;
             TalkingTo = null;
+
         }
         
             

@@ -80,9 +80,13 @@ public class Player : MonoBehaviour
           Gun.CurrentGun = collider.GetComponent<Item_Gun>().GunType;
           
 
-          Destroy(collider.gameObject);
           Gun.PickUpWeapon();
+          if(collider.GetComponent<Item_Gun>().IsItThrown == true)
+          {
+            Gun.ShotsInMagazine = collider.GetComponent<Item_Gun>().AmmoLeft;
+          }
           UpdateGunUI();
+          Destroy(collider.gameObject);
         }
       }
        

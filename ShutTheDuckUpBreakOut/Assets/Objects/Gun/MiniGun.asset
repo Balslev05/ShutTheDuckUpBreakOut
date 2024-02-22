@@ -18,11 +18,13 @@ MonoBehaviour:
   BulletDamage: 2
   Weight: 10
   SpeedBullet: 35
-  ShotsInMagasin: 999
+  ShotsInMagasin: 500
   bulletFiredPerShot: 1
   knockBack: 0.05
   bulletSPread: 0.005
   HoldToFire: 1
   BulletSize: {x: 0.2, y: 0.2, z: 0.2}
   GunSize: {x: 1, y: 1, z: 1}
+  BulletColor: {r: 0.9150943, g: 0.6387235, b: 0, a: 1}
+  TrailColor: {r: 0.91372555, g: 0.6392157, b: 0, a: 1}
   GunScreenshake: 1

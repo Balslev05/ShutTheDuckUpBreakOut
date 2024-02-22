@@ -140,6 +140,8 @@ MonoBehaviour:
   force: 15
   Damage: 0
   direction: {x: 0, y: 0, z: 0}
+  BulletDust: {fileID: 6559001905624645297, guid: 9823f4dd37d0d364c8dd4839f161f4df, type: 3}
+  Bullettrail: {fileID: 7519032383204459711}
 --- !u!1 &5806614357338813451
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +216,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Time: 5
+  m_Time: 1
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 5
@@ -231,7 +233,7 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1
+        time: 0.28993225
         value: 0
         inSlope: 0
         outSlope: 0

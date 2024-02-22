@@ -15,14 +15,16 @@ MonoBehaviour:
   GunName: AlladinSable
   sprite: {fileID: 21300000, guid: 9050de656813d924397030b55c755b61, type: 3}
   TimeBetweenShots: 0.2
-  BulletDamage: 0.2
+  BulletDamage: 1
   Weight: 250
   SpeedBullet: 30
-  ShotsInMagasin: 1
+  ShotsInMagasin: 3
   bulletFiredPerShot: 100
   knockBack: 0
   bulletSPread: 3
   HoldToFire: 0
   BulletSize: {x: 0.6, y: 0.6, z: 0.6}
   GunSize: {x: 1, y: 1, z: 1}
+  BulletColor: {r: 1, g: 0.9129498, b: 0, a: 1}
+  TrailColor: {r: 1, g: 0.91372555, b: 0, a: 1}
   GunScreenshake: 10

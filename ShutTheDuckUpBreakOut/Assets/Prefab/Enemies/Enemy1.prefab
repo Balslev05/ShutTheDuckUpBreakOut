@@ -391,6 +391,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 0
   Armor: 0
+  hundred_Drop: 0
   Drop: {fileID: 0}
   screenShake: {fileID: 0}
   CanTakeDamage: 0
@@ -487,8 +488,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 0.8
-  height: 2
+  radius: 0.73
+  height: 0.01
   canMove: 1
   maxSpeed: 3
   gravity: {x: NaN, y: NaN, z: NaN}
@@ -503,7 +504,7 @@ MonoBehaviour:
   autoRepath:
     mode: 2
     interval: 0.5
-    sensitivity: 10
+    sensitivity: 20
     maximumInterval: 2
     visualizeSensitivity: 0
   targetCompatibility: {fileID: 0}

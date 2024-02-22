@@ -19,8 +19,9 @@ public class Objects_Guns : ScriptableObject
     public bool HoldToFire;
     public Vector3 BulletSize;
     public Vector3 GunSize;
+    public Color BulletColor;
+    public Color TrailColor;
+
     public float GunScreenshake;
-
-
 
 }

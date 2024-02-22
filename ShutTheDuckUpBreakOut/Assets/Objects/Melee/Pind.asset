@@ -17,6 +17,6 @@ MonoBehaviour:
   Durability: 999
   weight: 1
   KnockBack: 0.2
-  throwSpeed: 1
+  throwSpeed: 0.1
   WeaponSize: {x: 1, y: 1, z: 1}
   AttackType: 1
